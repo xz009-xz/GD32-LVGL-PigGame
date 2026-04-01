@@ -14,6 +14,8 @@
                 "f:\\pig_game_c\\project\\lvgl\\examples\\porting",
                 "f:\\pig_game_c\\project\\lvgl\\demos\\benchmark",
                 "f:\\pig_game_c\\project\\lvgl\\demos\\stress",
+                "f:\\pig_game_c\\project\\common",
+                "f:\\pig_game_c\\project\\game_logic",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "f:\\pig_game_c\\project\\lvgl\\demos\\benchmark\\assets",

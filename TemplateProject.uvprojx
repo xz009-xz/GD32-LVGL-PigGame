@@ -340,7 +340,7 @@
               <MiscControls>--diag_suppress=68,111,188,223,546,1295</MiscControls>
               <Define>HXTAL_VALUE=8000000,</Define>
               <Undefine></Undefine>
-              <IncludePath>.\GD32H7xx_standard_peripheral\Include;.\GD32H7xx;.\GD32H7xx\CMSIS;.;.\Drivers;.\FATFS;.\lvgl;.\lvgl\src;.\lvgl\examples\porting;.\lvgl\demos\benchmark;.\lvgl\demos\stress</IncludePath>
+              <IncludePath>.\GD32H7xx_standard_peripheral\Include;.\GD32H7xx;.\GD32H7xx\CMSIS;.;.\Drivers;.\FATFS;.\lvgl;.\lvgl\src;.\lvgl\examples\porting;.\lvgl\demos\benchmark;.\lvgl\demos\stress;.\common;.\game_logic</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1420,6 +1420,24 @@
               <FilePath>.\lvgl\src\widgets\lv_textarea.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>common</GroupName>
+          <Files>
+            <File>
+              <FileName>game_api.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\common\game_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>game_type.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\common\game_type.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>gamelogic</GroupName>
         </Group>
       </Groups>
     </Target>
