@@ -2,7 +2,7 @@
 #include "lv_port_disp_template.h"
 #include "lv_port_indev_template.h"
 
-void Hang2Hang();
+//void Hang2Hang();
 
 int main()
 {
@@ -18,7 +18,7 @@ int main()
 		lv_port_indev_init();
 		
 
-		Hang2Hang();
+		//Hang2Hang();
 
 
 		while(1){
