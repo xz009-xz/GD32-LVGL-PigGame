@@ -2,8 +2,11 @@
 #include "lv_port_disp_template.h"
 #include "lv_port_indev_template.h"
 #include "game_api.h"
+#include "gamelogic/logic.h"
 
-pig_t pig[10];
+pig_fsm pig_fsms[MAX_PIGS];
+Food foods[MAX_FOOD];
+int money = 100;
 
 int main()
 {
@@ -20,11 +23,32 @@ int main()
 		
 
 		ui_game_start(); 
+		uint32_t last_tick = lv_tick_get();
+
 
 		while(1){
 			
 				delay_us(2000);
 				lv_timer_handler();
-			
+				uint32_t current_tick = lv_tick_get();
+				float dt = (current_tick - last_tick) / 1000.0f;
+				if(dt > 0.1f) {
+					dt = 0.1f;
+				}
+				last_tick = current_tick;
+				for(int i = 0; i < MAX_PIGS; i++){
+						fsm_update(&pig_fsms[i].action_fsm, dt);
+				}
+				for(int i = 0; i < MAX_PIGS; i++){
+						if(pig_fsms[i].pig_t.weight > 50 && pig_fsms[i].growth_fsm.current_state == NORMAL){
+								fsm_eventhandle(&pig_fsms[i].growth_fsm, EVENT_GROW);
+						}
+						else if(pig_fsms[i].pig_t.weight > 100 && pig_fsms[i].growth_fsm.current_state == BIG){
+								fsm_eventhandle(&pig_fsms[i].growth_fsm, EVENT_GROW);
+						}
+						else if(pig_fsms[i].growth_fsm.current_state == SLAUGHTER){
+								fsm_eventhandle(&pig_fsms[i].growth_fsm, EVENT_GROW);
+						}
+				}
 		}
 }

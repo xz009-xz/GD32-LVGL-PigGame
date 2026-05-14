@@ -195,9 +195,13 @@
 ".\objects\lv_textarea.o"
 ".\objects\mock_game_api.o"
 ".\objects\game_start.o"
+".\objects\ui_feed .o"
+".\objects\ui_fruit.o"
 ".\objects\ui_game_screen.o"
 ".\objects\ui_pig_to_big.o"
 ".\objects\ui_pig_to_small.o"
+".\objects\state_machine.o"
+".\objects\type_init.o"
 --strict --scatter ".\Objects\TemplateProject.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

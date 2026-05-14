@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>4</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -340,7 +340,7 @@
               <MiscControls>--diag_suppress=68,111,188,223,546,1295</MiscControls>
               <Define>HXTAL_VALUE=8000000,</Define>
               <Undefine></Undefine>
-              <IncludePath>.\GD32H7xx_standard_peripheral\Include;.\GD32H7xx;.\GD32H7xx\CMSIS;.;.\Drivers;.\FATFS;.\lvgl;.\lvgl\src;.\lvgl\examples\porting;.\lvgl\demos\benchmark;.\lvgl\demos\stress;.\common;.\gameapi;.\mock;.\assets</IncludePath>
+              <IncludePath>.\GD32H7xx_standard_peripheral\Include;.\GD32H7xx;.\GD32H7xx\CMSIS;.;.\Drivers;.\FATFS;.\lvgl;.\lvgl\src;.\lvgl\examples\porting;.\lvgl\demos\benchmark;.\lvgl\demos\stress;.\common;.\gameapi;.\mock;.\assets;.\gamelogic;.\gameui</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1455,22 +1455,52 @@
             <File>
               <FileName>game_start.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\game_ui\game_start.c</FilePath>
+              <FilePath>.\gameui\game_start.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_feed .c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gameui\ui_feed .c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_fruit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gameui\ui_fruit.c</FilePath>
             </File>
             <File>
               <FileName>ui_game_screen.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\game_ui\ui_game_screen.c</FilePath>
+              <FilePath>.\gameui\ui_game_screen.c</FilePath>
             </File>
             <File>
               <FileName>ui_pig_to_big.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\game_ui\ui_pig_to_big.c</FilePath>
+              <FilePath>.\gameui\ui_pig_to_big.c</FilePath>
             </File>
             <File>
               <FileName>ui_pig_to_small.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\game_ui\ui_pig_to_small.c</FilePath>
+              <FilePath>.\gameui\ui_pig_to_small.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>game_logic</GroupName>
+          <Files>
+            <File>
+              <FileName>logic.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gamelogic\logic.h</FilePath>
+            </File>
+            <File>
+              <FileName>state_machine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gamelogic\state_machine.c</FilePath>
+            </File>
+            <File>
+              <FileName>type_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gamelogic\type_init.c</FilePath>
             </File>
           </Files>
         </Group>

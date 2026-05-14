@@ -3,8 +3,7 @@
 #include "lv_port_disp_template.h"
 #include "lv_port_indev_template.h"
 #include "game_api.h"
-
-extern lv_img_dsc_t image_pig_small, image_pig_big;
+#include "gamelogic/logic.h"
 
 static lv_obj_t *target_pig = NULL;
 static lv_obj_t *dark_bg = NULL;
@@ -12,7 +11,7 @@ static lv_obj_t *circle_cover = NULL;
 
 static int flash_count = 0;
 
-// é…ç½®å‚æ•°
+// ÅäÖÃ²ÎÊı
 #define SMALL_FLASH_MAX    10
 #define SMALL_FLASH_SPEED  120
 #define BIG_FLASH_MAX      10
@@ -38,7 +37,7 @@ static void anim_all_finish(void)
     restore_screen();
 }
 
-// å¤§çŒªé—ªçƒ
+// ´óÖíÉÁË¸
 static void anim_big_pig_flash(lv_anim_t *anim)
 {
     static int cnt = 0;
@@ -64,7 +63,7 @@ static void anim_big_pig_flash(lv_anim_t *anim)
     lv_anim_start(&a);
 }
 
-// åœç•™ç»“æŸ â†’ å¤§çŒªéšè—ï¼Œå¼€å§‹é—ªçƒ
+// Í£Áô½áÊø ¡ú ´óÖíÒş²Ø£¬¿ªÊ¼ÉÁË¸
 static void anim_big_start_flash(lv_anim_t *anim)
 {
     lv_obj_add_flag(target_pig, LV_OBJ_FLAG_HIDDEN);
@@ -77,11 +76,11 @@ static void anim_big_start_flash(lv_anim_t *anim)
     lv_anim_start(&a);
 }
 
-// å°çŒªé—ªå®Œ â†’ éšè— â†’ å˜å¤§çŒª â†’ æ˜¾ç¤º â†’ åœç•™
+// Ğ¡ÖíÉÁÍê ¡ú Òş²Ø ¡ú ±äĞ¡Öí ¡ú ÏÔÊ¾ ¡ú Í£Áô
 static void anim_pig_final(void)
 {
     lv_obj_add_flag(target_pig, LV_OBJ_FLAG_HIDDEN);
-    lv_img_set_src(target_pig, &image_pig_big);
+    lv_img_set_src(target_pig, &pig_fsms[0].pig_t.image_pig_small);
 
     lv_anim_t a;
     lv_anim_init(&a);
@@ -92,7 +91,7 @@ static void anim_pig_final(void)
     lv_anim_start(&a);
 }
 
-// å°çŒªé—ªçƒ
+// Ğ¡ÖíÉÁË¸
 static void anim_small_pig_flash(lv_anim_t *anim)
 {
     flash_count++;
@@ -114,13 +113,13 @@ static void anim_small_pig_flash(lv_anim_t *anim)
     lv_anim_start(&a);
 }
 
-void pig_grow_anim(int pig_idx)
+void pig_small_anim(int pig_idx)
 {
-	pig_idx=0;//æµ‹è¯•ç”¨ï¼ä¸èƒ½åˆ 
-    target_pig = pig[pig_idx].img_pig;
+	pig_idx=0;//²âÊÔÓÃ£¡²»ÄÜÉ¾
+    target_pig = pig_fsms[pig_idx].pig_t.img_pig;
     flash_count = 0;
 
-    // å…¨å±é®ç½©ï¼ˆå·²ä¿®æ­£å˜é‡åï¼‰
+    // È«ÆÁÕÚÕÖ
     dark_bg = lv_obj_create(lv_scr_act());
     lv_obj_set_size(dark_bg, 1024 + 100, 600 + 100);
     lv_obj_align(dark_bg, LV_ALIGN_CENTER, 0, 0);
@@ -128,9 +127,9 @@ void pig_grow_anim(int pig_idx)
     lv_obj_set_style_bg_opa(dark_bg, 160, 0);
     lv_obj_clear_flag(dark_bg, LV_OBJ_FLAG_SCROLLABLE);
 
-    // ä¸­é—´é€æ˜åŒºåŸŸ
-    int x = pig[pig_idx].x;
-    int y = pig[pig_idx].y;
+    // ÖĞ¼äÍ¸Ã÷ÇøÓò
+    int x = pig_fsms[pig_idx].pig_t.x;
+    int y = pig_fsms[pig_idx].pig_t.y;
     int r = 90;
 
     circle_cover = lv_obj_create(lv_scr_act());
@@ -145,7 +144,7 @@ void pig_grow_anim(int pig_idx)
 
     lv_obj_add_flag(target_pig, LV_OBJ_FLAG_HIDDEN);
 
-    // å¯åŠ¨åŠ¨ç”»
+    // Æô¶¯¶¯»­
     lv_anim_t a;
     lv_anim_init(&a);
     lv_anim_set_var(&a, target_pig);
