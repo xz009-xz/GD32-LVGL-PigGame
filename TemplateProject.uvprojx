@@ -1482,6 +1482,11 @@
               <FileType>1</FileType>
               <FilePath>.\gameui\ui_pig_to_small.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gameui\ui_info.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

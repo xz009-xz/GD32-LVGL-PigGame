@@ -68,7 +68,7 @@ void ui_game_screen(lv_event_t *e)
 		btn_fruit[i] = lv_btn_create(game_screen);
 		lv_obj_set_size(btn_fruit[i], 110, 100);
 		lv_obj_align(btn_fruit[i], LV_ALIGN_TOP_LEFT, 328+i*128, 497);
-		lv_obj_add_event_cb(btn_fruit[i],fruit_cb, LV_EVENT_PRESSED, (void*)i);
+		lv_obj_add_event_cb(btn_fruit[i],fruit_cb, LV_EVENT_ALL, (void*)i);
 		lv_obj_set_style_opa(btn_fruit[i], LV_OPA_0, 0);
 	}
 

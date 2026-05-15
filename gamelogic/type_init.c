@@ -24,14 +24,14 @@ void create_food(Food *foods){
 	foods[0].img.header.reserved = 0;
 	foods[0].img.data_size = 60 * 71 * 3;
 	foods[0].img.data = image_buffer + 4;
-    image_buffer = sdram_malloc( 66 * 63 * 3 + 4 );
-	read_file_to_array("0:/fruit2.bin", image_buffer,  66 * 63 * 3 + 4 );
+    image_buffer = sdram_malloc( 66 * 68 * 3 + 4 );
+	read_file_to_array("0:/fruit2.bin", image_buffer,  66 * 68 * 3 + 4 );
 	foods[1].img.header.always_zero = 0;
 	foods[1].img.header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
 	foods[1].img.header.w = 66;
-	foods[1].img.header.h = 63;
+	foods[1].img.header.h = 68;
 	foods[1].img.header.reserved = 0;
-	foods[1].img.data_size = 66 * 63 * 3;
+	foods[1].img.data_size = 66 * 68 * 3;
 	foods[1].img.data = image_buffer + 4;
     foods[1].cost = 10;
     foods[1].growth_boost = 4;

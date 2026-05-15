@@ -2,7 +2,7 @@
 .\objects\touch_iic.o: Drivers\touch_iic.h
 .\objects\touch_iic.o: .\GD32H7xx\gd32h7xx.h
 .\objects\touch_iic.o: .\GD32H7xx\core_cm7.h
-.\objects\touch_iic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\touch_iic.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\touch_iic.o: .\GD32H7xx\CMSIS\cmsis_version.h
 .\objects\touch_iic.o: .\GD32H7xx\CMSIS\cmsis_compiler.h
 .\objects\touch_iic.o: .\GD32H7xx\CMSIS\cmsis_armcc.h

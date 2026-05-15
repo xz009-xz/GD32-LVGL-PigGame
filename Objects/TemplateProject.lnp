@@ -200,6 +200,7 @@
 ".\objects\ui_game_screen.o"
 ".\objects\ui_pig_to_big.o"
 ".\objects\ui_pig_to_small.o"
+".\objects\ui_info.o"
 ".\objects\state_machine.o"
 ".\objects\type_init.o"
 --strict --scatter ".\Objects\TemplateProject.sct"
