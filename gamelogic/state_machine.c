@@ -70,30 +70,30 @@ void fsm_update(Fsm *fsm,float dt){
 void growtobig(void *data){
     PigData *pig_data = (PigData *)data;
     pig_grow_anim(pig_data->id);
-    printf("Pig %d has grown to big!\n", pig_data->id);
+    //printf("Pig %d has grown to big!\n", pig_data->id);
 }
 
 void growtoslaughter(void *data){
     PigData *pig_data = (PigData *)data;
     //pig_slaughter_anim(pig_data->id);
-    printf("Pig %d has been slaughtered!\n", pig_data->id);
+    //printf("Pig %d has been slaughtered!\n", pig_data->id);
 }
 
 void growtonormal(void *data){
     PigData *pig_data = (PigData *)data;
     //pig_slaughter_anim(pig_data->id);
-    printf("Pig %d has returned to normal!\n", pig_data->id);
+    //printf("Pig %d has returned to normal!\n", pig_data->id);
 }
 
 void on_enter_eat(void *data){
     PigData *pig_data = (PigData *)data;
-    printf("Pig %d starts eating!\n", pig_data->id);
+    //printf("Pig %d starts eating!\n", pig_data->id);
     pig_data->eat_timer = 2.0f; //设置吃食物的时间为2秒
 }
 
 void on_exit_eat(void *data){
     PigData *pig_data = (PigData *)data;
-    printf("Pig %d stops eating!\n", pig_data->id);
+    //printf("Pig %d stops eating!\n", pig_data->id);
     pig_data->eat_timer = 2.0f; //重置吃食物的时间
 }
 
@@ -108,10 +108,10 @@ void on_update_eat(void *data,float dt,Food *food){
     pig_data->weight += dt * food[0].weight_boost;
     if(pig_data->hunger <= 0){
         pig_data->hunger = 0;
-        printf("Pig %d is full!\n", pig_data->id);
+        //printf("Pig %d is full!\n", pig_data->id);
     }
     if(pig_data->eat_timer < 0){
-        printf("Pig %d has finished eating!\n", pig_data->id);
+        //printf("Pig %d has finished eating!\n", pig_data->id);
     }
     
 }
@@ -121,7 +121,7 @@ void on_update_idle(void *data,float dt){
     pig_data->hunger += dt * 5; //空闲状态下饥饿度增加
     if(pig_data->hunger >= 100){
         pig_data->hunger = 100;
-        printf("Pig %d is very hungry!\n", pig_data->id);
+        //printf("Pig %d is very hungry!\n", pig_data->id);
     }
 }
 
@@ -173,7 +173,7 @@ void pig_fsm_init(pig_fsm *pig_fsm_instance,int id){
 
     enter_init(&pig_fsm_instance->action_fsm, ACTION_EAT, on_enter_eat);
     exit_init(&pig_fsm_instance->action_fsm, ACTION_EAT, on_exit_eat);
-    update_init(&pig_fsm_instance->action_fsm, ACTION_EAT, on_update_eat);
+    //update_init(&pig_fsm_instance->action_fsm, ACTION_EAT, on_update_eat);
     update_init(&pig_fsm_instance->action_fsm, ACTION_IDLE, on_update_idle);
 }
 

@@ -20,8 +20,8 @@ int main()
 		lv_init();
 		lv_port_disp_init();
 		lv_port_indev_init();
-		
 
+		 
 		ui_game_start(); 
 		uint32_t last_tick = lv_tick_get();
 

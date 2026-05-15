@@ -34,3 +34,4 @@ void ui_game_start(void)
 		
 	lv_scr_load(start_screen);
 }
+
