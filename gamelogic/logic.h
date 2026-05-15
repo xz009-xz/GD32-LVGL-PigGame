@@ -70,10 +70,11 @@ typedef enum{
 
 typedef struct{
     int id;
-    int growth;
-    int weight;
-    int hunger;
+    float growth;
+    float weight;
+    float hunger;
     float eat_timer;
+    int eat_fruit_idx;      // 当前正在吃的食物索引(-1表示没有在吃)
     int x,y;
     lv_img_dsc_t image_pig_small;
     lv_img_dsc_t image_pig_big;
@@ -92,7 +93,7 @@ void growtoslaughter(void *data);
 void growtonormal(void *data);
 void on_enter_eat(void *data);
 void on_exit_eat(void *data);
-void on_update_eat(void *data,float dt,Food *food);
+void on_update_eat(void *data,float dt);
 void on_update_idle(void *data,float dt);
 
 //pig??????init

@@ -48,6 +48,12 @@ void fruit_cb(lv_event_t *e)
                 y >= pig_y && y <= pig_y + pig_h)
             {
                 pig_feed_anim(j, i);
+                
+                // 设置猪正在吃的食物索引
+                pig_fsms[j].pig_t.eat_fruit_idx = i;
+                // 触发吃食状态
+                fsm_eventhandle(&pig_fsms[j].action_fsm, EVENT_START_EAT);
+                
                 return;
             }
         }

@@ -21,7 +21,6 @@ int main()
 		lv_port_disp_init();
 		lv_port_indev_init();
 
-		 
 		ui_game_start(); 
 		uint32_t last_tick = lv_tick_get();
 
@@ -38,6 +37,12 @@ int main()
 				last_tick = current_tick;
 				for(int i = 0; i < MAX_PIGS; i++){
 						fsm_update(&pig_fsms[i].action_fsm, dt);
+				}
+				for(int i = 0; i < MAX_PIGS; i++){
+						// 吃食计时结束，停止吃食
+						if(pig_fsms[i].action_fsm.current_state == ACTION_EAT && pig_fsms[i].pig_t.eat_timer <= 0){
+								fsm_eventhandle(&pig_fsms[i].action_fsm, EVENT_STOP_EAT);
+						}
 				}
 				for(int i = 0; i < MAX_PIGS; i++){
 						if(pig_fsms[i].pig_t.weight > 50 && pig_fsms[i].growth_fsm.current_state == NORMAL){

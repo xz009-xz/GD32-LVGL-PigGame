@@ -105,9 +105,9 @@ void ui_info(lv_event_t *e)
     lv_obj_t * label_weight = lv_label_create(info_img);
     lv_obj_t * label_hunger = lv_label_create(info_img);
     lv_label_set_text_fmt(label_id, "ID: %d", pig_fsms[i].pig_t.id);
-    lv_label_set_text_fmt(label_growth, "Growth: %d", pig_fsms[i].pig_t.growth);
-    lv_label_set_text_fmt(label_weight, "Weight: %d", pig_fsms[i].pig_t.weight);
-    lv_label_set_text_fmt(label_hunger, "Hunger: %d", pig_fsms[i].pig_t.hunger);
+    lv_label_set_text_fmt(label_growth, "Growth: %.1f", pig_fsms[i].pig_t.growth);
+    lv_label_set_text_fmt(label_weight, "Weight: %.1f", pig_fsms[i].pig_t.weight);
+    lv_label_set_text_fmt(label_hunger, "Hunger: %.1f", pig_fsms[i].pig_t.hunger);
     lv_obj_set_style_text_font(label_id, &lv_font_montserrat_24, 0);
     lv_obj_set_style_text_font(label_growth, &lv_font_montserrat_24, 0);
     lv_obj_set_style_text_font(label_weight, &lv_font_montserrat_24, 0);
