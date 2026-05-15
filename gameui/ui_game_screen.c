@@ -58,7 +58,9 @@ void ui_game_screen(lv_event_t *e)
         pig_fsms[i].pig_t.img_pig = lv_img_create(game_screen);
         lv_img_set_src(pig_fsms[i].pig_t.img_pig, &pig_fsms[i].pig_t.image_pig_small);
         lv_obj_set_pos(pig_fsms[i].pig_t.img_pig, pig_fsms[i].pig_t.x, pig_fsms[i].pig_t.y);
-        pig_shack_anim(i);
+        lv_obj_add_flag(pig_fsms[i].pig_t.img_pig, LV_OBJ_FLAG_CLICKABLE);
+		lv_obj_add_event_cb(pig_fsms[i].pig_t.img_pig, ui_info, LV_EVENT_CLICKED, (void*)(uintptr_t)i);
+		pig_shack_anim(i);
     }
 
 	   // 初始化食物数据

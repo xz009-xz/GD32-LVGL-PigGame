@@ -6,6 +6,7 @@
 #include "logic.h"
 
 lv_img_dsc_t image_info1,image_info2;
+lv_obj_t *info_img;
 lv_obj_t *info_cover;
 static int t = 0;
 
@@ -58,12 +59,26 @@ void create_info_image(void)
 }
 
 
+
 //创建全屏遮罩，点击遮罩关闭信息框
+void cover_event_cb(lv_event_t *e)
+{
+    lv_obj_del(info_img);
+    lv_obj_del(info_cover);
+    for(int j=0; j<10; j++){
+        //lv_obj_clear_flag(pig_fsms[j].pig_t.img_pig, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_style_opa(pig_fsms[j].pig_t.img_pig, LV_OPA_100, 0);
+    }
+}
+
 void create_screen_cover(void)
 {
-    info_cover = lv_obj_create(lv_scr_act());
+    info_cover = lv_btn_create(lv_scr_act());
     lv_obj_set_size(info_cover, 1024, 600);
     lv_obj_set_pos(info_cover, 0, 0);
+    lv_obj_move_foreground(info_cover);
+	lv_obj_set_style_opa(info_cover, LV_OPA_0, 0);
+    lv_obj_add_event_cb(info_cover, cover_event_cb, LV_EVENT_PRESSED, NULL);
 }
 
 void ui_info(lv_event_t *e)
@@ -72,7 +87,8 @@ void ui_info(lv_event_t *e)
 
     for(int j=0; j<10; j++){
         if (j != i) {
-            lv_obj_add_flag(pig_fsms[j].pig_t.img_pig, LV_OBJ_FLAG_HIDDEN);
+            //lv_obj_add_flag(pig_fsms[j].pig_t.img_pig, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_style_opa(pig_fsms[j].pig_t.img_pig, LV_OPA_50, 0);
         } 
     }
 
@@ -82,20 +98,40 @@ void ui_info(lv_event_t *e)
 
     int pig_x = pig_fsms[i].pig_t.x;
     int pig_y = pig_fsms[i].pig_t.y;
-    lv_obj_t *info_img = lv_img_create(lv_scr_act());
+    info_img = lv_img_create(lv_scr_act());
 
     lv_obj_t * label_id = lv_label_create(info_img);
     lv_obj_t * label_growth = lv_label_create(info_img);
     lv_obj_t * label_weight = lv_label_create(info_img);
     lv_obj_t * label_hunger = lv_label_create(info_img);
+    lv_label_set_text_fmt(label_id, "ID: %d", pig_fsms[i].pig_t.id);
+    lv_label_set_text_fmt(label_growth, "Growth: %d", pig_fsms[i].pig_t.growth);
+    lv_label_set_text_fmt(label_weight, "Weight: %d", pig_fsms[i].pig_t.weight);
+    lv_label_set_text_fmt(label_hunger, "Hunger: %d", pig_fsms[i].pig_t.hunger);
+    lv_obj_set_style_text_font(label_id, &lv_font_montserrat_24, 0);
+    lv_obj_set_style_text_font(label_growth, &lv_font_montserrat_24, 0);
+    lv_obj_set_style_text_font(label_weight, &lv_font_montserrat_24, 0);
+    lv_obj_set_style_text_font(label_hunger, &lv_font_montserrat_24, 0);
 
     //012567为info1，3489为info2
     if(i == 0 || i == 1 || i == 2 || i == 5 || i == 6 || i == 7){
         lv_img_set_src(info_img, &image_info1);
         lv_obj_set_pos(info_img, pig_x+120, pig_y-100);
+
+        lv_obj_set_pos(label_id, 185, 35);
+        lv_obj_set_pos(label_growth, 145, 90);
+        lv_obj_set_pos(label_weight, 145, 137);
+        lv_obj_set_pos(label_hunger, 145, 189);
     }
     else {
         lv_img_set_src(info_img, &image_info2);
         lv_obj_set_pos(info_img, pig_x-420, pig_y-100);
+
+        lv_obj_set_pos(label_id, 160, 35);
+        lv_obj_set_pos(label_growth, 120, 90);
+        lv_obj_set_pos(label_weight, 120, 137);
+        lv_obj_set_pos(label_hunger, 120, 189);
     }
+    lv_obj_move_foreground(info_img);
+    lv_obj_add_flag(info_img, LV_OBJ_FLAG_CLICKABLE);
 }
