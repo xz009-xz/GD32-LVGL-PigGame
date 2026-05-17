@@ -45,8 +45,9 @@ void fruit_cb(lv_event_t *e)
             int pig_h = 100;
 
             if (x >= pig_x && x <= pig_x + pig_w &&
-                y >= pig_y && y <= pig_y + pig_h)
-            {
+                y >= pig_y && y <= pig_y + pig_h && money >= foods[i].cost) {
+             
+                money -= foods[i].cost;  // 一次性扣除全部费用
                 pig_feed_anim(j, i);
                 
                 // 设置猪正在吃的食物索引

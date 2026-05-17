@@ -75,12 +75,20 @@ void growtobig(void *data){
 
 void growtoslaughter(void *data){
     PigData *pig_data = (PigData *)data;
+    pig_small_anim(pig_data->id);
+    money += pig_data->weight; 
     //pig_slaughter_anim(pig_data->id);
     //printf("Pig %d has been slaughtered!\n", pig_data->id);
 }
 
 void growtonormal(void *data){
     PigData *pig_data = (PigData *)data;
+    pig_small_anim(pig_data->id);
+    pig_data->growth = (float)(rand() % 40);
+    pig_data->weight = (float)(rand() % 30);
+    pig_data->hunger = (float)(rand() % 80);
+    pig_data->eat_timer = 0;
+    pig_data->eat_fruit_idx = -1;
     //pig_slaughter_anim(pig_data->id);
     //printf("Pig %d has returned to normal!\n", pig_data->id);
 }
@@ -104,7 +112,7 @@ void on_update_eat(void *data,float dt){
     pig_data->eat_timer -= dt;
     if(pig_data->eat_timer <= 0){
         pig_data->eat_timer = 0;
-        // ????????????????????? fsm_eventhandle ?? main ?§Õ?????
+        // ????????????????????? fsm_eventhandle ?? main ??????
         return;
     }
     
@@ -157,7 +165,7 @@ void pig_fsm_init(pig_fsm *pig_fsm_instance,int id){
     uint8_t* image_buffer = sdram_malloc( 100 * 100 * 3 + 4 );
 	read_file_to_array("0:/ui_pig_small.bin", image_buffer,  100 * 100 * 3 + 4 );
 	pig_fsm_instance->pig_t.image_pig_small.header.always_zero = 0;
-	pig_fsm_instance->pig_t.image_pig_small.header.cf = LV_IMG_CF_TRUE_COLOR;
+	pig_fsm_instance->pig_t.image_pig_small.header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
 	pig_fsm_instance->pig_t.image_pig_small.header.w = 100;
 	pig_fsm_instance->pig_t.image_pig_small.header.h = 100;
 	pig_fsm_instance->pig_t.image_pig_small.header.reserved = 0;
@@ -167,7 +175,7 @@ void pig_fsm_init(pig_fsm *pig_fsm_instance,int id){
     image_buffer = sdram_malloc( 100 * 100 * 3 + 4 );
 	read_file_to_array("0:/ui_pig_big.bin", image_buffer,  100 * 100 * 3 + 4 );
 	pig_fsm_instance->pig_t.image_pig_big.header.always_zero = 0;
-	pig_fsm_instance->pig_t.image_pig_big.header.cf = LV_IMG_CF_TRUE_COLOR;
+	pig_fsm_instance->pig_t.image_pig_big.header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
 	pig_fsm_instance->pig_t.image_pig_big.header.w = 100;
 	pig_fsm_instance->pig_t.image_pig_big.header.h = 100;
 	pig_fsm_instance->pig_t.image_pig_big.header.reserved = 0;

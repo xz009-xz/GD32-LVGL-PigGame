@@ -73,7 +73,11 @@ void ui_game_screen(lv_event_t *e)
 		lv_obj_add_event_cb(btn_fruit[i],fruit_cb, LV_EVENT_ALL, (void*)i);
 		lv_obj_set_style_opa(btn_fruit[i], LV_OPA_0, 0);
 	}
-
+	coin_label = lv_label_create(game_screen);
+	lv_label_set_text_fmt(coin_label, "%.0f", money);
+	lv_obj_align(coin_label, LV_ALIGN_TOP_LEFT, 110, 46);
+	lv_obj_set_style_text_color(coin_label, lv_color_hex(0xFF9933), 0);
+	lv_obj_set_style_text_font(coin_label, &lv_font_montserrat_26, 0);
 
 	//fruit
 	/*

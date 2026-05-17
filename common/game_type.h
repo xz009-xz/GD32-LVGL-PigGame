@@ -10,7 +10,7 @@
 #define TO_SLAUGHTER_WEIGHT 120
 #define MAX_FOOD 3
 
-extern int money;
+extern float money;
 
 typedef struct{
     int cost;

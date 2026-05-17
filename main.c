@@ -6,7 +6,8 @@
 
 pig_fsm pig_fsms[MAX_PIGS];
 Food foods[MAX_FOOD];
-int money = 100;
+float money = 200.0f;
+lv_obj_t *coin_label;
 
 int main()
 {
@@ -39,21 +40,24 @@ int main()
 						fsm_update(&pig_fsms[i].action_fsm, dt);
 				}
 				for(int i = 0; i < MAX_PIGS; i++){
-						// 吃食计时结束，停止吃食
+		
 						if(pig_fsms[i].action_fsm.current_state == ACTION_EAT && pig_fsms[i].pig_t.eat_timer <= 0){
 								fsm_eventhandle(&pig_fsms[i].action_fsm, EVENT_STOP_EAT);
 						}
 				}
 				for(int i = 0; i < MAX_PIGS; i++){
-						if(pig_fsms[i].pig_t.weight > 50 && pig_fsms[i].growth_fsm.current_state == NORMAL){
+						if(pig_fsms[i].pig_t.growth >= 50 && pig_fsms[i].growth_fsm.current_state == NORMAL){
 								fsm_eventhandle(&pig_fsms[i].growth_fsm, EVENT_GROW);
 						}
-						else if(pig_fsms[i].pig_t.weight > 100 && pig_fsms[i].growth_fsm.current_state == BIG){
+						else if(pig_fsms[i].pig_t.growth >= 100 && pig_fsms[i].growth_fsm.current_state == BIG){
 								fsm_eventhandle(&pig_fsms[i].growth_fsm, EVENT_GROW);
 						}
 						else if(pig_fsms[i].growth_fsm.current_state == SLAUGHTER){
 								fsm_eventhandle(&pig_fsms[i].growth_fsm, EVENT_GROW);
 						}
+				}
+				if(coin_label != NULL){
+						lv_label_set_text_fmt(coin_label, "%.0f", money);
 				}
 		}
 }

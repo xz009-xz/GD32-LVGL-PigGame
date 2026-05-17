@@ -74,7 +74,7 @@ typedef struct{
     float weight;
     float hunger;
     float eat_timer;
-    int eat_fruit_idx;      // 当前正在吃的食物索引(-1表示没有在吃)
+    int eat_fruit_idx;      // ????????????????(-1?????????)
     int x,y;
     lv_img_dsc_t image_pig_small;
     lv_img_dsc_t image_pig_big;
@@ -101,5 +101,7 @@ void pig_fsm_init(pig_fsm *pig_fsm_instance,int id);
 
 extern pig_fsm pig_fsms[MAX_PIGS];
 extern Food foods[MAX_FOOD];
+extern float money;
+extern lv_obj_t *coin_label;
 
 #endif
