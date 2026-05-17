@@ -10,7 +10,7 @@ static lv_obj_t *food = NULL;
 void fruit_cb(lv_event_t *e)
 {
     void *user_data = lv_event_get_user_data(e);
-    int i = (intptr_t)user_data;//水果号
+    int i = (intptr_t)user_data;
     lv_event_code_t code = lv_event_get_code(e);
 
     lv_indev_t *indev = lv_indev_get_act();
@@ -47,12 +47,11 @@ void fruit_cb(lv_event_t *e)
             if (x >= pig_x && x <= pig_x + pig_w &&
                 y >= pig_y && y <= pig_y + pig_h && money >= foods[i].cost) {
              
-                money -= foods[i].cost;  // 一次性扣除全部费用
+                money -= foods[i].cost;  
                 pig_feed_anim(j, i);
-                
-                // 设置猪正在吃的食物索引
+               
                 pig_fsms[j].pig_t.eat_fruit_idx = i;
-                // 触发吃食状态
+         
                 fsm_eventhandle(&pig_fsms[j].action_fsm, EVENT_START_EAT);
                 
                 return;

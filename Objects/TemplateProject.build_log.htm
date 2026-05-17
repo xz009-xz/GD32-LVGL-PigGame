@@ -27,10 +27,17 @@ Project File Date:  05/15/2026
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-compiling main.c...
+compiling state_machine.c...
+gamelogic\state_machine.c(129): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      pig_data->hunger += dt * 0.5; 
+gamelogic\state_machine.c(132): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          pig_data->growth -= dt * 0.5;
+gamelogic\state_machine.c(136): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          pig_data->weight -= dt * 0.5;
+gamelogic\state_machine.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=181226 RO-data=255698 RW-data=768 ZI-data=32515544  
-".\Objects\TemplateProject.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=181290 RO-data=255698 RW-data=768 ZI-data=32515544  
+".\Objects\TemplateProject.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 

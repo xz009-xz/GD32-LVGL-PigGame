@@ -14,7 +14,7 @@ static int flash_count = 0;
 static int base_food_x = 0;
 static int base_food_y = 0;
 
-// ===================== 可调节参数 =====================
+
 #define FOOD_FLASH_MAX      10
 #define FOOD_FLASH_SPEED    120
 #define FOOD_SHAKE_OFFSET   6
@@ -22,7 +22,7 @@ static int base_food_y = 0;
 #define ANIM_DELAY          500
 #define FOOD_OFFSET_X       20
 #define FOOD_OFFSET_Y       40
-// ======================================================
+
 
 static void restore_screen(void)
 {
@@ -65,7 +65,7 @@ static void anim_food_flash_shake(lv_anim_t *anim)
     if(now_opa > FOOD_OPA_STEP)
         lv_obj_set_style_opa(food_obj, now_opa - FOOD_OPA_STEP, 0);
 
-    // 第一次不隐藏！！！
+
     if(flash_count > 1)
     {
         if(lv_obj_has_flag(food_obj, LV_OBJ_FLAG_HIDDEN))
@@ -108,7 +108,7 @@ void pig_feed_anim(int pig_idx, int fruit_idx)
     lv_obj_set_style_bg_opa(circle_cover, 0, 0);
     lv_obj_set_style_border_width(circle_cover, 0, 0);
 
-    // ===================== 食物 =====================
+    
     food_obj = lv_img_create(lv_scr_act());
     lv_img_set_src(food_obj, &foods[fruit_idx].img);
     
@@ -119,11 +119,10 @@ void pig_feed_anim(int pig_idx, int fruit_idx)
     lv_obj_set_y(food_obj, base_food_y);
     lv_obj_set_style_opa(food_obj, 255, 0);
 
-    // ========== 终极修复：食物永远在最顶层 ==========
     lv_obj_move_foreground(dark_bg);
     lv_obj_move_foreground(circle_cover);
     lv_obj_move_foreground(target_pig);
-    lv_obj_move_foreground(food_obj); // 最后抬食物
+    lv_obj_move_foreground(food_obj);
 
     // 启动动画
     lv_anim_t a;

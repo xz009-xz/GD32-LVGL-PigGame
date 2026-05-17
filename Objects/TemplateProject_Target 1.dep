@@ -1,6 +1,6 @@
 Dependencies for Project 'TemplateProject', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
-F (.\main.c)(0x6A098259)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x6A09894B)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\Drivers\drivers.h)(0x69FADA9E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9B3488)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
@@ -193,7 +193,7 @@ I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
 I (.\common\game_api.h)(0x6A070A06)
-I (gamelogic/logic.h)(0x6A098116)
+I (gamelogic/logic.h)(0x6A09889B)
 I (.\common/game_type.h)(0x6A098111)
 F (.\GD32H7xx\startup_gd32h7xx.s)(0x69FADA9F)(--cpu Cortex-M7.fp.dp -g --apcs=interwork -ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include--pd "__UVISION_VERSION SETA 538" --pd "USE_STDPERIPH_DRIVER SETA 1" --pd "GD32H7XX SETA 1" --pd "GD32H7XXI SETA 1"--list .\listings\startup_gd32h7xx.lst --xref -o .\objects\startup_gd32h7xx.o --depend .\objects\startup_gd32h7xx.d)
 F (.\GD32H7xx\system_gd32h7xx.c)(0x69FADA9F)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\system_gd32h7xx.o --omf_browse .\objects\system_gd32h7xx.crf --depend .\objects\system_gd32h7xx.d)
@@ -14007,7 +14007,7 @@ I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
 I (.\common\game_api.h)(0x6A070A06)
-F (.\gameui\ui_feed .c)(0x6A0347D6)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o ".\objects\ui_feed .o" --omf_browse ".\objects\ui_feed .crf" --depend ".\objects\ui_feed .d")
+F (.\gameui\ui_feed .c)(0x6A0988F0)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o ".\objects\ui_feed .o" --omf_browse ".\objects\ui_feed .crf" --depend ".\objects\ui_feed .d")
 I (.\lvgl\lvgl.h)(0x69FADA9F)
 I (.\lvgl\src/misc/lv_log.h)(0x69FADAA0)
 I (.\lvgl\src/misc/../lv_conf_internal.h)(0x69FADAA0)
@@ -14200,9 +14200,9 @@ I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
 I (.\common\game_api.h)(0x6A070A06)
-I (.\gamelogic/logic.h)(0x6A098116)
+I (.\gamelogic/logic.h)(0x6A09889B)
 I (.\common/game_type.h)(0x6A098111)
-F (.\gameui\ui_fruit.c)(0x6A098027)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_fruit.o --omf_browse .\objects\ui_fruit.crf --depend .\objects\ui_fruit.d)
+F (.\gameui\ui_fruit.c)(0x6A098907)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_fruit.o --omf_browse .\objects\ui_fruit.crf --depend .\objects\ui_fruit.d)
 I (.\lvgl\lvgl.h)(0x69FADA9F)
 I (.\lvgl\src/misc/lv_log.h)(0x69FADAA0)
 I (.\lvgl\src/misc/../lv_conf_internal.h)(0x69FADAA0)
@@ -14395,7 +14395,7 @@ I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
 I (.\common\game_api.h)(0x6A070A06)
-I (.\gamelogic/logic.h)(0x6A098116)
+I (.\gamelogic/logic.h)(0x6A09889B)
 I (.\common/game_type.h)(0x6A098111)
 F (.\gameui\ui_game_screen.c)(0x6A09811D)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_game_screen.o --omf_browse .\objects\ui_game_screen.crf --depend .\objects\ui_game_screen.d)
 I (.\lvgl\lvgl.h)(0x69FADA9F)
@@ -14590,9 +14590,9 @@ I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
 I (.\common\game_api.h)(0x6A070A06)
-I (.\gamelogic/logic.h)(0x6A098116)
+I (.\gamelogic/logic.h)(0x6A09889B)
 I (.\common/game_type.h)(0x6A098111)
-F (.\gameui\ui_pig_to_big.c)(0x6A074237)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_pig_to_big.o --omf_browse .\objects\ui_pig_to_big.crf --depend .\objects\ui_pig_to_big.d)
+F (.\gameui\ui_pig_to_big.c)(0x6A098937)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_pig_to_big.o --omf_browse .\objects\ui_pig_to_big.crf --depend .\objects\ui_pig_to_big.d)
 I (.\lvgl\lvgl.h)(0x69FADA9F)
 I (.\lvgl\src/misc/lv_log.h)(0x69FADAA0)
 I (.\lvgl\src/misc/../lv_conf_internal.h)(0x69FADAA0)
@@ -14785,9 +14785,9 @@ I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
 I (.\common\game_api.h)(0x6A070A06)
-I (.\gamelogic/logic.h)(0x6A098116)
+I (.\gamelogic/logic.h)(0x6A09889B)
 I (.\common/game_type.h)(0x6A098111)
-F (.\gameui\ui_pig_to_small.c)(0x6A097E5E)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_pig_to_small.o --omf_browse .\objects\ui_pig_to_small.crf --depend .\objects\ui_pig_to_small.d)
+F (.\gameui\ui_pig_to_small.c)(0x6A0989D4)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_pig_to_small.o --omf_browse .\objects\ui_pig_to_small.crf --depend .\objects\ui_pig_to_small.d)
 I (.\lvgl\lvgl.h)(0x69FADA9F)
 I (.\lvgl\src/misc/lv_log.h)(0x69FADAA0)
 I (.\lvgl\src/misc/../lv_conf_internal.h)(0x69FADAA0)
@@ -14980,9 +14980,9 @@ I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
 I (.\common\game_api.h)(0x6A070A06)
-I (.\gamelogic/logic.h)(0x6A098116)
+I (.\gamelogic/logic.h)(0x6A09889B)
 I (.\common/game_type.h)(0x6A098111)
-F (.\gameui\ui_info.c)(0x6A073B35)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_info.o --omf_browse .\objects\ui_info.crf --depend .\objects\ui_info.d)
+F (.\gameui\ui_info.c)(0x6A098921)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_info.o --omf_browse .\objects\ui_info.crf --depend .\objects\ui_info.d)
 I (.\lvgl\lvgl.h)(0x69FADA9F)
 I (.\lvgl\src/misc/lv_log.h)(0x69FADAA0)
 I (.\lvgl\src/misc/../lv_conf_internal.h)(0x69FADAA0)
@@ -15175,11 +15175,11 @@ I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
 I (.\common\game_api.h)(0x6A070A06)
-I (.\gamelogic\logic.h)(0x6A098116)
+I (.\gamelogic\logic.h)(0x6A09889B)
 I (.\common/game_type.h)(0x6A098111)
-F (.\gamelogic\logic.h)(0x6A098116)()
-F (.\gamelogic\state_machine.c)(0x6A098207)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\state_machine.o --omf_browse .\objects\state_machine.crf --depend .\objects\state_machine.d)
-I (gamelogic\logic.h)(0x6A098116)
+F (.\gamelogic\logic.h)(0x6A09889B)()
+F (.\gamelogic\state_machine.c)(0x6A098A7B)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\state_machine.o --omf_browse .\objects\state_machine.crf --depend .\objects\state_machine.d)
+I (gamelogic\logic.h)(0x6A09889B)
 I (.\common/game_type.h)(0x6A098111)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
@@ -15374,7 +15374,7 @@ I (.\FATFS\ffconf.h)(0x69FADA9F)
 I (.\Drivers\touch.h)(0x69FADA9E)
 I (.\Drivers\sdram_malloc.h)(0x69FADA9E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9B348A)
-F (.\gamelogic\type_init.c)(0x6A097B65)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\type_init.o --omf_browse .\objects\type_init.crf --depend .\objects\type_init.d)
+F (.\gamelogic\type_init.c)(0x6A09890A)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\keilemdk58\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\type_init.o --omf_browse .\objects\type_init.crf --depend .\objects\type_init.d)
 I (.\common\game_type.h)(0x6A098111)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
 I (.\lvgl\examples\porting\lv_port_disp_template.h)(0x69FADA9F)
@@ -15500,7 +15500,7 @@ I (.\lvgl/src/extra/libs/freetype/lv_freetype.h)(0x69FADAA0)
 I (.\lvgl/src/extra/libs/rlottie/lv_rlottie.h)(0x69FADAA0)
 I (.\lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.h)(0x69FADAA0)
 I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x69FADA9F)
-I (gamelogic\logic.h)(0x6A098116)
+I (gamelogic\logic.h)(0x6A09889B)
 I (.\common/game_api.h)(0x6A070A06)
 I (.\Drivers\drivers.h)(0x69FADA9E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)

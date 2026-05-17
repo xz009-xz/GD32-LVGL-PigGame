@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\TemplateProject.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\TemplateProject.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun May 17 16:55:06 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun May 17 17:29:39 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1400 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2813,12 +2813,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> state_machine.o(.data)
 </UL>
-<P><STRONG><a name="[10]"></a>growtoslaughter</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, state_machine.o(i.growtoslaughter))
-<BR><BR>[Stack]<UL><LI>Max Depth = 1400 + Unknown Stack Size
-<LI>Call Chain = growtoslaughter &rArr; pig_small_anim &rArr; read_file_to_array &rArr; f_open &rArr; dir_register &rArr; dir_find &rArr; dir_read &rArr; load_xdir &rArr; dir_next &rArr; create_chain &rArr; fill_last_frag &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; sd_config &rArr; sd_bus_mode_config &rArr; sd_bus_width_config &rArr; sd_scr_get &rArr; sdio_command_response_config
-</UL>
-<BR>[Calls]<UL><LI><a href="#[3fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pig_small_anim
-</UL>
+<P><STRONG><a name="[10]"></a>growtoslaughter</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, state_machine.o(i.growtoslaughter))
 <BR>[Address Reference Count : 1]<UL><LI> state_machine.o(.data)
 </UL>
 <P><STRONG><a name="[e1]"></a>img_del</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, ui_pig_to_small.o(i.img_del))
@@ -9305,7 +9300,7 @@ Global Symbols
 <P><STRONG><a name="[12e]"></a>on_update_eat</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, state_machine.o(i.on_update_eat))
 <BR>[Address Reference Count : 1]<UL><LI> state_machine.o(i.pig_fsm_init)
 </UL>
-<P><STRONG><a name="[12f]"></a>on_update_idle</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, state_machine.o(i.on_update_idle))
+<P><STRONG><a name="[12f]"></a>on_update_idle</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, state_machine.o(i.on_update_idle))
 <BR>[Address Reference Count : 1]<UL><LI> state_machine.o(i.pig_fsm_init)
 </UL>
 <P><STRONG><a name="[3c6]"></a>pig_feed_anim</STRONG> (Thumb, 316 bytes, Stack size 88 bytes, ui_feed .o(i.pig_feed_anim))
@@ -9376,7 +9371,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_game_screen
 </UL>
 
-<P><STRONG><a name="[3fa]"></a>pig_small_anim</STRONG> (Thumb, 174 bytes, Stack size 80 bytes, ui_pig_to_small.o(i.pig_small_anim))
+<P><STRONG><a name="[3fa]"></a>pig_small_anim</STRONG> (Thumb, 178 bytes, Stack size 80 bytes, ui_pig_to_small.o(i.pig_small_anim))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1392 + Unknown Stack Size
 <LI>Call Chain = pig_small_anim &rArr; read_file_to_array &rArr; f_open &rArr; dir_register &rArr; dir_find &rArr; dir_read &rArr; load_xdir &rArr; dir_next &rArr; create_chain &rArr; fill_last_frag &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; sd_config &rArr; sd_bus_mode_config &rArr; sd_bus_width_config &rArr; sd_scr_get &rArr; sdio_command_response_config
 </UL>
@@ -9390,8 +9385,7 @@ Global Symbols
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;growtoslaughter
-<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;growtonormal
+<BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;growtonormal
 </UL>
 
 <P><STRONG><a name="[2b4]"></a>pvPortMalloc</STRONG> (Thumb, 180 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))

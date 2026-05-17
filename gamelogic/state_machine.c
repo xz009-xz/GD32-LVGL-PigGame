@@ -5,7 +5,6 @@
 #include<string.h>
 #include<stdlib.h>
  
-//??????????
 void fsm_init(Fsm *fsm, Fsm_table *table,int table_size,int initial_state){
     fsm->current_state = initial_state;
     fsm->table = table;
@@ -66,7 +65,7 @@ void fsm_update(Fsm *fsm,float dt){
         fsm->updateFun[fsm->current_state](fsm->data,dt);
     }
 }
-//pig???????
+
 void growtobig(void *data){
     PigData *pig_data = (PigData *)data;
     pig_grow_anim(pig_data->id);
@@ -75,7 +74,6 @@ void growtobig(void *data){
 
 void growtoslaughter(void *data){
     PigData *pig_data = (PigData *)data;
-    pig_small_anim(pig_data->id);
     money += pig_data->weight; 
     //pig_slaughter_anim(pig_data->id);
     //printf("Pig %d has been slaughtered!\n", pig_data->id);
@@ -89,30 +87,27 @@ void growtonormal(void *data){
     pig_data->hunger = (float)(rand() % 80);
     pig_data->eat_timer = 0;
     pig_data->eat_fruit_idx = -1;
-    //pig_slaughter_anim(pig_data->id);
     //printf("Pig %d has returned to normal!\n", pig_data->id);
 }
 
 void on_enter_eat(void *data){
     PigData *pig_data = (PigData *)data;
-    pig_data->eat_timer = 2.0f; // ???????????????2??
+    pig_data->eat_timer = 2.0f; 
 }
 
 void on_exit_eat(void *data){
     PigData *pig_data = (PigData *)data;
     pig_data->eat_timer = 0;
-    pig_data->eat_fruit_idx = -1; // ??????????
+    pig_data->eat_fruit_idx = -1; 
 }
 
 void on_update_eat(void *data,float dt){
     extern Food foods[MAX_FOOD];
     PigData *pig_data = (PigData *)data;
     
-    // ???????????
     pig_data->eat_timer -= dt;
     if(pig_data->eat_timer <= 0){
         pig_data->eat_timer = 0;
-        // ????????????????????? fsm_eventhandle ?? main ??????
         return;
     }
     
@@ -131,14 +126,22 @@ void on_update_eat(void *data,float dt){
 
 void on_update_idle(void *data,float dt){
     PigData *pig_data = (PigData *)data;
-    pig_data->hunger += dt * 0.1; //?????????????????
+    pig_data->hunger += dt * 0.5; 
     if(pig_data->hunger >= 100){
         pig_data->hunger = 100;
+        pig_data->growth -= dt * 0.5;
+        if(pig_data->growth < 0){
+            pig_data->growth = 0;
+        }
+        pig_data->weight -= dt * 0.5;
+        if(pig_data->weight < 0){
+            pig_data->weight = 0;
+        }
         //printf("Pig %d is very hungry!\n", pig_data->id);
     }
 }
 
-//?????????????
+
 
 static Fsm_table state_table[] = {
     {EVENT_GROW, NORMAL, growtobig, BIG},
@@ -153,7 +156,7 @@ static Fsm_table action_table[] = {
 };
 static const int action_table_size = sizeof(action_table) / sizeof(action_table[0]);
 
-//pig??init
+
 void pig_fsm_init(pig_fsm *pig_fsm_instance,int id){
     pig_fsm_instance->pig_t.id = id;
     pig_fsm_instance->pig_t.growth = (float)(rand() % 40);
@@ -185,7 +188,6 @@ void pig_fsm_init(pig_fsm *pig_fsm_instance,int id){
     fsm_init(&pig_fsm_instance->growth_fsm, state_table, state_table_size, NORMAL);
     fsm_init(&pig_fsm_instance->action_fsm, action_table, action_table_size, ACTION_IDLE);
 
-    // ???? data ?????? PigData??? update/enter/exit ?????????????????????
     pig_fsm_instance->growth_fsm.data = &pig_fsm_instance->pig_t;
     pig_fsm_instance->action_fsm.data = &pig_fsm_instance->pig_t;
 

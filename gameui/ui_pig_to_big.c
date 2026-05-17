@@ -11,7 +11,6 @@ static lv_obj_t *circle_cover = NULL;
 
 static int flash_count = 0;
 
-// 配置参数
 #define SMALL_FLASH_MAX    10
 #define SMALL_FLASH_SPEED  120
 #define BIG_FLASH_MAX      10
@@ -115,11 +114,11 @@ static void anim_small_pig_flash(lv_anim_t *anim)
 
 void pig_grow_anim(int pig_idx)
 {
-	//pig_idx=0;//测试用！不能删
+	//pig_idx=0;//测试用
     target_pig = pig_fsms[pig_idx].pig_t.img_pig;
     flash_count = 0;
 
-    // 全屏遮罩（已修正变量名）
+    // 全屏遮罩
     dark_bg = lv_obj_create(lv_scr_act());
     lv_obj_set_size(dark_bg, 1024 + 100, 600 + 100);
     lv_obj_align(dark_bg, LV_ALIGN_CENTER, 0, 0);

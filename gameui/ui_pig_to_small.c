@@ -112,6 +112,8 @@ void pig_small_anim(int i)
     lv_anim_set_values(&anim, -480, y - 380); // ?????
     lv_anim_set_time(&anim, ANIM_TIME);
     lv_anim_set_repeat_count(&anim, 0);
+    lv_anim_set_delay(&anim, 1000);
     lv_anim_set_ready_cb(&anim, drop_finish_cb);
     lv_anim_start(&anim);
 }
+

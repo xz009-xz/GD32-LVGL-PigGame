@@ -32,13 +32,13 @@ void create_info_image(void)
 
     int w = 400;
     int h = 300;
-    uint8_t* src = image_buffer + 4;   // 原始像素
-    uint8_t* dst = sdram_malloc(w * h * 3); // 翻转后的缓存
+    uint8_t* src = image_buffer + 4;   
+    uint8_t* dst = sdram_malloc(w * h * 3); 
 
     for (int y = 0; y < h; y++) {
         for (int x = 0; x < w; x++) {
             int src_idx = (y * w + x) * 3;
-            int dst_x = w - 1 - x;        // 水平翻转
+            int dst_x = w - 1 - x;        
             int dst_idx = (y * w + dst_x) * 3;
 
             dst[dst_idx + 0] = src[src_idx + 0];

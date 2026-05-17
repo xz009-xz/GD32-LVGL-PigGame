@@ -10,7 +10,7 @@ void create_food(Food *foods);
 //int *money_init(void);
 void free_food(Food *food);
 
-//????????
+
  
 typedef enum
 {
@@ -54,7 +54,7 @@ void fsm_statetransform(Fsm *fsm, int new_state);
 void fsm_eventhandle(Fsm *fsm, Event event);
 void fsm_update(Fsm *fsm, float dt);
 
-//pig???????
+
 typedef enum{
     NORMAL,
     BIG,
@@ -74,11 +74,11 @@ typedef struct{
     float weight;
     float hunger;
     float eat_timer;
-    int eat_fruit_idx;      // ????????????????(-1?????????)
+    int eat_fruit_idx;     
     int x,y;
     lv_img_dsc_t image_pig_small;
     lv_img_dsc_t image_pig_big;
-    lv_obj_t *img_pig;      // LVGL image object on screen
+    lv_obj_t *img_pig;     
     
 } PigData;
 
