@@ -14787,7 +14787,7 @@ I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x6A0F0B8F)
 I (.\common\game_api.h)(0x6A0F0C9B)
 I (.\gamelogic/logic.h)(0x6A0F0B8F)
 I (.\common/game_type.h)(0x6A0F0B8F)
-F (.\gameui\ui_pig_to_small.c)(0x6A0F0B8F)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\cks\pack\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_pig_to_small.o --omf_browse .\objects\ui_pig_to_small.crf --depend .\objects\ui_pig_to_small.d)
+F (.\gameui\ui_pig_to_small.c)(0x6A0F1300)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\cks\pack\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_pig_to_small.o --omf_browse .\objects\ui_pig_to_small.crf --depend .\objects\ui_pig_to_small.d)
 I (.\lvgl\lvgl.h)(0x6A0F0B8F)
 I (.\lvgl\src/misc/lv_log.h)(0x6A0F0B8F)
 I (.\lvgl\src/misc/../lv_conf_internal.h)(0x6A0F0B8F)

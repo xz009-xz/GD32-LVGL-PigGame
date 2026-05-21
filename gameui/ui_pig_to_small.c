@@ -6,8 +6,8 @@
 #include "gamelogic/logic.h"
 
 int pig_idx, x, y;
-lv_img_dsc_t sell_image1;
-lv_obj_t *sell_img;
+lv_img_dsc_t sell_image1,cage_image;
+lv_obj_t *sell_img,*cage_img;
 
 #define ANIM_TIME 800
 
@@ -23,13 +23,20 @@ void img_del(struct _lv_anim_t *a)
     lv_obj_del(img);
 }
 
-void img_up(struct _lv_anim_t *a)
+//图片透明度逐渐变大，最后删除图片
+void img_hiding(void* var, int32_t v)
+{
+    lv_obj_t *img = (lv_obj_t *)var;
+    lv_obj_set_style_opa(img, v, 0);
+}
+
+void img_hiden(struct _lv_anim_t *a)
 {
     lv_anim_t anim1;
     lv_anim_init(&anim1);
-    lv_anim_set_var(&anim1, sell_img);
-    lv_anim_set_exec_cb(&anim1, img_move);
-    lv_anim_set_values(&anim1, y - 380, -480); // ??????
+    lv_anim_set_var(&anim1, cage_img);
+    lv_anim_set_exec_cb(&anim1, img_hiding);
+    lv_anim_set_values(&anim1, 100, 0);
     lv_anim_set_time(&anim1, ANIM_TIME);
     lv_anim_set_repeat_count(&anim1, 0);
     lv_anim_set_ready_cb(&anim1, img_del);
@@ -38,15 +45,21 @@ void img_up(struct _lv_anim_t *a)
 
 void new_pig(struct _lv_anim_t *a)
 {
+    //换成笼子图片
+    cage_img = lv_img_create(lv_scr_act());
+	lv_img_set_src(cage_img, &cage_image);
+    lv_obj_set_pos(cage_img, x, -100);
+
     lv_img_set_src(pig_fsms[pig_idx].pig_t.img_pig, &pig_fsms[pig_idx].pig_t.image_pig_small);
+    
     lv_anim_t anim1;
     lv_anim_init(&anim1);
-    lv_anim_set_var(&anim1, sell_img);
+    lv_anim_set_var(&anim1, cage_img);
     lv_anim_set_exec_cb(&anim1, img_move);
-    lv_anim_set_values(&anim1, -480, y - 380); // ???
+    lv_anim_set_values(&anim1, -100, y);
     lv_anim_set_time(&anim1, ANIM_TIME);
     lv_anim_set_repeat_count(&anim1, 0);
-    lv_anim_set_ready_cb(&anim1, img_up);
+    lv_anim_set_ready_cb(&anim1, img_hiden);
     lv_anim_set_delay(&anim1, 1000);
     lv_anim_start(&anim1);
     
@@ -70,7 +83,7 @@ void drop_finish_cb(struct _lv_anim_t *a)
     lv_anim_set_values(&anim1, y - 380, -480); // ??????
     lv_anim_set_time(&anim1, ANIM_TIME);
     lv_anim_set_repeat_count(&anim1, 0);
-    lv_anim_set_ready_cb(&anim1, new_pig);
+    lv_anim_set_ready_cb(&anim1, img_del);
     lv_anim_start(&anim1);
     
     lv_anim_t anim2;
@@ -104,6 +117,17 @@ void pig_small_anim(int i)
     x = pig_fsms[pig_idx].pig_t.x;
     y = pig_fsms[pig_idx].pig_t.y;
     lv_obj_set_pos(sell_img, x-10, -480);
+
+    //cage
+    image_buffer = sdram_malloc( 100 * 100 * 3 + 4 );
+	read_file_to_array("0:/cage.bin", image_buffer,  100 * 100 * 3 + 4 );
+	cage_image.header.always_zero = 0;
+	cage_image.header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
+	cage_image.header.w = 100;
+	cage_image.header.h = 100;
+	cage_image.header.reserved = 0;
+	cage_image.data_size = 100 * 100 * 3;
+	cage_image.data = image_buffer + 4;
 
     lv_anim_t anim;
     lv_anim_init(&anim);
