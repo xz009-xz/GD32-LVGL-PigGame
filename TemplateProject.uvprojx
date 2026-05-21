@@ -1487,6 +1487,11 @@
               <FileType>1</FileType>
               <FilePath>.\gameui\ui_info.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_rain.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gameui\ui_rain.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

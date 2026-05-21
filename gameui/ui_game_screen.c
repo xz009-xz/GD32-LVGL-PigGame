@@ -95,17 +95,17 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_set_size(btn_back1, 80, 40);
 	lv_obj_align(btn_back1, LV_ALIGN_TOP_LEFT, 10, 10);
 	lv_obj_add_event_cb(btn_back1,pig_grow_anim, LV_EVENT_RELEASED, NULL);
-
+*/
 	lv_obj_t *btn_back2 = lv_btn_create(game_screen);
 	lv_obj_set_size(btn_back2, 80, 40);
 	lv_obj_align(btn_back2, LV_ALIGN_TOP_LEFT, 100, 10);
-	lv_obj_add_event_cb(btn_back2,pig_small_anim, LV_EVENT_RELEASED, NULL);
+	lv_obj_add_event_cb(btn_back2,rain_stop, LV_EVENT_RELEASED, NULL);
 
 	lv_obj_t *btn_back3 = lv_btn_create(game_screen);
 	lv_obj_set_size(btn_back3, 80, 40);
 	lv_obj_align(btn_back3, LV_ALIGN_TOP_LEFT, 190, 10);
-	lv_obj_add_event_cb(btn_back3,pig_feed_anim, LV_EVENT_RELEASED, NULL);
-*/
+	lv_obj_add_event_cb(btn_back3,rain_start, LV_EVENT_RELEASED, NULL);
+
     lv_scr_load_anim(
         game_screen,
         LV_SCR_LOAD_ANIM_FADE_ON,

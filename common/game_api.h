@@ -11,5 +11,7 @@ void pig_slaughter_anim(int pig_idx);
 void fruit_cb(lv_event_t *e);
 void pig_feed_anim(int pig_idx, int food_idx);
 void ui_info(lv_event_t *e);
+void rain_start(void);
+void rain_stop(void);
 
 #endif
