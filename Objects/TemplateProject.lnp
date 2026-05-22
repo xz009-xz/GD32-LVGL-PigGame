@@ -202,6 +202,7 @@
 ".\objects\ui_pig_to_small.o"
 ".\objects\ui_info.o"
 ".\objects\ui_rain.o"
+".\objects\ui_hot.o"
 ".\objects\state_machine.o"
 ".\objects\type_init.o"
 --strict --scatter ".\Objects\TemplateProject.sct"

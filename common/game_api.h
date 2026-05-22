@@ -13,5 +13,7 @@ void pig_feed_anim(int pig_idx, int food_idx);
 void ui_info(lv_event_t *e);
 void rain_start(void);
 void rain_stop(void);
+void hot_start(void);
+void hot_stop(void);
 
 #endif

@@ -1492,6 +1492,11 @@
               <FileType>1</FileType>
               <FilePath>.\gameui\ui_rain.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_hot.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gameui\ui_hot.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
