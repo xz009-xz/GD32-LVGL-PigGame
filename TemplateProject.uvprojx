@@ -1497,6 +1497,11 @@
               <FileType>1</FileType>
               <FilePath>.\gameui\ui_hot.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_snow.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gameui\ui_snow.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

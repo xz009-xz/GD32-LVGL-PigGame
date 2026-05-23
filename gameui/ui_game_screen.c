@@ -7,6 +7,7 @@
 
 lv_img_dsc_t image_struct;
 lv_img_dsc_t image_fruit[3];
+lv_obj_t *img_main;
 
 //	pig shack animation
 static void pig_shake_anim_callback(void* var, int32_t v)
@@ -47,7 +48,7 @@ void ui_game_screen(lv_event_t *e)
 	image_struct.header.reserved = 0;
 	image_struct.data_size = 1024 * 600 * 3;
 	image_struct.data = image_buffer + 4;
-	lv_obj_t *img_main = lv_img_create(game_screen);
+	img_main = lv_img_create(game_screen);
 	lv_img_set_src(img_main, &image_struct);
 
     //pig - 使用 pig_fsm_init 初始化
@@ -99,12 +100,12 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_t *btn_back2 = lv_btn_create(game_screen);
 	lv_obj_set_size(btn_back2, 80, 40);
 	lv_obj_align(btn_back2, LV_ALIGN_TOP_LEFT, 100, 10);
-	lv_obj_add_event_cb(btn_back2,hot_stop, LV_EVENT_RELEASED, NULL);
+	lv_obj_add_event_cb(btn_back2,snow_start, LV_EVENT_RELEASED, NULL);
 
 	lv_obj_t *btn_back3 = lv_btn_create(game_screen);
 	lv_obj_set_size(btn_back3, 80, 40);
 	lv_obj_align(btn_back3, LV_ALIGN_TOP_LEFT, 190, 10);
-	lv_obj_add_event_cb(btn_back3,hot_start, LV_EVENT_RELEASED, NULL);
+	lv_obj_add_event_cb(btn_back3,snow_stop, LV_EVENT_RELEASED, NULL);
 
     lv_scr_load_anim(
         game_screen,

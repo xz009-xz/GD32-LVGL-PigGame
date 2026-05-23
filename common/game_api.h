@@ -15,5 +15,7 @@ void rain_start(void);
 void rain_stop(void);
 void hot_start(void);
 void hot_stop(void);
+void snow_start(void);
+void snow_stop(void);
 
 #endif

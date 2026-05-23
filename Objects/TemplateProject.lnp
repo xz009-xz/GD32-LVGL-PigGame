@@ -203,6 +203,7 @@
 ".\objects\ui_info.o"
 ".\objects\ui_rain.o"
 ".\objects\ui_hot.o"
+".\objects\ui_snow.o"
 ".\objects\state_machine.o"
 ".\objects\type_init.o"
 --strict --scatter ".\Objects\TemplateProject.sct"
