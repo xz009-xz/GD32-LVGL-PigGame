@@ -2,7 +2,7 @@
 .\objects\diskio.o: FATFS\diskio.h
 .\objects\diskio.o: FATFS\ff.h
 .\objects\diskio.o: FATFS\ffconf.h
-.\objects\diskio.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\diskio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\diskio.o: .\Drivers\sdcard.h
 .\objects\diskio.o: .\GD32H7xx\gd32h7xx.h
 .\objects\diskio.o: .\GD32H7xx\core_cm7.h

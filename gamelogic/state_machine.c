@@ -1,6 +1,7 @@
 #include "logic.h"
 #include "game_api.h"
 #include "drivers.h"
+#include "disaster.h"
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -104,7 +105,8 @@ void on_exit_eat(void *data){
 void on_update_eat(void *data,float dt){
     extern Food foods[MAX_FOOD];
     PigData *pig_data = (PigData *)data;
-    
+    DisasterModifier mod = disaster_get_modifier();
+
     pig_data->eat_timer -= dt;
     if(pig_data->eat_timer <= 0){
         pig_data->eat_timer = 0;
@@ -115,25 +117,26 @@ void on_update_eat(void *data,float dt){
     int idx = pig_data->eat_fruit_idx;
     if(idx < 0 || idx >= MAX_FOOD) return;
     
-    pig_data->hunger -= dt * 10;
+    pig_data->hunger -= dt * 10 * mod.eat_effect_modifier;
     if(pig_data->hunger < 0){
         pig_data->hunger = 0;
     }
     
-    pig_data->growth += dt * foods[idx].growth_boost;
-    pig_data->weight += dt * foods[idx].weight_boost;
+    pig_data->growth += dt * foods[idx].growth_boost * mod.growth_rate_modifier;
+    pig_data->weight += dt * foods[idx].weight_boost * mod.weight_loss_rate;
 }
 
 void on_update_idle(void *data,float dt){
     PigData *pig_data = (PigData *)data;
-    pig_data->hunger += dt * 0.5; 
+    DisasterModifier mod = disaster_get_modifier();
+    pig_data->hunger += dt * 0.5f*mod.hunger_increase_rate; 
     if(pig_data->hunger >= 100){
         pig_data->hunger = 100;
-        pig_data->growth -= dt * 0.5;
+        pig_data->growth -= dt * 0.5f*mod.growth_rate_modifier;
         if(pig_data->growth < 0){
             pig_data->growth = 0;
         }
-        pig_data->weight -= dt * 0.5;
+        pig_data->weight -= dt * 0.5f*mod.weight_loss_rate;
         if(pig_data->weight < 0){
             pig_data->weight = 0;
         }

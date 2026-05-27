@@ -2840,7 +2840,7 @@
 
   <Group>
     <GroupName>game_logic</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -2877,6 +2877,30 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\gamelogic\type_init.c</PathWithFileName>
       <FilenameWithoutPath>type_init.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>18</GroupNumber>
+      <FileNumber>212</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\gamelogic\disaster.c</PathWithFileName>
+      <FilenameWithoutPath>disaster.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>18</GroupNumber>
+      <FileNumber>213</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\gamelogic\disaster.h</PathWithFileName>
+      <FilenameWithoutPath>disaster.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
