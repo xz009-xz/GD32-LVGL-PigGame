@@ -1,9 +1,9 @@
 .\objects\heap_4.o: Drivers\heap_4.c
-.\objects\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\heap_4.o: D:\cks\ARM\ARMCC\Bin\..\include\string.h
 .\objects\heap_4.o: Drivers\sdram_malloc.h
 .\objects\heap_4.o: .\GD32H7xx\gd32h7xx.h
 .\objects\heap_4.o: .\GD32H7xx\core_cm7.h
-.\objects\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\heap_4.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\heap_4.o: .\GD32H7xx\CMSIS\cmsis_version.h
 .\objects\heap_4.o: .\GD32H7xx\CMSIS\cmsis_compiler.h
 .\objects\heap_4.o: .\GD32H7xx\CMSIS\cmsis_armcc.h

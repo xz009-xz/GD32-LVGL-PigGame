@@ -2,7 +2,7 @@
 .\objects\lcd_tli.o: Drivers\LCD_tli.h
 .\objects\lcd_tli.o: .\GD32H7xx\gd32h7xx.h
 .\objects\lcd_tli.o: .\GD32H7xx\core_cm7.h
-.\objects\lcd_tli.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lcd_tli.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\lcd_tli.o: .\GD32H7xx\CMSIS\cmsis_version.h
 .\objects\lcd_tli.o: .\GD32H7xx\CMSIS\cmsis_compiler.h
 .\objects\lcd_tli.o: .\GD32H7xx\CMSIS\cmsis_armcc.h

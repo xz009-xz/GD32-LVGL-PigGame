@@ -1,2 +1,7 @@
-Load "f:\\pig_game_c\\ui_test\\cks\\Objects\\TemplateProject.axf" 
-Erase Done.Programming Done.Verify OK.Flash Load finished at 17:48:23
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\cks\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling ui_login.c...
+linking...
+Program Size: Code=185514 RO-data=293002 RW-data=928 ZI-data=32517600  
+".\Objects\TemplateProject.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:04

@@ -44,12 +44,12 @@ int main()
 				last_tick = current_tick;
 				disaster_update(dt);
 				static float trigger_timer = 0.0f;
-				static float chance = 0.0f;          // ÀÛ»ý¸ÅÂÊ£¬´¥·¢ºó¹éÁã
+				static float chance = 0.0f;          // ï¿½Û»ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				trigger_timer += dt;
 				if (trigger_timer >= 30.0f) {
 					trigger_timer = 0.0f;
 					if (!disaster_is_active()) {
-						// ¼ÆËãËùÓÐÖíµÄÆ½¾ù×´Ì¬
+						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½×´Ì¬
 						float avg_hunger = 0.0f, avg_weight = 0.0f;
 						for (int i = 0; i < MAX_PIGS; i++) {
 							avg_hunger += pig_fsms[i].pig_t.hunger;
@@ -58,13 +58,13 @@ int main()
 						avg_hunger /= MAX_PIGS;
 						avg_weight /= MAX_PIGS;
 	
-						// ÀÛ»ý¸ÅÂÊ£º»ù´¡ + ×´Ì¬Ìõ¼þ£¬´¥·¢Ç°³ÖÐøÀÛ¼Ó
-						if (avg_hunger > 60) chance += 0.5  f;
+						// ï¿½Û»ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ + ×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Û¼ï¿½
+						if (avg_hunger > 60) chance += 0.5f;
 						if (avg_weight > 80) chance += 0.01f;
 						if (chance > 1.0f) chance = 1.0f;
 	
 						if (rand_float() < chance) {
-							// Ëæ»úÑ¡ÔñÔÖº¦ÀàÐÍ£¨0/1/2£©
+							// ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½Í£ï¿½0/1/2ï¿½ï¿½
 							DisasterType disaster_type;
 							switch (rand() % 3) {
 								case 0:  disaster_type = DISASTER_HOT;  break;
@@ -72,7 +72,7 @@ int main()
 								default: disaster_type = DISASTER_RAIN; break;
 							}
 							disaster_start(disaster_type, 20.0f);
-							chance = 0.0f;    // ´¥·¢ºóÖØÖÃ
+							chance = 0.0f;    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						}
 					}
 				}

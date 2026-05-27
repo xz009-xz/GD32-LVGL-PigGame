@@ -9,7 +9,7 @@ lv_img_dsc_t image_struct1;
 void ui_game_start(void)
 {
 	lv_obj_t *start_screen=lv_obj_create(NULL);
-
+	
 	uint8_t* image_buffer = sdram_malloc( 1024 * 600 * 3 + 4 );
 	read_file_to_array("0:/img_start.bin", image_buffer,  1024 * 600 * 3 + 4 );
 	image_struct1.header.always_zero = 0;
@@ -33,5 +33,7 @@ void ui_game_start(void)
     lv_obj_set_style_shadow_opa(start_btn, LV_OPA_TRANSP, 0); 
 		
 	lv_scr_load(start_screen);
+	
+	create_login_ui();
 }
 

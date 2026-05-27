@@ -17,5 +17,6 @@ void hot_start(void);
 void hot_stop(void);
 void snow_start(void);
 void snow_stop(void);
+void create_login_ui(void);
 
 #endif

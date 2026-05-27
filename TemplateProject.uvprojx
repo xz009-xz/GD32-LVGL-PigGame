@@ -1502,6 +1502,11 @@
               <FileType>1</FileType>
               <FilePath>.\gameui\ui_snow.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_login.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gameui\ui_login.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
