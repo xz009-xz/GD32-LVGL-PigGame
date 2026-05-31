@@ -114,7 +114,7 @@ static void anim_small_pig_flash(lv_anim_t *anim)
 
 void pig_grow_anim(int pig_idx)
 {
-	//pig_idx=0;//测试用
+	pig_idx=0;//测试用
     target_pig = pig_fsms[pig_idx].pig_t.img_pig;
     flash_count = 0;
 
