@@ -80,6 +80,9 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_set_style_text_color(coin_label, lv_color_hex(0xFF9933), 0);
 	lv_obj_set_style_text_font(coin_label, &lv_font_montserrat_26, 0);
 
+	//饥饿
+	create_hunger_img();
+
 	//fruit
 	/*
 	lv_obj_t *btn_fruit[3];
@@ -101,12 +104,12 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_t *btn_back2 = lv_btn_create(game_screen);
 	lv_obj_set_size(btn_back2, 80, 40);
 	lv_obj_align(btn_back2, LV_ALIGN_TOP_LEFT, 100, 10);
-	lv_obj_add_event_cb(btn_back2,pig_grow_anim, LV_EVENT_RELEASED, NULL);
+	lv_obj_add_event_cb(btn_back2,show_hunger, LV_EVENT_RELEASED, NULL);
 
 	lv_obj_t *btn_back3 = lv_btn_create(game_screen);
 	lv_obj_set_size(btn_back3, 80, 40);
 	lv_obj_align(btn_back3, LV_ALIGN_TOP_LEFT, 190, 10);
-	lv_obj_add_event_cb(btn_back3,pig_small_anim, LV_EVENT_RELEASED, NULL);
+	lv_obj_add_event_cb(btn_back3,hide_hunger, LV_EVENT_RELEASED, NULL);
 
     lv_scr_load_anim(
         game_screen,

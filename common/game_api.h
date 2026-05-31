@@ -18,5 +18,8 @@ void hot_stop(void);
 void snow_start(void);
 void snow_stop(void);
 void create_login_ui(void);
+void create_hunger_img(void);
+void show_hunger(int pig_idx,int hunger_level);
+void hide_hunger(int pig_idx);
 
 #endif

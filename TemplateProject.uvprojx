@@ -1507,6 +1507,11 @@
               <FileType>1</FileType>
               <FilePath>.\gameui\ui_login.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_hunder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gameui\ui_hunder.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
