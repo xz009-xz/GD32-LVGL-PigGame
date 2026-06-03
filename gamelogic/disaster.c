@@ -24,7 +24,7 @@ typedef struct {
 
 static DisasterManager manager;
 static DisasterConfig configs[DISASTER_MAX] = {
-    { DISASTER_NONE, 0.0f, 1.0f, 0.0f, 1.0f },
+    { DISASTER_NONE, 0.0f, 1.0f, 1.0f, 1.0f },
     { DISASTER_HOT, -0.01f, 0.02f, 0.9f, 0.8f },
     { DISASTER_SNOW, -0.02f, 0.03f, 0.8f, 0.7f },
     { DISASTER_RAIN, -0.015f, 0.025f, 0.85f, 0.75f }
@@ -133,7 +133,7 @@ DisasterType disaster_get_type(void){
 
 DisasterModifier disaster_get_modifier(void){
     if(!manager.active){
-        DisasterModifier mod = {0.0f, 1.0f, 0.0f, 1.0f};
+        DisasterModifier mod = {1.0f, 1.0f, 1.0f, 1.0f};
         return mod;
     }
     DisasterConfig config = configs[manager.type];
@@ -150,6 +150,6 @@ float disaster_get_remaining_time(void){
     if(!manager.active){
         return 0.0f;
     }
-    //¹éÒ»»¯;
+    //ï¿½ï¿½Ò»ï¿½ï¿½;
     return (manager.duration - manager.timer) / manager.duration;
 }

@@ -18,5 +18,6 @@ void hot_stop(void);
 void snow_start(void);
 void snow_stop(void);
 void create_login_ui(void);
+void save_btn_cb(lv_event_t *e);
 
 #endif

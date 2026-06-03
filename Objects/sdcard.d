@@ -2,7 +2,7 @@
 .\objects\sdcard.o: Drivers\sdcard.h
 .\objects\sdcard.o: .\GD32H7xx\gd32h7xx.h
 .\objects\sdcard.o: .\GD32H7xx\core_cm7.h
-.\objects\sdcard.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sdcard.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\sdcard.o: .\GD32H7xx\CMSIS\cmsis_version.h
 .\objects\sdcard.o: .\GD32H7xx\CMSIS\cmsis_compiler.h
 .\objects\sdcard.o: .\GD32H7xx\CMSIS\cmsis_armcc.h
@@ -61,4 +61,4 @@
 .\objects\sdcard.o: .\GD32H7xx_standard_peripheral\Include\gd32h7xx_usart.h
 .\objects\sdcard.o: .\GD32H7xx_standard_peripheral\Include\gd32h7xx_vref.h
 .\objects\sdcard.o: .\GD32H7xx_standard_peripheral\Include\gd32h7xx_wwdgt.h
-.\objects\sdcard.o: D:\cks\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\sdcard.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

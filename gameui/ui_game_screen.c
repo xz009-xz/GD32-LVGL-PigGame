@@ -4,6 +4,8 @@
 #include "lv_port_indev_template.h"
 #include "game_api.h"
 #include "gamelogic/logic.h"
+#include "gamelogic/auth.h"
+#include "gamelogic/save.h"
 
 lv_img_dsc_t image_struct;
 lv_img_dsc_t image_fruit[3];
@@ -36,6 +38,9 @@ void pig_shack_anim(int pig_idx)
 
 void ui_game_screen(lv_event_t *e)
 {
+	extern char current_user[];
+    bool has_save = (current_user[0] != '\0') && save_exists(current_user);
+
 	lv_obj_t *game_screen = lv_obj_create(NULL);
 	lv_obj_clear_flag(game_screen, LV_OBJ_FLAG_SCROLLABLE);
 	// Create game screen
@@ -80,6 +85,14 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_set_style_text_color(coin_label, lv_color_hex(0xFF9933), 0);
 	lv_obj_set_style_text_font(coin_label, &lv_font_montserrat_26, 0);
 
+	lv_obj_t *save_btn = lv_btn_create(game_screen);
+	lv_obj_set_size(save_btn, 100, 40);
+	lv_obj_align(save_btn, LV_ALIGN_TOP_RIGHT, -20, 10);
+	lv_obj_add_event_cb(save_btn, save_btn_cb, LV_EVENT_CLICKED, NULL);
+
+	lv_obj_t *save_label = lv_label_create(save_btn);
+	lv_label_set_text(save_label, "SAVE");
+	lv_obj_center(save_label);
 	//fruit
 	/*
 	lv_obj_t *btn_fruit[3];
@@ -107,7 +120,11 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_set_size(btn_back3, 80, 40);
 	lv_obj_align(btn_back3, LV_ALIGN_TOP_LEFT, 190, 10);
 	lv_obj_add_event_cb(btn_back3,snow_stop, LV_EVENT_RELEASED, NULL);
-*/
+*/	
+	if (has_save) {
+        load_game(current_user);  // 覆写 pig_fsm_init() 的随机初始值为存档值
+    }
+
     lv_scr_load_anim(
         game_screen,
         LV_SCR_LOAD_ANIM_FADE_ON,

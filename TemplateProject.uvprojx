@@ -1537,6 +1537,26 @@
               <FileType>5</FileType>
               <FilePath>.\gamelogic\disaster.h</FilePath>
             </File>
+            <File>
+              <FileName>auth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gamelogic\auth.c</FilePath>
+            </File>
+            <File>
+              <FileName>auth.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gamelogic\auth.h</FilePath>
+            </File>
+            <File>
+              <FileName>save.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gamelogic\save.c</FilePath>
+            </File>
+            <File>
+              <FileName>save.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gamelogic\save.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

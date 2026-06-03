@@ -5,11 +5,14 @@
 #include "gamelogic/logic.h"
 #include "gamelogic/disaster.h"
 #include <stdlib.h>
+#include "gamelogic/auth.h"
+#include "gamelogic/save.h"
 
 pig_fsm pig_fsms[MAX_PIGS];
 Food foods[MAX_FOOD];
 float money = 200.0f;
 lv_obj_t *coin_label;
+char current_user[MAX_USERNAME_LEN + 1] = {0};
 
 float rand_float(void) {
     return (float)rand() / (float)RAND_MAX;
@@ -44,12 +47,12 @@ int main()
 				last_tick = current_tick;
 				disaster_update(dt);
 				static float trigger_timer = 0.0f;
-				static float chance = 0.0f;          // �ۻ����ʣ����������
+				static float chance = 0.0f;          
 				trigger_timer += dt;
 				if (trigger_timer >= 30.0f) {
 					trigger_timer = 0.0f;
 					if (!disaster_is_active()) {
-						// ������������ƽ��״̬
+						
 						float avg_hunger = 0.0f, avg_weight = 0.0f;
 						for (int i = 0; i < MAX_PIGS; i++) {
 							avg_hunger += pig_fsms[i].pig_t.hunger;
@@ -58,13 +61,13 @@ int main()
 						avg_hunger /= MAX_PIGS;
 						avg_weight /= MAX_PIGS;
 	
-						// �ۻ����ʣ����� + ״̬����������ǰ�����ۼ�
+						   
 						if (avg_hunger > 60) chance += 0.5f;
 						if (avg_weight > 80) chance += 0.01f;
 						if (chance > 1.0f) chance = 1.0f;
 	
 						if (rand_float() < chance) {
-							// ���ѡ���ֺ����ͣ�0/1/2��
+							// ���ѡ���ֺ����ͣ�?0/1/2��
 							DisasterType disaster_type;
 							switch (rand() % 3) {
 								case 0:  disaster_type = DISASTER_HOT;  break;
