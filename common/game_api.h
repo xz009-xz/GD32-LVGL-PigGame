@@ -18,6 +18,12 @@ void hot_stop(void);
 void snow_start(void);
 void snow_stop(void);
 void create_login_ui(void);
+<<<<<<< HEAD
 void save_btn_cb(lv_event_t *e);
+=======
+void create_hunger_img(void);
+void show_hunger(int pig_idx,int hunger_level);
+void hide_hunger(int pig_idx);
+>>>>>>> e059f4d54a5c7ec8dfd026815306492d10d8b132
 
 #endif

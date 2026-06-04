@@ -85,6 +85,7 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_set_style_text_color(coin_label, lv_color_hex(0xFF9933), 0);
 	lv_obj_set_style_text_font(coin_label, &lv_font_montserrat_26, 0);
 
+<<<<<<< HEAD
 	lv_obj_t *save_btn = lv_btn_create(game_screen);
 	lv_obj_set_size(save_btn, 100, 40);
 	lv_obj_align(save_btn, LV_ALIGN_TOP_RIGHT, -20, 10);
@@ -93,6 +94,11 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_t *save_label = lv_label_create(save_btn);
 	lv_label_set_text(save_label, "SAVE");
 	lv_obj_center(save_label);
+=======
+	//饥饿
+	create_hunger_img();
+
+>>>>>>> e059f4d54a5c7ec8dfd026815306492d10d8b132
 	//fruit
 	/*
 	lv_obj_t *btn_fruit[3];
@@ -110,20 +116,24 @@ void ui_game_screen(lv_event_t *e)
 	lv_obj_align(btn_back1, LV_ALIGN_TOP_LEFT, 10, 10);
 	lv_obj_add_event_cb(btn_back1,pig_grow_anim, LV_EVENT_RELEASED, NULL);
 */
-/*
+
 	lv_obj_t *btn_back2 = lv_btn_create(game_screen);
 	lv_obj_set_size(btn_back2, 80, 40);
 	lv_obj_align(btn_back2, LV_ALIGN_TOP_LEFT, 100, 10);
-	lv_obj_add_event_cb(btn_back2,snow_start, LV_EVENT_RELEASED, NULL);
+	lv_obj_add_event_cb(btn_back2,show_hunger, LV_EVENT_RELEASED, NULL);
 
 	lv_obj_t *btn_back3 = lv_btn_create(game_screen);
 	lv_obj_set_size(btn_back3, 80, 40);
 	lv_obj_align(btn_back3, LV_ALIGN_TOP_LEFT, 190, 10);
+<<<<<<< HEAD
 	lv_obj_add_event_cb(btn_back3,snow_stop, LV_EVENT_RELEASED, NULL);
 */	
 	if (has_save) {
         load_game(current_user);  // 覆写 pig_fsm_init() 的随机初始值为存档值
     }
+=======
+	lv_obj_add_event_cb(btn_back3,hide_hunger, LV_EVENT_RELEASED, NULL);
+>>>>>>> e059f4d54a5c7ec8dfd026815306492d10d8b132
 
     lv_scr_load_anim(
         game_screen,

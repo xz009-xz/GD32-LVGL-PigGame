@@ -99,7 +99,6 @@ void drop_finish_cb(struct _lv_anim_t *a)
 
 void pig_small_anim(int i)
 {
-    //i=5;//??????
 	pig_idx=i;
 
     // ????

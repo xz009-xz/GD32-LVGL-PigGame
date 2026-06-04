@@ -85,53 +85,76 @@ void ui_info(lv_event_t *e)
 {
     int i = (intptr_t)lv_event_get_user_data(e);
 
-    for(int j=0; j<10; j++){
+    for(int j = 0; j < 10; j++){
         if (j != i) {
-            //lv_obj_add_flag(pig_fsms[j].pig_t.img_pig, LV_OBJ_FLAG_HIDDEN);
             lv_obj_set_style_opa(pig_fsms[j].pig_t.img_pig, LV_OPA_50, 0);
         } 
     }
 
     create_info_image();
-
     create_screen_cover();
 
     int pig_x = pig_fsms[i].pig_t.x;
     int pig_y = pig_fsms[i].pig_t.y;
+
     info_img = lv_img_create(lv_scr_act());
 
-    lv_obj_t * label_id = lv_label_create(info_img);
-    lv_obj_t * label_growth = lv_label_create(info_img);
-    lv_obj_t * label_weight = lv_label_create(info_img);
-    lv_obj_t * label_hunger = lv_label_create(info_img);
+    /* ID Label */
+    lv_obj_t *label_id = lv_label_create(info_img);
     lv_label_set_text_fmt(label_id, "ID: %d", pig_fsms[i].pig_t.id);
-    lv_label_set_text_fmt(label_growth, "Growth: %.1f", pig_fsms[i].pig_t.growth);
-    lv_label_set_text_fmt(label_weight, "Weight: %.1f", pig_fsms[i].pig_t.weight);
-    lv_label_set_text_fmt(label_hunger, "Hunger: %.1f", pig_fsms[i].pig_t.hunger);
     lv_obj_set_style_text_font(label_id, &lv_font_montserrat_24, 0);
-    lv_obj_set_style_text_font(label_growth, &lv_font_montserrat_24, 0);
+
+    /* Weight Label */
+    lv_obj_t *label_weight = lv_label_create(info_img);
+    lv_label_set_text_fmt(label_weight, "Weight: %.1f kg", pig_fsms[i].pig_t.weight);
     lv_obj_set_style_text_font(label_weight, &lv_font_montserrat_24, 0);
+
+    /* Growth Label & Bar */
+    lv_obj_t *label_growth = lv_label_create(info_img);
+    lv_label_set_text(label_growth, "Growth:");
+    lv_obj_set_style_text_font(label_growth, &lv_font_montserrat_24, 0);
+
+    lv_obj_t *bar_growth = lv_bar_create(info_img);
+    lv_obj_set_size(bar_growth, 120, 12);
+    lv_bar_set_range(bar_growth, 0, 100);
+    lv_obj_set_style_bg_color(bar_growth, lv_color_hex(0xFF6A00), LV_PART_INDICATOR);
+    lv_bar_set_value(bar_growth, (int)pig_fsms[i].pig_t.growth, LV_ANIM_OFF);
+
+    /* Hunger Label & Bar */
+    lv_obj_t *label_hunger = lv_label_create(info_img);
+    lv_label_set_text(label_hunger, "Hunger:");
     lv_obj_set_style_text_font(label_hunger, &lv_font_montserrat_24, 0);
 
-    //012567为info1，3489为info2
+    lv_obj_t *bar_hunger = lv_bar_create(info_img);
+    lv_obj_set_size(bar_hunger, 120, 12);
+    lv_bar_set_range(bar_hunger, 0, 100);
+    lv_obj_set_style_bg_color(bar_hunger, lv_color_hex(0xFF0000), LV_PART_INDICATOR);
+    lv_bar_set_value(bar_hunger, (int)pig_fsms[i].pig_t.hunger, LV_ANIM_OFF);
+
+    /* 设置图片源及位置 */
     if(i == 0 || i == 1 || i == 2 || i == 5 || i == 6 || i == 7){
         lv_img_set_src(info_img, &image_info1);
-        lv_obj_set_pos(info_img, pig_x+120, pig_y-100);
+        lv_obj_set_pos(info_img, pig_x + 120, pig_y - 100);
 
         lv_obj_set_pos(label_id, 185, 35);
-        lv_obj_set_pos(label_growth, 145, 90);
-        lv_obj_set_pos(label_weight, 145, 137);
-        lv_obj_set_pos(label_hunger, 145, 189);
+        lv_obj_set_pos(label_weight, 95, 90);
+        lv_obj_set_pos(label_growth, 95, 140);
+        lv_obj_set_pos(bar_growth, 195, 150);
+        lv_obj_set_pos(label_hunger, 95, 190);
+        lv_obj_set_pos(bar_hunger, 195, 200);
     }
     else {
         lv_img_set_src(info_img, &image_info2);
-        lv_obj_set_pos(info_img, pig_x-420, pig_y-100);
+        lv_obj_set_pos(info_img, pig_x - 420, pig_y - 100);
 
         lv_obj_set_pos(label_id, 160, 35);
-        lv_obj_set_pos(label_growth, 120, 90);
-        lv_obj_set_pos(label_weight, 120, 137);
-        lv_obj_set_pos(label_hunger, 120, 189);
+        lv_obj_set_pos(label_weight, 70, 90);
+        lv_obj_set_pos(label_growth, 70, 140);
+        lv_obj_set_pos(bar_growth, 170, 150);
+        lv_obj_set_pos(label_hunger, 70, 190);
+        lv_obj_set_pos(bar_hunger, 170, 200);
     }
+
     lv_obj_move_foreground(info_img);
     lv_obj_add_flag(info_img, LV_OBJ_FLAG_CLICKABLE);
 }
