@@ -59,3 +59,26 @@ void fruit_cb(lv_event_t *e)
         }
     }
 }
+
+void fruit_help_cb(lv_event_t *e)
+{
+    void *user_data = lv_event_get_user_data(e);
+    int i = (intptr_t)user_data;
+
+    //title是水果名
+    const char *title = foods[i].name;
+    //text是水果价格、增长值、体重增长值
+    char text[100];
+    snprintf(text, sizeof(text), "Cost: %d\nGrowth: %d\nWeight Gain: %d",
+     foods[i].cost, foods[i].growth_boost, foods[i].weight_boost);
+    
+    lv_obj_t * mbox = lv_msgbox_create(
+        NULL,
+        title,
+        text,
+        NULL,
+        true
+    );
+
+    lv_obj_center(mbox);
+}

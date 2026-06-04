@@ -15,12 +15,6 @@ static lv_obj_t *remember_btn;
 static bool remember_me = false;
 static bool remember_file_exists = false;
 
-static void msgbox_ok_cb(lv_event_t * e)
-{
-    lv_obj_t * mbox = lv_event_get_user_data(e); // 用 user_data 存整个 msgbox
-    lv_obj_del(mbox);
-}
-
 static void show_error_msg(const char * title, const char * text)
 {
     lv_obj_t * mbox = lv_msgbox_create(
@@ -47,13 +41,6 @@ static void update_remember_button_style(void)
     } else {
         lv_obj_set_style_bg_color(remember_btn, lv_color_hex(0x999999), 0);
     }
-}
-
-// 只留默认处理，不重复触发
-static void keyboard_event_cb(lv_event_t *e)
-{
-    LV_UNUSED(e);
-    // 不写任何东西，让键盘自己正常工作
 }
 
 static void input_click_cb(lv_event_t *e)

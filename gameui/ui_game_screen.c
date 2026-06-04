@@ -72,12 +72,24 @@ void ui_game_screen(lv_event_t *e)
 	   // 初始化食物数据
 	create_food(foods);
 	lv_obj_t *btn_fruit[3];
+	lv_obj_t *help_fruit[3];
 	for(int i=0;i<3;i++){
 		btn_fruit[i] = lv_btn_create(game_screen);
 		lv_obj_set_size(btn_fruit[i], 110, 100);
-		lv_obj_align(btn_fruit[i], LV_ALIGN_TOP_LEFT, 328+i*128, 497);
+		lv_obj_set_pos(btn_fruit[i], 328+i*128, 497);
 		lv_obj_add_event_cb(btn_fruit[i],fruit_cb, LV_EVENT_ALL, (void*)i);
 		lv_obj_set_style_opa(btn_fruit[i], LV_OPA_0, 0);
+
+		help_fruit[i] = lv_btn_create(game_screen);
+		lv_obj_set_size(help_fruit[i], 30, 30);
+    	lv_obj_set_pos(help_fruit[i], 398+i*128, 565);
+		lv_obj_set_style_bg_color(help_fruit[i], lv_color_hex(0xB97A57), 0);
+		lv_obj_t *label1 = lv_label_create(help_fruit[i]);
+    	lv_label_set_text(label1, "?");
+    	lv_obj_center(label1);
+		lv_obj_add_event_cb(help_fruit[i],fruit_help_cb, LV_EVENT_CLICKED, (void*)i);
+
+		lv_obj_move_foreground(help_fruit[i]);
 	}
 	coin_label = lv_label_create(game_screen);
 	lv_label_set_text_fmt(coin_label, "%.0f", money);

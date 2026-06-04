@@ -22,5 +22,6 @@ void save_btn_cb(lv_event_t *e);
 void create_hunger_img(void);
 void show_hunger(int pig_idx,int hunger_level);
 void hide_hunger(int pig_idx);
+void fruit_help_cb(lv_event_t *e);
 
 #endif
