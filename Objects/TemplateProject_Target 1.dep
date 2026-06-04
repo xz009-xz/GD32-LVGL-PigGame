@@ -15768,7 +15768,7 @@ I (.\lvgl\examples\porting\lv_port_indev_template.h)(0x6A20E2E0)
 I (.\common\game_api.h)(0x6A20E4CE)
 I (.\gamelogic/logic.h)(0x6A20E2E0)
 I (.\common/game_type.h)(0x6A20E2E0)
-F (.\gameui\ui_login.c)(0x6A20EDB1)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\cks\pack\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_login.o --omf_browse .\objects\ui_login.crf --depend .\objects\ui_login.d)
+F (.\gameui\ui_login.c)(0x6A2115AE)(--c99 -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I .\GD32H7xx_standard_peripheral\Include -I .\GD32H7xx -I .\GD32H7xx\CMSIS -I . -I .\Drivers -I .\FATFS -I .\lvgl -I .\lvgl\src -I .\lvgl\examples\porting -I .\lvgl\demos\benchmark -I .\lvgl\demos\stress -I .\common -I .\gameapi -I .\mock -I .\assets -I .\gamelogic -I .\gameui --diag_suppress=68,111,188,223,546,1295-ID:\cks\pack\GigaDevice\GD32H7xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="538" -DUSE_STDPERIPH_DRIVER -DGD32H7XX -DGD32H7XXI -DHXTAL_VALUE="8000000"-o .\objects\ui_login.o --omf_browse .\objects\ui_login.crf --depend .\objects\ui_login.d)
 I (.\Drivers\drivers.h)(0x6A20E2DF)
 I (D:\cks\ARM\ARMCC\include\string.h)(0x5D9B3488)
 I (D:\cks\ARM\ARMCC\include\stdio.h)(0x5D9B348A)

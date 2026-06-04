@@ -15,6 +15,31 @@ static lv_obj_t *remember_btn;
 static bool remember_me = false;
 static bool remember_file_exists = false;
 
+static void msgbox_ok_cb(lv_event_t * e)
+{
+    lv_obj_t * mbox = lv_event_get_user_data(e); // 用 user_data 存整个 msgbox
+    lv_obj_del(mbox);
+}
+
+static void show_error_msg(const char * title, const char * text)
+{
+    lv_obj_t * mbox = lv_msgbox_create(
+        NULL,
+        title,
+        text,
+        NULL,
+        true
+    );
+
+    lv_obj_center(mbox);
+
+    // 设置文字为红色
+    lv_obj_t * label = lv_msgbox_get_text(mbox);
+    lv_obj_set_style_text_color(label, lv_palette_main(LV_PALETTE_RED), 0);
+    label = lv_msgbox_get_title(mbox);
+    lv_obj_set_style_text_color(label, lv_palette_main(LV_PALETTE_RED), 0);
+}
+
 static void update_remember_button_style(void)
 {
     if (remember_file_exists) {
@@ -72,7 +97,8 @@ static void remember_btn_cb(lv_event_t *e)
     }
 }
 
-static void login_btn_cb(lv_event_t *e) {
+static void login_btn_cb(lv_event_t *e)
+{
     const char *username = lv_textarea_get_text(username_ta);
     const char *password = lv_textarea_get_text(password_ta);
 
@@ -80,43 +106,55 @@ static void login_btn_cb(lv_event_t *e) {
 
     switch (res) {
         case AUTH_OK: {
-            // 记录当前用户
             extern char current_user[];
+
             strncpy(current_user, username, MAX_USERNAME_LEN);
             current_user[MAX_USERNAME_LEN] = '\0';
 
-            // 只有当用户显式点击记住我才保存当前登录信息
             if (remember_me) {
                 auth_save_remember(username, password);
                 remember_file_exists = true;
             }
 
-            // 进入游戏 (ui_game_screen 内部会自动 load 存档)
             ui_game_screen(NULL);
             break;
         }
+
         case AUTH_ERR_USER_NOT_FOUND:
-            // 显示用户不存在
+            show_error_msg(
+                "Login Failed",
+                "User does not exist."
+            );
             break;
+
         case AUTH_ERR_WRONG_PASSWORD:
-            // 显示密码错误
+            show_error_msg(
+                "Login Failed",
+                "Incorrect password."
+            );
             break;
+
         default:
+            show_error_msg(
+                "Login Failed",
+                "An error occurred during login.\nPlease try again later."
+            );
             break;
     }
 }
 
-static void reg_btn_cb(lv_event_t *e){
-
+static void reg_btn_cb(lv_event_t *e)
+{
     const char *username = lv_textarea_get_text(username_ta);
     const char *password = lv_textarea_get_text(password_ta);
 
     AuthResult res = auth_register(username, password);
 
-    switch(res){
+    switch(res) {
+
         case AUTH_OK: {
-            // 记录当前用户
             extern char current_user[];
+
             strncpy(current_user, username, MAX_USERNAME_LEN);
             current_user[MAX_USERNAME_LEN] = '\0';
 
@@ -125,15 +163,22 @@ static void reg_btn_cb(lv_event_t *e){
                 remember_file_exists = true;
             }
 
-            // 新用户直接进入游戏（无需加载存档）
             ui_game_screen(NULL);
             break;
         }
+
         case AUTH_ERR_USER_EXIST:
-            // 显示用户已存在错误
+            show_error_msg(
+                "Register Failed",
+                "Username already exists."
+            );
             break;
+
         default:
-            // 显示其他错误
+            show_error_msg(
+                "Register Failed",
+                "Failed to create account.\nPlease try again later."
+            );
             break;
     }
 }
