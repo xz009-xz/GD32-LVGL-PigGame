@@ -6726,6 +6726,12 @@ Section Cross References
     ui_game_screen.o(i.ui_game_screen) refers to main.o(.data) for coin_label
     ui_game_screen.o(i.ui_game_screen) refers to lv_font_montserrat_26.o(.constdata) for lv_font_montserrat_26
     ui_game_screen.o(i.ui_game_screen) refers to ui_login.o(i.save_btn_cb) for save_btn_cb
+    ui_game_screen.o(i.ui_game_screen) refers to ui_hot.o(i.hot_start) for hot_start
+    ui_game_screen.o(i.ui_game_screen) refers to ui_hot.o(i.hot_stop) for hot_stop
+    ui_game_screen.o(i.ui_game_screen) refers to ui_snow.o(i.snow_start) for snow_start
+    ui_game_screen.o(i.ui_game_screen) refers to ui_snow.o(i.snow_stop) for snow_stop
+    ui_game_screen.o(i.ui_game_screen) refers to ui_rain.o(i.rain_start) for rain_start
+    ui_game_screen.o(i.ui_game_screen) refers to ui_rain.o(i.rain_stop) for rain_stop
     ui_pig_to_big.o(i.anim_big_pig_flash) refers to lv_obj.o(i.lv_obj_has_flag) for lv_obj_has_flag
     ui_pig_to_big.o(i.anim_big_pig_flash) refers to lv_obj.o(i.lv_obj_clear_flag) for lv_obj_clear_flag
     ui_pig_to_big.o(i.anim_big_pig_flash) refers to lv_obj.o(i.lv_obj_add_flag) for lv_obj_add_flag
@@ -11348,196 +11354,196 @@ Image Symbol Table
     i.trans_del                              0x0802e6fc   Section        0  lv_obj_style.o(i.trans_del)
     trans_del                                0x0802e6fd   Thumb Code   168  lv_obj_style.o(i.trans_del)
     i.ui_game_screen                         0x0802e7a8   Section        0  ui_game_screen.o(i.ui_game_screen)
-    i.ui_game_start                          0x0802ea74   Section        0  game_start.o(i.ui_game_start)
-    i.ui_info                                0x0802eb38   Section        0  ui_info.o(i.ui_info)
-    i.unicode_list_compare                   0x0802ed8c   Section        0  lv_font_fmt_txt.o(i.unicode_list_compare)
-    unicode_list_compare                     0x0802ed8d   Thumb Code     8  lv_font_fmt_txt.o(i.unicode_list_compare)
-    i.update_cursor_position_on_click        0x0802ed94   Section        0  lv_textarea.o(i.update_cursor_position_on_click)
-    update_cursor_position_on_click          0x0802ed95   Thumb Code   384  lv_textarea.o(i.update_cursor_position_on_click)
-    i.update_init                            0x0802ef14   Section        0  state_machine.o(i.update_init)
-    i.update_remember_button_style           0x0802ef20   Section        0  ui_login.o(i.update_remember_button_style)
-    update_remember_button_style             0x0802ef21   Thumb Code    34  ui_login.o(i.update_remember_button_style)
-    i.usart_baudrate_set                     0x0802ef4c   Section        0  gd32h7xx_usart.o(i.usart_baudrate_set)
-    i.usart_deinit                           0x0802efdc   Section        0  gd32h7xx_usart.o(i.usart_deinit)
-    i.usart_enable                           0x0802f058   Section        0  gd32h7xx_usart.o(i.usart_enable)
-    i.usart_transmit_config                  0x0802f062   Section        0  gd32h7xx_usart.o(i.usart_transmit_config)
-    i.validate                               0x0802f072   Section        0  ff.o(i.validate)
-    validate                                 0x0802f073   Thumb Code    52  ff.o(i.validate)
-    i.value_changed_event_cb                 0x0802f0a8   Section        0  lv_calendar_header_arrow.o(i.value_changed_event_cb)
-    value_changed_event_cb                   0x0802f0a9   Thumb Code    56  lv_calendar_header_arrow.o(i.value_changed_event_cb)
-    i.value_changed_event_cb                 0x0802f0ec   Section        0  lv_calendar_header_dropdown.o(i.value_changed_event_cb)
-    value_changed_event_cb                   0x0802f0ed   Thumb Code    72  lv_calendar_header_dropdown.o(i.value_changed_event_cb)
-    i.value_update                           0x0802f134   Section        0  lv_arc.o(i.value_update)
-    value_update                             0x0802f135   Thumb Code   194  lv_arc.o(i.value_update)
-    i.xdir_sum                               0x0802f1f6   Section        0  ff.o(i.xdir_sum)
-    xdir_sum                                 0x0802f1f7   Thumb Code    52  ff.o(i.xdir_sum)
-    i.xname_sum                              0x0802f22a   Section        0  ff.o(i.xname_sum)
-    xname_sum                                0x0802f22b   Thumb Code    62  ff.o(i.xname_sum)
-    i.year_event_cb                          0x0802f268   Section        0  lv_calendar_header_dropdown.o(i.year_event_cb)
-    year_event_cb                            0x0802f269   Thumb Code    56  lv_calendar_header_dropdown.o(i.year_event_cb)
-    x$fpl$fpinit                             0x0802f2a0   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x0802f2a0   Number         0  fpinit.o(x$fpl$fpinit)
-    .constdata                               0x0802f2ac   Section       48  gd32h7xx_spi.o(.constdata)
-    .constdata                               0x0802f2dc   Section       10  touch_gtxx.o(.constdata)
-    g_atk_rgblcd_touch_tp_reg                0x0802f2dc   Data          10  touch_gtxx.o(.constdata)
-    .constdata                               0x0802f2e8   Section       76  ff.o(.constdata)
-    LfnOfs                                   0x0802f2e8   Data          13  ff.o(.constdata)
-    badchr                                   0x0802f2f5   Data          18  ff.o(.constdata)
-    cst                                      0x0802f308   Data          14  ff.o(.constdata)
-    cst32                                    0x0802f316   Data          14  ff.o(.constdata)
-    defopt                                   0x0802f324   Data          16  ff.o(.constdata)
-    .constdata                               0x0802f334   Section    175030  ffunicode.o(.constdata)
-    uni2oem936                               0x0802f334   Data       87172  ffunicode.o(.constdata)
-    oem2uni936                               0x080447b8   Data       87172  ffunicode.o(.constdata)
-    cvt1                                     0x08059c3c   Data         498  ffunicode.o(.constdata)
-    cvt2                                     0x08059e2e   Data         188  ffunicode.o(.constdata)
-    .constdata                               0x08059eec   Section       28  lv_obj.o(.constdata)
-    .constdata                               0x08059f08   Section        8  lv_obj_pos.o(.constdata)
-    .constdata                               0x08059f10   Section      278  lv_draw_sw_letter.o(.constdata)
-    .constdata                               0x0805a026   Section       33  lv_draw_sw_line.o(.constdata)
-    wcorr                                    0x0805a026   Data          33  lv_draw_sw_line.o(.constdata)
-    .constdata                               0x0805a048   Section        8  lv_draw_sw_polygon.o(.constdata)
-    .constdata                               0x0805a050   Section       22  lv_theme_default.o(.constdata)
-    trans_props                              0x0805a050   Data          22  lv_theme_default.o(.constdata)
-    .constdata                               0x0805a068   Section       28  lv_calendar.o(.constdata)
-    .constdata                               0x0805a084   Section       28  lv_calendar_header_arrow.o(.constdata)
-    .constdata                               0x0805a0a0   Section       28  lv_calendar_header_dropdown.o(.constdata)
-    .constdata                               0x0805a0bc   Section       28  lv_chart.o(.constdata)
-    .constdata                               0x0805a0d8   Section       28  lv_colorwheel.o(.constdata)
-    .constdata                               0x0805a0f4   Section       28  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a110   Section      176  lv_keyboard.o(.constdata)
-    default_kb_map_lc                        0x0805a110   Data         176  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a1c0   Section       80  lv_keyboard.o(.constdata)
-    default_kb_ctrl_lc_map                   0x0805a1c0   Data          80  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a210   Section      176  lv_keyboard.o(.constdata)
-    default_kb_map_uc                        0x0805a210   Data         176  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a2c0   Section       80  lv_keyboard.o(.constdata)
-    default_kb_ctrl_uc_map                   0x0805a2c0   Data          80  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a310   Section      176  lv_keyboard.o(.constdata)
-    default_kb_map_spec                      0x0805a310   Data         176  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a3c0   Section       80  lv_keyboard.o(.constdata)
-    default_kb_ctrl_spec_map                 0x0805a3c0   Data          80  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a410   Section       84  lv_keyboard.o(.constdata)
-    default_kb_map_num                       0x0805a410   Data          84  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a464   Section       34  lv_keyboard.o(.constdata)
-    default_kb_ctrl_num_map                  0x0805a464   Data          34  lv_keyboard.o(.constdata)
-    .constdata                               0x0805a488   Section       28  lv_led.o(.constdata)
-    .constdata                               0x0805a4a4   Section       84  lv_list.o(.constdata)
-    .constdata                               0x0805a4f8   Section      252  lv_menu.o(.constdata)
-    .constdata                               0x0805a5f4   Section       28  lv_meter.o(.constdata)
-    .constdata                               0x0805a610   Section       84  lv_msgbox.o(.constdata)
-    .constdata                               0x0805a664   Section       28  lv_spinbox.o(.constdata)
-    .constdata                               0x0805a680   Section       28  lv_spinner.o(.constdata)
-    .constdata                               0x0805a69c   Section       28  lv_tabview.o(.constdata)
-    .constdata                               0x0805a6b8   Section       56  lv_tileview.o(.constdata)
-    .constdata                               0x0805a6f0   Section       28  lv_win.o(.constdata)
-    .constdata                               0x0805a70c   Section     8832  lv_font_montserrat_14.o(.constdata)
-    glyph_bitmap                             0x0805a70c   Data        8832  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805c98c   Section     1264  lv_font_montserrat_14.o(.constdata)
-    glyph_dsc                                0x0805c98c   Data        1264  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805ce7c   Section      124  lv_font_montserrat_14.o(.constdata)
-    unicode_list_1                           0x0805ce7c   Data         124  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805cef8   Section       40  lv_font_montserrat_14.o(.constdata)
-    cmaps                                    0x0805cef8   Data          40  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805cf20   Section      158  lv_font_montserrat_14.o(.constdata)
-    kern_left_class_mapping                  0x0805cf20   Data         158  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805cfbe   Section      158  lv_font_montserrat_14.o(.constdata)
-    kern_right_class_mapping                 0x0805cfbe   Data         158  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805d05c   Section     2989  lv_font_montserrat_14.o(.constdata)
-    kern_class_values                        0x0805d05c   Data        2989  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805dc0c   Section       16  lv_font_montserrat_14.o(.constdata)
-    kern_classes                             0x0805dc0c   Data          16  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805dc1c   Section       24  lv_font_montserrat_14.o(.constdata)
-    font_dsc                                 0x0805dc1c   Data          24  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805dc34   Section       28  lv_font_montserrat_14.o(.constdata)
-    .constdata                               0x0805dc50   Section    23884  lv_font_montserrat_24.o(.constdata)
-    glyph_bitmap                             0x0805dc50   Data       23884  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x0806399c   Section     1264  lv_font_montserrat_24.o(.constdata)
-    glyph_dsc                                0x0806399c   Data        1264  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x08063e8c   Section      124  lv_font_montserrat_24.o(.constdata)
-    unicode_list_1                           0x08063e8c   Data         124  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x08063f08   Section       40  lv_font_montserrat_24.o(.constdata)
-    cmaps                                    0x08063f08   Data          40  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x08063f30   Section      158  lv_font_montserrat_24.o(.constdata)
-    kern_left_class_mapping                  0x08063f30   Data         158  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x08063fce   Section      158  lv_font_montserrat_24.o(.constdata)
-    kern_right_class_mapping                 0x08063fce   Data         158  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x0806406c   Section     2989  lv_font_montserrat_24.o(.constdata)
-    kern_class_values                        0x0806406c   Data        2989  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x08064c1c   Section       16  lv_font_montserrat_24.o(.constdata)
-    kern_classes                             0x08064c1c   Data          16  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x08064c2c   Section       24  lv_font_montserrat_24.o(.constdata)
-    font_dsc                                 0x08064c2c   Data          24  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x08064c44   Section       28  lv_font_montserrat_24.o(.constdata)
-    .constdata                               0x08064c60   Section    28088  lv_font_montserrat_26.o(.constdata)
-    glyph_bitmap                             0x08064c60   Data       28088  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806ba18   Section     1264  lv_font_montserrat_26.o(.constdata)
-    glyph_dsc                                0x0806ba18   Data        1264  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806bf08   Section      124  lv_font_montserrat_26.o(.constdata)
-    unicode_list_1                           0x0806bf08   Data         124  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806bf84   Section       40  lv_font_montserrat_26.o(.constdata)
-    cmaps                                    0x0806bf84   Data          40  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806bfac   Section      158  lv_font_montserrat_26.o(.constdata)
-    kern_left_class_mapping                  0x0806bfac   Data         158  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806c04a   Section      158  lv_font_montserrat_26.o(.constdata)
-    kern_right_class_mapping                 0x0806c04a   Data         158  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806c0e8   Section     2989  lv_font_montserrat_26.o(.constdata)
-    kern_class_values                        0x0806c0e8   Data        2989  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806cc98   Section       16  lv_font_montserrat_26.o(.constdata)
-    kern_classes                             0x0806cc98   Data          16  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806cca8   Section       24  lv_font_montserrat_26.o(.constdata)
-    font_dsc                                 0x0806cca8   Data          24  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806ccc0   Section       28  lv_font_montserrat_26.o(.constdata)
-    .constdata                               0x0806ccdc   Section    41096  lv_font_montserrat_32.o(.constdata)
-    glyph_bitmap                             0x0806ccdc   Data       41096  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x08076d64   Section     1264  lv_font_montserrat_32.o(.constdata)
-    glyph_dsc                                0x08076d64   Data        1264  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x08077254   Section      124  lv_font_montserrat_32.o(.constdata)
-    unicode_list_1                           0x08077254   Data         124  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x080772d0   Section       40  lv_font_montserrat_32.o(.constdata)
-    cmaps                                    0x080772d0   Data          40  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x080772f8   Section      158  lv_font_montserrat_32.o(.constdata)
-    kern_left_class_mapping                  0x080772f8   Data         158  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x08077396   Section      158  lv_font_montserrat_32.o(.constdata)
-    kern_right_class_mapping                 0x08077396   Data         158  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x08077434   Section     2989  lv_font_montserrat_32.o(.constdata)
-    kern_class_values                        0x08077434   Data        2989  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x08077fe4   Section       16  lv_font_montserrat_32.o(.constdata)
-    kern_classes                             0x08077fe4   Data          16  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x08077ff4   Section       24  lv_font_montserrat_32.o(.constdata)
-    font_dsc                                 0x08077ff4   Data          24  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x0807800c   Section       28  lv_font_montserrat_32.o(.constdata)
-    .constdata                               0x08078028   Section      380  lv_color.o(.constdata)
-    colors                                   0x08078028   Data          38  lv_color.o(.constdata)
-    colors                                   0x0807804e   Data         190  lv_color.o(.constdata)
-    colors                                   0x0807810c   Data         152  lv_color.o(.constdata)
-    .constdata                               0x080781a4   Section      182  lv_math.o(.constdata)
-    sin0_90_table                            0x080781a4   Data         182  lv_math.o(.constdata)
-    .constdata                               0x08078260   Section       80  lv_printf.o(.constdata)
-    pow10                                    0x08078260   Data          80  lv_printf.o(.constdata)
-    .constdata                               0x080782b0   Section       28  lv_arc.o(.constdata)
-    .constdata                               0x080782cc   Section       28  lv_bar.o(.constdata)
-    .constdata                               0x080782e8   Section       28  lv_btn.o(.constdata)
-    .constdata                               0x08078304   Section       28  lv_btnmatrix.o(.constdata)
-    .constdata                               0x08078320   Section       28  lv_checkbox.o(.constdata)
-    .constdata                               0x0807833c   Section       56  lv_dropdown.o(.constdata)
-    .constdata                               0x08078374   Section       28  lv_img.o(.constdata)
-    .constdata                               0x08078390   Section       28  lv_label.o(.constdata)
-    .constdata                               0x080783ac   Section       28  lv_line.o(.constdata)
-    .constdata                               0x080783c8   Section       56  lv_roller.o(.constdata)
-    .constdata                               0x08078400   Section       28  lv_slider.o(.constdata)
-    .constdata                               0x0807841c   Section       28  lv_switch.o(.constdata)
-    .constdata                               0x08078438   Section       28  lv_table.o(.constdata)
-    .constdata                               0x08078454   Section       28  lv_textarea.o(.constdata)
-    .constdata                               0x08078470   Section       16  disaster.o(.constdata)
-    .conststring                             0x08078480   Section       27  lv_calendar.o(.conststring)
-    .conststring                             0x0807849c   Section      105  lv_calendar_header_arrow.o(.conststring)
-    .conststring                             0x08078508   Section      652  lv_calendar_header_dropdown.o(.conststring)
-    .conststring                             0x08078794   Section      157  lv_keyboard.o(.conststring)
-    .conststring                             0x08078834   Section      108  lv_keyboard.o(.conststring)
-    .conststring                             0x080788a0   Section      126  lv_keyboard.o(.conststring)
-    .conststring                             0x08078920   Section        4  lv_keyboard.o(.conststring)
-    .conststring                             0x08078924   Section       37  lv_btnmatrix.o(.conststring)
+    i.ui_game_start                          0x0802ec44   Section        0  game_start.o(i.ui_game_start)
+    i.ui_info                                0x0802ed08   Section        0  ui_info.o(i.ui_info)
+    i.unicode_list_compare                   0x0802ef5c   Section        0  lv_font_fmt_txt.o(i.unicode_list_compare)
+    unicode_list_compare                     0x0802ef5d   Thumb Code     8  lv_font_fmt_txt.o(i.unicode_list_compare)
+    i.update_cursor_position_on_click        0x0802ef64   Section        0  lv_textarea.o(i.update_cursor_position_on_click)
+    update_cursor_position_on_click          0x0802ef65   Thumb Code   384  lv_textarea.o(i.update_cursor_position_on_click)
+    i.update_init                            0x0802f0e4   Section        0  state_machine.o(i.update_init)
+    i.update_remember_button_style           0x0802f0f0   Section        0  ui_login.o(i.update_remember_button_style)
+    update_remember_button_style             0x0802f0f1   Thumb Code    34  ui_login.o(i.update_remember_button_style)
+    i.usart_baudrate_set                     0x0802f11c   Section        0  gd32h7xx_usart.o(i.usart_baudrate_set)
+    i.usart_deinit                           0x0802f1ac   Section        0  gd32h7xx_usart.o(i.usart_deinit)
+    i.usart_enable                           0x0802f228   Section        0  gd32h7xx_usart.o(i.usart_enable)
+    i.usart_transmit_config                  0x0802f232   Section        0  gd32h7xx_usart.o(i.usart_transmit_config)
+    i.validate                               0x0802f242   Section        0  ff.o(i.validate)
+    validate                                 0x0802f243   Thumb Code    52  ff.o(i.validate)
+    i.value_changed_event_cb                 0x0802f278   Section        0  lv_calendar_header_arrow.o(i.value_changed_event_cb)
+    value_changed_event_cb                   0x0802f279   Thumb Code    56  lv_calendar_header_arrow.o(i.value_changed_event_cb)
+    i.value_changed_event_cb                 0x0802f2bc   Section        0  lv_calendar_header_dropdown.o(i.value_changed_event_cb)
+    value_changed_event_cb                   0x0802f2bd   Thumb Code    72  lv_calendar_header_dropdown.o(i.value_changed_event_cb)
+    i.value_update                           0x0802f304   Section        0  lv_arc.o(i.value_update)
+    value_update                             0x0802f305   Thumb Code   194  lv_arc.o(i.value_update)
+    i.xdir_sum                               0x0802f3c6   Section        0  ff.o(i.xdir_sum)
+    xdir_sum                                 0x0802f3c7   Thumb Code    52  ff.o(i.xdir_sum)
+    i.xname_sum                              0x0802f3fa   Section        0  ff.o(i.xname_sum)
+    xname_sum                                0x0802f3fb   Thumb Code    62  ff.o(i.xname_sum)
+    i.year_event_cb                          0x0802f438   Section        0  lv_calendar_header_dropdown.o(i.year_event_cb)
+    year_event_cb                            0x0802f439   Thumb Code    56  lv_calendar_header_dropdown.o(i.year_event_cb)
+    x$fpl$fpinit                             0x0802f470   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x0802f470   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x0802f47c   Section       48  gd32h7xx_spi.o(.constdata)
+    .constdata                               0x0802f4ac   Section       10  touch_gtxx.o(.constdata)
+    g_atk_rgblcd_touch_tp_reg                0x0802f4ac   Data          10  touch_gtxx.o(.constdata)
+    .constdata                               0x0802f4b8   Section       76  ff.o(.constdata)
+    LfnOfs                                   0x0802f4b8   Data          13  ff.o(.constdata)
+    badchr                                   0x0802f4c5   Data          18  ff.o(.constdata)
+    cst                                      0x0802f4d8   Data          14  ff.o(.constdata)
+    cst32                                    0x0802f4e6   Data          14  ff.o(.constdata)
+    defopt                                   0x0802f4f4   Data          16  ff.o(.constdata)
+    .constdata                               0x0802f504   Section    175030  ffunicode.o(.constdata)
+    uni2oem936                               0x0802f504   Data       87172  ffunicode.o(.constdata)
+    oem2uni936                               0x08044988   Data       87172  ffunicode.o(.constdata)
+    cvt1                                     0x08059e0c   Data         498  ffunicode.o(.constdata)
+    cvt2                                     0x08059ffe   Data         188  ffunicode.o(.constdata)
+    .constdata                               0x0805a0bc   Section       28  lv_obj.o(.constdata)
+    .constdata                               0x0805a0d8   Section        8  lv_obj_pos.o(.constdata)
+    .constdata                               0x0805a0e0   Section      278  lv_draw_sw_letter.o(.constdata)
+    .constdata                               0x0805a1f6   Section       33  lv_draw_sw_line.o(.constdata)
+    wcorr                                    0x0805a1f6   Data          33  lv_draw_sw_line.o(.constdata)
+    .constdata                               0x0805a218   Section        8  lv_draw_sw_polygon.o(.constdata)
+    .constdata                               0x0805a220   Section       22  lv_theme_default.o(.constdata)
+    trans_props                              0x0805a220   Data          22  lv_theme_default.o(.constdata)
+    .constdata                               0x0805a238   Section       28  lv_calendar.o(.constdata)
+    .constdata                               0x0805a254   Section       28  lv_calendar_header_arrow.o(.constdata)
+    .constdata                               0x0805a270   Section       28  lv_calendar_header_dropdown.o(.constdata)
+    .constdata                               0x0805a28c   Section       28  lv_chart.o(.constdata)
+    .constdata                               0x0805a2a8   Section       28  lv_colorwheel.o(.constdata)
+    .constdata                               0x0805a2c4   Section       28  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a2e0   Section      176  lv_keyboard.o(.constdata)
+    default_kb_map_lc                        0x0805a2e0   Data         176  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a390   Section       80  lv_keyboard.o(.constdata)
+    default_kb_ctrl_lc_map                   0x0805a390   Data          80  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a3e0   Section      176  lv_keyboard.o(.constdata)
+    default_kb_map_uc                        0x0805a3e0   Data         176  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a490   Section       80  lv_keyboard.o(.constdata)
+    default_kb_ctrl_uc_map                   0x0805a490   Data          80  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a4e0   Section      176  lv_keyboard.o(.constdata)
+    default_kb_map_spec                      0x0805a4e0   Data         176  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a590   Section       80  lv_keyboard.o(.constdata)
+    default_kb_ctrl_spec_map                 0x0805a590   Data          80  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a5e0   Section       84  lv_keyboard.o(.constdata)
+    default_kb_map_num                       0x0805a5e0   Data          84  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a634   Section       34  lv_keyboard.o(.constdata)
+    default_kb_ctrl_num_map                  0x0805a634   Data          34  lv_keyboard.o(.constdata)
+    .constdata                               0x0805a658   Section       28  lv_led.o(.constdata)
+    .constdata                               0x0805a674   Section       84  lv_list.o(.constdata)
+    .constdata                               0x0805a6c8   Section      252  lv_menu.o(.constdata)
+    .constdata                               0x0805a7c4   Section       28  lv_meter.o(.constdata)
+    .constdata                               0x0805a7e0   Section       84  lv_msgbox.o(.constdata)
+    .constdata                               0x0805a834   Section       28  lv_spinbox.o(.constdata)
+    .constdata                               0x0805a850   Section       28  lv_spinner.o(.constdata)
+    .constdata                               0x0805a86c   Section       28  lv_tabview.o(.constdata)
+    .constdata                               0x0805a888   Section       56  lv_tileview.o(.constdata)
+    .constdata                               0x0805a8c0   Section       28  lv_win.o(.constdata)
+    .constdata                               0x0805a8dc   Section     8832  lv_font_montserrat_14.o(.constdata)
+    glyph_bitmap                             0x0805a8dc   Data        8832  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805cb5c   Section     1264  lv_font_montserrat_14.o(.constdata)
+    glyph_dsc                                0x0805cb5c   Data        1264  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805d04c   Section      124  lv_font_montserrat_14.o(.constdata)
+    unicode_list_1                           0x0805d04c   Data         124  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805d0c8   Section       40  lv_font_montserrat_14.o(.constdata)
+    cmaps                                    0x0805d0c8   Data          40  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805d0f0   Section      158  lv_font_montserrat_14.o(.constdata)
+    kern_left_class_mapping                  0x0805d0f0   Data         158  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805d18e   Section      158  lv_font_montserrat_14.o(.constdata)
+    kern_right_class_mapping                 0x0805d18e   Data         158  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805d22c   Section     2989  lv_font_montserrat_14.o(.constdata)
+    kern_class_values                        0x0805d22c   Data        2989  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805dddc   Section       16  lv_font_montserrat_14.o(.constdata)
+    kern_classes                             0x0805dddc   Data          16  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805ddec   Section       24  lv_font_montserrat_14.o(.constdata)
+    font_dsc                                 0x0805ddec   Data          24  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805de04   Section       28  lv_font_montserrat_14.o(.constdata)
+    .constdata                               0x0805de20   Section    23884  lv_font_montserrat_24.o(.constdata)
+    glyph_bitmap                             0x0805de20   Data       23884  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x08063b6c   Section     1264  lv_font_montserrat_24.o(.constdata)
+    glyph_dsc                                0x08063b6c   Data        1264  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x0806405c   Section      124  lv_font_montserrat_24.o(.constdata)
+    unicode_list_1                           0x0806405c   Data         124  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x080640d8   Section       40  lv_font_montserrat_24.o(.constdata)
+    cmaps                                    0x080640d8   Data          40  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x08064100   Section      158  lv_font_montserrat_24.o(.constdata)
+    kern_left_class_mapping                  0x08064100   Data         158  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x0806419e   Section      158  lv_font_montserrat_24.o(.constdata)
+    kern_right_class_mapping                 0x0806419e   Data         158  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x0806423c   Section     2989  lv_font_montserrat_24.o(.constdata)
+    kern_class_values                        0x0806423c   Data        2989  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x08064dec   Section       16  lv_font_montserrat_24.o(.constdata)
+    kern_classes                             0x08064dec   Data          16  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x08064dfc   Section       24  lv_font_montserrat_24.o(.constdata)
+    font_dsc                                 0x08064dfc   Data          24  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x08064e14   Section       28  lv_font_montserrat_24.o(.constdata)
+    .constdata                               0x08064e30   Section    28088  lv_font_montserrat_26.o(.constdata)
+    glyph_bitmap                             0x08064e30   Data       28088  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806bbe8   Section     1264  lv_font_montserrat_26.o(.constdata)
+    glyph_dsc                                0x0806bbe8   Data        1264  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806c0d8   Section      124  lv_font_montserrat_26.o(.constdata)
+    unicode_list_1                           0x0806c0d8   Data         124  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806c154   Section       40  lv_font_montserrat_26.o(.constdata)
+    cmaps                                    0x0806c154   Data          40  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806c17c   Section      158  lv_font_montserrat_26.o(.constdata)
+    kern_left_class_mapping                  0x0806c17c   Data         158  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806c21a   Section      158  lv_font_montserrat_26.o(.constdata)
+    kern_right_class_mapping                 0x0806c21a   Data         158  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806c2b8   Section     2989  lv_font_montserrat_26.o(.constdata)
+    kern_class_values                        0x0806c2b8   Data        2989  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806ce68   Section       16  lv_font_montserrat_26.o(.constdata)
+    kern_classes                             0x0806ce68   Data          16  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806ce78   Section       24  lv_font_montserrat_26.o(.constdata)
+    font_dsc                                 0x0806ce78   Data          24  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806ce90   Section       28  lv_font_montserrat_26.o(.constdata)
+    .constdata                               0x0806ceac   Section    41096  lv_font_montserrat_32.o(.constdata)
+    glyph_bitmap                             0x0806ceac   Data       41096  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x08076f34   Section     1264  lv_font_montserrat_32.o(.constdata)
+    glyph_dsc                                0x08076f34   Data        1264  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x08077424   Section      124  lv_font_montserrat_32.o(.constdata)
+    unicode_list_1                           0x08077424   Data         124  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x080774a0   Section       40  lv_font_montserrat_32.o(.constdata)
+    cmaps                                    0x080774a0   Data          40  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x080774c8   Section      158  lv_font_montserrat_32.o(.constdata)
+    kern_left_class_mapping                  0x080774c8   Data         158  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x08077566   Section      158  lv_font_montserrat_32.o(.constdata)
+    kern_right_class_mapping                 0x08077566   Data         158  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x08077604   Section     2989  lv_font_montserrat_32.o(.constdata)
+    kern_class_values                        0x08077604   Data        2989  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x080781b4   Section       16  lv_font_montserrat_32.o(.constdata)
+    kern_classes                             0x080781b4   Data          16  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x080781c4   Section       24  lv_font_montserrat_32.o(.constdata)
+    font_dsc                                 0x080781c4   Data          24  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x080781dc   Section       28  lv_font_montserrat_32.o(.constdata)
+    .constdata                               0x080781f8   Section      380  lv_color.o(.constdata)
+    colors                                   0x080781f8   Data          38  lv_color.o(.constdata)
+    colors                                   0x0807821e   Data         190  lv_color.o(.constdata)
+    colors                                   0x080782dc   Data         152  lv_color.o(.constdata)
+    .constdata                               0x08078374   Section      182  lv_math.o(.constdata)
+    sin0_90_table                            0x08078374   Data         182  lv_math.o(.constdata)
+    .constdata                               0x08078430   Section       80  lv_printf.o(.constdata)
+    pow10                                    0x08078430   Data          80  lv_printf.o(.constdata)
+    .constdata                               0x08078480   Section       28  lv_arc.o(.constdata)
+    .constdata                               0x0807849c   Section       28  lv_bar.o(.constdata)
+    .constdata                               0x080784b8   Section       28  lv_btn.o(.constdata)
+    .constdata                               0x080784d4   Section       28  lv_btnmatrix.o(.constdata)
+    .constdata                               0x080784f0   Section       28  lv_checkbox.o(.constdata)
+    .constdata                               0x0807850c   Section       56  lv_dropdown.o(.constdata)
+    .constdata                               0x08078544   Section       28  lv_img.o(.constdata)
+    .constdata                               0x08078560   Section       28  lv_label.o(.constdata)
+    .constdata                               0x0807857c   Section       28  lv_line.o(.constdata)
+    .constdata                               0x08078598   Section       56  lv_roller.o(.constdata)
+    .constdata                               0x080785d0   Section       28  lv_slider.o(.constdata)
+    .constdata                               0x080785ec   Section       28  lv_switch.o(.constdata)
+    .constdata                               0x08078608   Section       28  lv_table.o(.constdata)
+    .constdata                               0x08078624   Section       28  lv_textarea.o(.constdata)
+    .constdata                               0x08078640   Section       16  disaster.o(.constdata)
+    .conststring                             0x08078650   Section       27  lv_calendar.o(.conststring)
+    .conststring                             0x0807866c   Section      105  lv_calendar_header_arrow.o(.conststring)
+    .conststring                             0x080786d8   Section      652  lv_calendar_header_dropdown.o(.conststring)
+    .conststring                             0x08078964   Section      157  lv_keyboard.o(.conststring)
+    .conststring                             0x08078a04   Section      108  lv_keyboard.o(.conststring)
+    .conststring                             0x08078a70   Section      126  lv_keyboard.o(.conststring)
+    .conststring                             0x08078af0   Section        4  lv_keyboard.o(.conststring)
+    .conststring                             0x08078af4   Section       37  lv_btnmatrix.o(.conststring)
     .data                                    0x24000000   Section       16  main.o(.data)
     trigger_timer                            0x24000004   Data           4  main.o(.data)
     chance                                   0x24000008   Data           4  main.o(.data)
@@ -12862,73 +12868,73 @@ Image Symbol Table
     tli_layer_enable                         0x0802e3bd   Thumb Code    10  gd32h7xx_tli.o(i.tli_layer_enable)
     tli_layer_init                           0x0802e3c7   Thumb Code   140  gd32h7xx_tli.o(i.tli_layer_init)
     tli_reload_config                        0x0802e455   Thumb Code    22  gd32h7xx_tli.o(i.tli_reload_config)
-    ui_game_screen                           0x0802e7a9   Thumb Code   624  ui_game_screen.o(i.ui_game_screen)
-    ui_game_start                            0x0802ea75   Thumb Code   164  game_start.o(i.ui_game_start)
-    ui_info                                  0x0802eb39   Thumb Code   534  ui_info.o(i.ui_info)
-    update_init                              0x0802ef15   Thumb Code    12  state_machine.o(i.update_init)
-    usart_baudrate_set                       0x0802ef4d   Thumb Code   136  gd32h7xx_usart.o(i.usart_baudrate_set)
-    usart_deinit                             0x0802efdd   Thumb Code   116  gd32h7xx_usart.o(i.usart_deinit)
-    usart_enable                             0x0802f059   Thumb Code    10  gd32h7xx_usart.o(i.usart_enable)
-    usart_transmit_config                    0x0802f063   Thumb Code    16  gd32h7xx_usart.o(i.usart_transmit_config)
-    _fp_init                                 0x0802f2a1   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x0802f2a9   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x0802f2a9   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    lv_obj_class                             0x08059eec   Data          28  lv_obj.o(.constdata)
-    _lv_bpp1_opa_table                       0x08059f10   Data           2  lv_draw_sw_letter.o(.constdata)
-    _lv_bpp2_opa_table                       0x08059f12   Data           4  lv_draw_sw_letter.o(.constdata)
-    _lv_bpp4_opa_table                       0x08059f16   Data          16  lv_draw_sw_letter.o(.constdata)
-    _lv_bpp8_opa_table                       0x08059f26   Data         256  lv_draw_sw_letter.o(.constdata)
-    lv_calendar_class                        0x0805a068   Data          28  lv_calendar.o(.constdata)
-    lv_calendar_header_arrow_class           0x0805a084   Data          28  lv_calendar_header_arrow.o(.constdata)
-    lv_calendar_header_dropdown_class        0x0805a0a0   Data          28  lv_calendar_header_dropdown.o(.constdata)
-    lv_chart_class                           0x0805a0bc   Data          28  lv_chart.o(.constdata)
-    lv_colorwheel_class                      0x0805a0d8   Data          28  lv_colorwheel.o(.constdata)
-    lv_keyboard_class                        0x0805a0f4   Data          28  lv_keyboard.o(.constdata)
-    lv_led_class                             0x0805a488   Data          28  lv_led.o(.constdata)
-    lv_list_class                            0x0805a4a4   Data          28  lv_list.o(.constdata)
-    lv_list_btn_class                        0x0805a4c0   Data          28  lv_list.o(.constdata)
-    lv_list_text_class                       0x0805a4dc   Data          28  lv_list.o(.constdata)
-    lv_menu_class                            0x0805a4f8   Data          28  lv_menu.o(.constdata)
-    lv_menu_page_class                       0x0805a514   Data          28  lv_menu.o(.constdata)
-    lv_menu_cont_class                       0x0805a530   Data          28  lv_menu.o(.constdata)
-    lv_menu_section_class                    0x0805a54c   Data          28  lv_menu.o(.constdata)
-    lv_menu_separator_class                  0x0805a568   Data          28  lv_menu.o(.constdata)
-    lv_menu_sidebar_cont_class               0x0805a584   Data          28  lv_menu.o(.constdata)
-    lv_menu_main_cont_class                  0x0805a5a0   Data          28  lv_menu.o(.constdata)
-    lv_menu_main_header_cont_class           0x0805a5bc   Data          28  lv_menu.o(.constdata)
-    lv_menu_sidebar_header_cont_class        0x0805a5d8   Data          28  lv_menu.o(.constdata)
-    lv_meter_class                           0x0805a5f4   Data          28  lv_meter.o(.constdata)
-    lv_msgbox_class                          0x0805a610   Data          28  lv_msgbox.o(.constdata)
-    lv_msgbox_content_class                  0x0805a62c   Data          28  lv_msgbox.o(.constdata)
-    lv_msgbox_backdrop_class                 0x0805a648   Data          28  lv_msgbox.o(.constdata)
-    lv_spinbox_class                         0x0805a664   Data          28  lv_spinbox.o(.constdata)
-    lv_spinner_class                         0x0805a680   Data          28  lv_spinner.o(.constdata)
-    lv_tabview_class                         0x0805a69c   Data          28  lv_tabview.o(.constdata)
-    lv_tileview_class                        0x0805a6b8   Data          28  lv_tileview.o(.constdata)
-    lv_tileview_tile_class                   0x0805a6d4   Data          28  lv_tileview.o(.constdata)
-    lv_win_class                             0x0805a6f0   Data          28  lv_win.o(.constdata)
-    lv_font_montserrat_14                    0x0805dc34   Data          28  lv_font_montserrat_14.o(.constdata)
-    lv_font_montserrat_24                    0x08064c44   Data          28  lv_font_montserrat_24.o(.constdata)
-    lv_font_montserrat_26                    0x0806ccc0   Data          28  lv_font_montserrat_26.o(.constdata)
-    lv_font_montserrat_32                    0x0807800c   Data          28  lv_font_montserrat_32.o(.constdata)
-    lv_arc_class                             0x080782b0   Data          28  lv_arc.o(.constdata)
-    lv_bar_class                             0x080782cc   Data          28  lv_bar.o(.constdata)
-    lv_btn_class                             0x080782e8   Data          28  lv_btn.o(.constdata)
-    lv_btnmatrix_class                       0x08078304   Data          28  lv_btnmatrix.o(.constdata)
-    lv_checkbox_class                        0x08078320   Data          28  lv_checkbox.o(.constdata)
-    lv_dropdown_class                        0x0807833c   Data          28  lv_dropdown.o(.constdata)
-    lv_dropdownlist_class                    0x08078358   Data          28  lv_dropdown.o(.constdata)
-    lv_img_class                             0x08078374   Data          28  lv_img.o(.constdata)
-    lv_label_class                           0x08078390   Data          28  lv_label.o(.constdata)
-    lv_line_class                            0x080783ac   Data          28  lv_line.o(.constdata)
-    lv_roller_class                          0x080783c8   Data          28  lv_roller.o(.constdata)
-    lv_roller_label_class                    0x080783e4   Data          28  lv_roller.o(.constdata)
-    lv_slider_class                          0x08078400   Data          28  lv_slider.o(.constdata)
-    lv_switch_class                          0x0807841c   Data          28  lv_switch.o(.constdata)
-    lv_table_class                           0x08078438   Data          28  lv_table.o(.constdata)
-    lv_textarea_class                        0x08078454   Data          28  lv_textarea.o(.constdata)
-    Region$$Table$$Base                      0x0807894c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0807896c   Number         0  anon$$obj.o(Region$$Table)
+    ui_game_screen                           0x0802e7a9   Thumb Code   990  ui_game_screen.o(i.ui_game_screen)
+    ui_game_start                            0x0802ec45   Thumb Code   164  game_start.o(i.ui_game_start)
+    ui_info                                  0x0802ed09   Thumb Code   534  ui_info.o(i.ui_info)
+    update_init                              0x0802f0e5   Thumb Code    12  state_machine.o(i.update_init)
+    usart_baudrate_set                       0x0802f11d   Thumb Code   136  gd32h7xx_usart.o(i.usart_baudrate_set)
+    usart_deinit                             0x0802f1ad   Thumb Code   116  gd32h7xx_usart.o(i.usart_deinit)
+    usart_enable                             0x0802f229   Thumb Code    10  gd32h7xx_usart.o(i.usart_enable)
+    usart_transmit_config                    0x0802f233   Thumb Code    16  gd32h7xx_usart.o(i.usart_transmit_config)
+    _fp_init                                 0x0802f471   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x0802f479   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x0802f479   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    lv_obj_class                             0x0805a0bc   Data          28  lv_obj.o(.constdata)
+    _lv_bpp1_opa_table                       0x0805a0e0   Data           2  lv_draw_sw_letter.o(.constdata)
+    _lv_bpp2_opa_table                       0x0805a0e2   Data           4  lv_draw_sw_letter.o(.constdata)
+    _lv_bpp4_opa_table                       0x0805a0e6   Data          16  lv_draw_sw_letter.o(.constdata)
+    _lv_bpp8_opa_table                       0x0805a0f6   Data         256  lv_draw_sw_letter.o(.constdata)
+    lv_calendar_class                        0x0805a238   Data          28  lv_calendar.o(.constdata)
+    lv_calendar_header_arrow_class           0x0805a254   Data          28  lv_calendar_header_arrow.o(.constdata)
+    lv_calendar_header_dropdown_class        0x0805a270   Data          28  lv_calendar_header_dropdown.o(.constdata)
+    lv_chart_class                           0x0805a28c   Data          28  lv_chart.o(.constdata)
+    lv_colorwheel_class                      0x0805a2a8   Data          28  lv_colorwheel.o(.constdata)
+    lv_keyboard_class                        0x0805a2c4   Data          28  lv_keyboard.o(.constdata)
+    lv_led_class                             0x0805a658   Data          28  lv_led.o(.constdata)
+    lv_list_class                            0x0805a674   Data          28  lv_list.o(.constdata)
+    lv_list_btn_class                        0x0805a690   Data          28  lv_list.o(.constdata)
+    lv_list_text_class                       0x0805a6ac   Data          28  lv_list.o(.constdata)
+    lv_menu_class                            0x0805a6c8   Data          28  lv_menu.o(.constdata)
+    lv_menu_page_class                       0x0805a6e4   Data          28  lv_menu.o(.constdata)
+    lv_menu_cont_class                       0x0805a700   Data          28  lv_menu.o(.constdata)
+    lv_menu_section_class                    0x0805a71c   Data          28  lv_menu.o(.constdata)
+    lv_menu_separator_class                  0x0805a738   Data          28  lv_menu.o(.constdata)
+    lv_menu_sidebar_cont_class               0x0805a754   Data          28  lv_menu.o(.constdata)
+    lv_menu_main_cont_class                  0x0805a770   Data          28  lv_menu.o(.constdata)
+    lv_menu_main_header_cont_class           0x0805a78c   Data          28  lv_menu.o(.constdata)
+    lv_menu_sidebar_header_cont_class        0x0805a7a8   Data          28  lv_menu.o(.constdata)
+    lv_meter_class                           0x0805a7c4   Data          28  lv_meter.o(.constdata)
+    lv_msgbox_class                          0x0805a7e0   Data          28  lv_msgbox.o(.constdata)
+    lv_msgbox_content_class                  0x0805a7fc   Data          28  lv_msgbox.o(.constdata)
+    lv_msgbox_backdrop_class                 0x0805a818   Data          28  lv_msgbox.o(.constdata)
+    lv_spinbox_class                         0x0805a834   Data          28  lv_spinbox.o(.constdata)
+    lv_spinner_class                         0x0805a850   Data          28  lv_spinner.o(.constdata)
+    lv_tabview_class                         0x0805a86c   Data          28  lv_tabview.o(.constdata)
+    lv_tileview_class                        0x0805a888   Data          28  lv_tileview.o(.constdata)
+    lv_tileview_tile_class                   0x0805a8a4   Data          28  lv_tileview.o(.constdata)
+    lv_win_class                             0x0805a8c0   Data          28  lv_win.o(.constdata)
+    lv_font_montserrat_14                    0x0805de04   Data          28  lv_font_montserrat_14.o(.constdata)
+    lv_font_montserrat_24                    0x08064e14   Data          28  lv_font_montserrat_24.o(.constdata)
+    lv_font_montserrat_26                    0x0806ce90   Data          28  lv_font_montserrat_26.o(.constdata)
+    lv_font_montserrat_32                    0x080781dc   Data          28  lv_font_montserrat_32.o(.constdata)
+    lv_arc_class                             0x08078480   Data          28  lv_arc.o(.constdata)
+    lv_bar_class                             0x0807849c   Data          28  lv_bar.o(.constdata)
+    lv_btn_class                             0x080784b8   Data          28  lv_btn.o(.constdata)
+    lv_btnmatrix_class                       0x080784d4   Data          28  lv_btnmatrix.o(.constdata)
+    lv_checkbox_class                        0x080784f0   Data          28  lv_checkbox.o(.constdata)
+    lv_dropdown_class                        0x0807850c   Data          28  lv_dropdown.o(.constdata)
+    lv_dropdownlist_class                    0x08078528   Data          28  lv_dropdown.o(.constdata)
+    lv_img_class                             0x08078544   Data          28  lv_img.o(.constdata)
+    lv_label_class                           0x08078560   Data          28  lv_label.o(.constdata)
+    lv_line_class                            0x0807857c   Data          28  lv_line.o(.constdata)
+    lv_roller_class                          0x08078598   Data          28  lv_roller.o(.constdata)
+    lv_roller_label_class                    0x080785b4   Data          28  lv_roller.o(.constdata)
+    lv_slider_class                          0x080785d0   Data          28  lv_slider.o(.constdata)
+    lv_switch_class                          0x080785ec   Data          28  lv_switch.o(.constdata)
+    lv_table_class                           0x08078608   Data          28  lv_table.o(.constdata)
+    lv_textarea_class                        0x08078624   Data          28  lv_textarea.o(.constdata)
+    Region$$Table$$Base                      0x08078b1c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08078b3c   Number         0  anon$$obj.o(Region$$Table)
     Image$$RW_IRAM1$$RW$$Base                0x24000000   Number         0  anon$$obj.o ABSOLUTE
     money                                    0x24000000   Data           4  main.o(.data)
     coin_label                               0x2400000c   Data           4  main.o(.data)
@@ -13021,14 +13027,14 @@ Memory Map of the image
 
   Image Entry point : 0x080003a5
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00078d14, Max: 0x003c0000, ABSOLUTE, COMPRESSED[0x00078a88])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00078ee4, Max: 0x003c0000, ABSOLUTE, COMPRESSED[0x00078c58])
 
-    Execution Region RW_IRAM2 (Exec base: 0x00000000, Load base: 0x08078a88, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x00000000, Load base: 0x08078c58, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0007896c, Max: 0x003c0000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00078b3c, Max: 0x003c0000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -14666,146 +14672,146 @@ Memory Map of the image
     0x0802e618   0x0802e618   0x000000a4   Code   RO         8742    i.trans_anim_ready_cb  lv_obj_style.o
     0x0802e6bc   0x0802e6bc   0x00000040   Code   RO         8743    i.trans_anim_start_cb  lv_obj_style.o
     0x0802e6fc   0x0802e6fc   0x000000ac   Code   RO         8744    i.trans_del         lv_obj_style.o
-    0x0802e7a8   0x0802e7a8   0x000002cc   Code   RO        36566    i.ui_game_screen    ui_game_screen.o
-    0x0802ea74   0x0802ea74   0x000000c4   Code   RO        35838    i.ui_game_start     game_start.o
-    0x0802eb38   0x0802eb38   0x00000254   Code   RO        37197    i.ui_info           ui_info.o
-    0x0802ed8c   0x0802ed8c   0x00000008   Code   RO        28056    i.unicode_list_compare  lv_font_fmt_txt.o
-    0x0802ed94   0x0802ed94   0x00000180   Code   RO        35485    i.update_cursor_position_on_click  lv_textarea.o
-    0x0802ef14   0x0802ef14   0x0000000c   Code   RO        38736    i.update_init       state_machine.o
-    0x0802ef20   0x0802ef20   0x0000002c   Code   RO        38326    i.update_remember_button_style  ui_login.o
-    0x0802ef4c   0x0802ef4c   0x00000090   Code   RO         2712    i.usart_baudrate_set  gd32h7xx_usart.o
-    0x0802efdc   0x0802efdc   0x0000007c   Code   RO         2720    i.usart_deinit      gd32h7xx_usart.o
-    0x0802f058   0x0802f058   0x0000000a   Code   RO         2727    i.usart_enable      gd32h7xx_usart.o
-    0x0802f062   0x0802f062   0x00000010   Code   RO         2777    i.usart_transmit_config  gd32h7xx_usart.o
-    0x0802f072   0x0802f072   0x00000034   Code   RO         5301    i.validate          ff.o
-    0x0802f0a6   0x0802f0a6   0x00000002   PAD
-    0x0802f0a8   0x0802f0a8   0x00000044   Code   RO        20378    i.value_changed_event_cb  lv_calendar_header_arrow.o
-    0x0802f0ec   0x0802f0ec   0x00000048   Code   RO        20576    i.value_changed_event_cb  lv_calendar_header_dropdown.o
-    0x0802f134   0x0802f134   0x000000c2   Code   RO        32569    i.value_update      lv_arc.o
-    0x0802f1f6   0x0802f1f6   0x00000034   Code   RO         5302    i.xdir_sum          ff.o
-    0x0802f22a   0x0802f22a   0x0000003e   Code   RO         5303    i.xname_sum         ff.o
-    0x0802f268   0x0802f268   0x00000038   Code   RO        20577    i.year_event_cb     lv_calendar_header_dropdown.o
-    0x0802f2a0   0x0802f2a0   0x0000000a   Code   RO        39704    x$fpl$fpinit        fz_wv.l(fpinit.o)
-    0x0802f2aa   0x0802f2aa   0x00000002   PAD
-    0x0802f2ac   0x0802f2ac   0x00000030   Data   RO         3265    .constdata          gd32h7xx_spi.o
-    0x0802f2dc   0x0802f2dc   0x0000000a   Data   RO         4863    .constdata          touch_gtxx.o
-    0x0802f2e6   0x0802f2e6   0x00000002   PAD
-    0x0802f2e8   0x0802f2e8   0x0000004c   Data   RO         5305    .constdata          ff.o
-    0x0802f334   0x0802f334   0x0002abb6   Data   RO         5678    .constdata          ffunicode.o
-    0x08059eea   0x08059eea   0x00000002   PAD
-    0x08059eec   0x08059eec   0x0000001c   Data   RO         7412    .constdata          lv_obj.o
-    0x08059f08   0x08059f08   0x00000008   Data   RO         8038    .constdata          lv_obj_pos.o
-    0x08059f10   0x08059f10   0x00000116   Data   RO        12342    .constdata          lv_draw_sw_letter.o
-    0x0805a026   0x0805a026   0x00000021   Data   RO        12448    .constdata          lv_draw_sw_line.o
-    0x0805a047   0x0805a047   0x00000001   PAD
-    0x0805a048   0x0805a048   0x00000008   Data   RO        12548    .constdata          lv_draw_sw_polygon.o
-    0x0805a050   0x0805a050   0x00000016   Data   RO        18545    .constdata          lv_theme_default.o
-    0x0805a066   0x0805a066   0x00000002   PAD
-    0x0805a068   0x0805a068   0x0000001c   Data   RO        19907    .constdata          lv_calendar.o
-    0x0805a084   0x0805a084   0x0000001c   Data   RO        20379    .constdata          lv_calendar_header_arrow.o
-    0x0805a0a0   0x0805a0a0   0x0000001c   Data   RO        20578    .constdata          lv_calendar_header_dropdown.o
-    0x0805a0bc   0x0805a0bc   0x0000001c   Data   RO        20766    .constdata          lv_chart.o
-    0x0805a0d8   0x0805a0d8   0x0000001c   Data   RO        21444    .constdata          lv_colorwheel.o
-    0x0805a0f4   0x0805a0f4   0x0000001c   Data   RO        22411    .constdata          lv_keyboard.o
-    0x0805a110   0x0805a110   0x000000b0   Data   RO        22412    .constdata          lv_keyboard.o
-    0x0805a1c0   0x0805a1c0   0x00000050   Data   RO        22413    .constdata          lv_keyboard.o
-    0x0805a210   0x0805a210   0x000000b0   Data   RO        22414    .constdata          lv_keyboard.o
-    0x0805a2c0   0x0805a2c0   0x00000050   Data   RO        22415    .constdata          lv_keyboard.o
-    0x0805a310   0x0805a310   0x000000b0   Data   RO        22416    .constdata          lv_keyboard.o
-    0x0805a3c0   0x0805a3c0   0x00000050   Data   RO        22417    .constdata          lv_keyboard.o
-    0x0805a410   0x0805a410   0x00000054   Data   RO        22418    .constdata          lv_keyboard.o
-    0x0805a464   0x0805a464   0x00000022   Data   RO        22419    .constdata          lv_keyboard.o
-    0x0805a486   0x0805a486   0x00000002   PAD
-    0x0805a488   0x0805a488   0x0000001c   Data   RO        22663    .constdata          lv_led.o
-    0x0805a4a4   0x0805a4a4   0x00000054   Data   RO        23110    .constdata          lv_list.o
-    0x0805a4f8   0x0805a4f8   0x000000fc   Data   RO        23338    .constdata          lv_menu.o
-    0x0805a5f4   0x0805a5f4   0x0000001c   Data   RO        23671    .constdata          lv_meter.o
-    0x0805a610   0x0805a610   0x00000054   Data   RO        24179    .constdata          lv_msgbox.o
-    0x0805a664   0x0805a664   0x0000001c   Data   RO        25230    .constdata          lv_spinbox.o
-    0x0805a680   0x0805a680   0x0000001c   Data   RO        25712    .constdata          lv_spinner.o
-    0x0805a69c   0x0805a69c   0x0000001c   Data   RO        26134    .constdata          lv_tabview.o
-    0x0805a6b8   0x0805a6b8   0x00000038   Data   RO        26590    .constdata          lv_tileview.o
-    0x0805a6f0   0x0805a6f0   0x0000001c   Data   RO        26789    .constdata          lv_win.o
-    0x0805a70c   0x0805a70c   0x00002280   Data   RO        28229    .constdata          lv_font_montserrat_14.o
-    0x0805c98c   0x0805c98c   0x000004f0   Data   RO        28230    .constdata          lv_font_montserrat_14.o
-    0x0805ce7c   0x0805ce7c   0x0000007c   Data   RO        28231    .constdata          lv_font_montserrat_14.o
-    0x0805cef8   0x0805cef8   0x00000028   Data   RO        28232    .constdata          lv_font_montserrat_14.o
-    0x0805cf20   0x0805cf20   0x0000009e   Data   RO        28233    .constdata          lv_font_montserrat_14.o
-    0x0805cfbe   0x0805cfbe   0x0000009e   Data   RO        28234    .constdata          lv_font_montserrat_14.o
-    0x0805d05c   0x0805d05c   0x00000bad   Data   RO        28235    .constdata          lv_font_montserrat_14.o
-    0x0805dc09   0x0805dc09   0x00000003   PAD
-    0x0805dc0c   0x0805dc0c   0x00000010   Data   RO        28236    .constdata          lv_font_montserrat_14.o
-    0x0805dc1c   0x0805dc1c   0x00000018   Data   RO        28237    .constdata          lv_font_montserrat_14.o
-    0x0805dc34   0x0805dc34   0x0000001c   Data   RO        28238    .constdata          lv_font_montserrat_14.o
-    0x0805dc50   0x0805dc50   0x00005d4c   Data   RO        28468    .constdata          lv_font_montserrat_24.o
-    0x0806399c   0x0806399c   0x000004f0   Data   RO        28469    .constdata          lv_font_montserrat_24.o
-    0x08063e8c   0x08063e8c   0x0000007c   Data   RO        28470    .constdata          lv_font_montserrat_24.o
-    0x08063f08   0x08063f08   0x00000028   Data   RO        28471    .constdata          lv_font_montserrat_24.o
-    0x08063f30   0x08063f30   0x0000009e   Data   RO        28472    .constdata          lv_font_montserrat_24.o
-    0x08063fce   0x08063fce   0x0000009e   Data   RO        28473    .constdata          lv_font_montserrat_24.o
-    0x0806406c   0x0806406c   0x00000bad   Data   RO        28474    .constdata          lv_font_montserrat_24.o
-    0x08064c19   0x08064c19   0x00000003   PAD
-    0x08064c1c   0x08064c1c   0x00000010   Data   RO        28475    .constdata          lv_font_montserrat_24.o
-    0x08064c2c   0x08064c2c   0x00000018   Data   RO        28476    .constdata          lv_font_montserrat_24.o
-    0x08064c44   0x08064c44   0x0000001c   Data   RO        28477    .constdata          lv_font_montserrat_24.o
-    0x08064c60   0x08064c60   0x00006db8   Data   RO        28683    .constdata          lv_font_montserrat_26.o
-    0x0806ba18   0x0806ba18   0x000004f0   Data   RO        28684    .constdata          lv_font_montserrat_26.o
-    0x0806bf08   0x0806bf08   0x0000007c   Data   RO        28685    .constdata          lv_font_montserrat_26.o
-    0x0806bf84   0x0806bf84   0x00000028   Data   RO        28686    .constdata          lv_font_montserrat_26.o
-    0x0806bfac   0x0806bfac   0x0000009e   Data   RO        28687    .constdata          lv_font_montserrat_26.o
-    0x0806c04a   0x0806c04a   0x0000009e   Data   RO        28688    .constdata          lv_font_montserrat_26.o
-    0x0806c0e8   0x0806c0e8   0x00000bad   Data   RO        28689    .constdata          lv_font_montserrat_26.o
-    0x0806cc95   0x0806cc95   0x00000003   PAD
-    0x0806cc98   0x0806cc98   0x00000010   Data   RO        28690    .constdata          lv_font_montserrat_26.o
-    0x0806cca8   0x0806cca8   0x00000018   Data   RO        28691    .constdata          lv_font_montserrat_26.o
-    0x0806ccc0   0x0806ccc0   0x0000001c   Data   RO        28692    .constdata          lv_font_montserrat_26.o
-    0x0806ccdc   0x0806ccdc   0x0000a088   Data   RO        29334    .constdata          lv_font_montserrat_32.o
-    0x08076d64   0x08076d64   0x000004f0   Data   RO        29335    .constdata          lv_font_montserrat_32.o
-    0x08077254   0x08077254   0x0000007c   Data   RO        29336    .constdata          lv_font_montserrat_32.o
-    0x080772d0   0x080772d0   0x00000028   Data   RO        29337    .constdata          lv_font_montserrat_32.o
-    0x080772f8   0x080772f8   0x0000009e   Data   RO        29338    .constdata          lv_font_montserrat_32.o
-    0x08077396   0x08077396   0x0000009e   Data   RO        29339    .constdata          lv_font_montserrat_32.o
-    0x08077434   0x08077434   0x00000bad   Data   RO        29340    .constdata          lv_font_montserrat_32.o
-    0x08077fe1   0x08077fe1   0x00000003   PAD
-    0x08077fe4   0x08077fe4   0x00000010   Data   RO        29341    .constdata          lv_font_montserrat_32.o
-    0x08077ff4   0x08077ff4   0x00000018   Data   RO        29342    .constdata          lv_font_montserrat_32.o
-    0x0807800c   0x0807800c   0x0000001c   Data   RO        29343    .constdata          lv_font_montserrat_32.o
-    0x08078028   0x08078028   0x0000017c   Data   RO        30712    .constdata          lv_color.o
-    0x080781a4   0x080781a4   0x000000b6   Data   RO        31125    .constdata          lv_math.o
-    0x0807825a   0x0807825a   0x00000006   PAD
-    0x08078260   0x08078260   0x00000050   Data   RO        31281    .constdata          lv_printf.o
-    0x080782b0   0x080782b0   0x0000001c   Data   RO        32570    .constdata          lv_arc.o
-    0x080782cc   0x080782cc   0x0000001c   Data   RO        32904    .constdata          lv_bar.o
-    0x080782e8   0x080782e8   0x0000001c   Data   RO        33115    .constdata          lv_btn.o
-    0x08078304   0x08078304   0x0000001c   Data   RO        33173    .constdata          lv_btnmatrix.o
-    0x08078320   0x08078320   0x0000001c   Data   RO        33649    .constdata          lv_checkbox.o
-    0x0807833c   0x0807833c   0x00000038   Data   RO        33846    .constdata          lv_dropdown.o
-    0x08078374   0x08078374   0x0000001c   Data   RO        34148    .constdata          lv_img.o
-    0x08078390   0x08078390   0x0000001c   Data   RO        34385    .constdata          lv_label.o
-    0x080783ac   0x080783ac   0x0000001c   Data   RO        34630    .constdata          lv_line.o
-    0x080783c8   0x080783c8   0x00000038   Data   RO        34705    .constdata          lv_roller.o
-    0x08078400   0x08078400   0x0000001c   Data   RO        34900    .constdata          lv_slider.o
-    0x0807841c   0x0807841c   0x0000001c   Data   RO        35041    .constdata          lv_switch.o
-    0x08078438   0x08078438   0x0000001c   Data   RO        35197    .constdata          lv_table.o
-    0x08078454   0x08078454   0x0000001c   Data   RO        35486    .constdata          lv_textarea.o
-    0x08078470   0x08078470   0x00000010   Data   RO        38887    .constdata          disaster.o
-    0x08078480   0x08078480   0x0000001b   Data   RO        19908    .conststring        lv_calendar.o
-    0x0807849b   0x0807849b   0x00000001   PAD
-    0x0807849c   0x0807849c   0x00000069   Data   RO        20380    .conststring        lv_calendar_header_arrow.o
-    0x08078505   0x08078505   0x00000003   PAD
-    0x08078508   0x08078508   0x0000028c   Data   RO        20579    .conststring        lv_calendar_header_dropdown.o
-    0x08078794   0x08078794   0x0000009d   Data   RO        22420    .conststring        lv_keyboard.o
-    0x08078831   0x08078831   0x00000003   PAD
-    0x08078834   0x08078834   0x0000006c   Data   RO        22421    .conststring        lv_keyboard.o
-    0x080788a0   0x080788a0   0x0000007e   Data   RO        22422    .conststring        lv_keyboard.o
-    0x0807891e   0x0807891e   0x00000002   PAD
-    0x08078920   0x08078920   0x00000004   Data   RO        22423    .conststring        lv_keyboard.o
-    0x08078924   0x08078924   0x00000025   Data   RO        33174    .conststring        lv_btnmatrix.o
-    0x08078949   0x08078949   0x00000003   PAD
-    0x0807894c   0x0807894c   0x00000020   Data   RO        39782    Region$$Table       anon$$obj.o
+    0x0802e7a8   0x0802e7a8   0x0000049c   Code   RO        36566    i.ui_game_screen    ui_game_screen.o
+    0x0802ec44   0x0802ec44   0x000000c4   Code   RO        35838    i.ui_game_start     game_start.o
+    0x0802ed08   0x0802ed08   0x00000254   Code   RO        37197    i.ui_info           ui_info.o
+    0x0802ef5c   0x0802ef5c   0x00000008   Code   RO        28056    i.unicode_list_compare  lv_font_fmt_txt.o
+    0x0802ef64   0x0802ef64   0x00000180   Code   RO        35485    i.update_cursor_position_on_click  lv_textarea.o
+    0x0802f0e4   0x0802f0e4   0x0000000c   Code   RO        38736    i.update_init       state_machine.o
+    0x0802f0f0   0x0802f0f0   0x0000002c   Code   RO        38326    i.update_remember_button_style  ui_login.o
+    0x0802f11c   0x0802f11c   0x00000090   Code   RO         2712    i.usart_baudrate_set  gd32h7xx_usart.o
+    0x0802f1ac   0x0802f1ac   0x0000007c   Code   RO         2720    i.usart_deinit      gd32h7xx_usart.o
+    0x0802f228   0x0802f228   0x0000000a   Code   RO         2727    i.usart_enable      gd32h7xx_usart.o
+    0x0802f232   0x0802f232   0x00000010   Code   RO         2777    i.usart_transmit_config  gd32h7xx_usart.o
+    0x0802f242   0x0802f242   0x00000034   Code   RO         5301    i.validate          ff.o
+    0x0802f276   0x0802f276   0x00000002   PAD
+    0x0802f278   0x0802f278   0x00000044   Code   RO        20378    i.value_changed_event_cb  lv_calendar_header_arrow.o
+    0x0802f2bc   0x0802f2bc   0x00000048   Code   RO        20576    i.value_changed_event_cb  lv_calendar_header_dropdown.o
+    0x0802f304   0x0802f304   0x000000c2   Code   RO        32569    i.value_update      lv_arc.o
+    0x0802f3c6   0x0802f3c6   0x00000034   Code   RO         5302    i.xdir_sum          ff.o
+    0x0802f3fa   0x0802f3fa   0x0000003e   Code   RO         5303    i.xname_sum         ff.o
+    0x0802f438   0x0802f438   0x00000038   Code   RO        20577    i.year_event_cb     lv_calendar_header_dropdown.o
+    0x0802f470   0x0802f470   0x0000000a   Code   RO        39704    x$fpl$fpinit        fz_wv.l(fpinit.o)
+    0x0802f47a   0x0802f47a   0x00000002   PAD
+    0x0802f47c   0x0802f47c   0x00000030   Data   RO         3265    .constdata          gd32h7xx_spi.o
+    0x0802f4ac   0x0802f4ac   0x0000000a   Data   RO         4863    .constdata          touch_gtxx.o
+    0x0802f4b6   0x0802f4b6   0x00000002   PAD
+    0x0802f4b8   0x0802f4b8   0x0000004c   Data   RO         5305    .constdata          ff.o
+    0x0802f504   0x0802f504   0x0002abb6   Data   RO         5678    .constdata          ffunicode.o
+    0x0805a0ba   0x0805a0ba   0x00000002   PAD
+    0x0805a0bc   0x0805a0bc   0x0000001c   Data   RO         7412    .constdata          lv_obj.o
+    0x0805a0d8   0x0805a0d8   0x00000008   Data   RO         8038    .constdata          lv_obj_pos.o
+    0x0805a0e0   0x0805a0e0   0x00000116   Data   RO        12342    .constdata          lv_draw_sw_letter.o
+    0x0805a1f6   0x0805a1f6   0x00000021   Data   RO        12448    .constdata          lv_draw_sw_line.o
+    0x0805a217   0x0805a217   0x00000001   PAD
+    0x0805a218   0x0805a218   0x00000008   Data   RO        12548    .constdata          lv_draw_sw_polygon.o
+    0x0805a220   0x0805a220   0x00000016   Data   RO        18545    .constdata          lv_theme_default.o
+    0x0805a236   0x0805a236   0x00000002   PAD
+    0x0805a238   0x0805a238   0x0000001c   Data   RO        19907    .constdata          lv_calendar.o
+    0x0805a254   0x0805a254   0x0000001c   Data   RO        20379    .constdata          lv_calendar_header_arrow.o
+    0x0805a270   0x0805a270   0x0000001c   Data   RO        20578    .constdata          lv_calendar_header_dropdown.o
+    0x0805a28c   0x0805a28c   0x0000001c   Data   RO        20766    .constdata          lv_chart.o
+    0x0805a2a8   0x0805a2a8   0x0000001c   Data   RO        21444    .constdata          lv_colorwheel.o
+    0x0805a2c4   0x0805a2c4   0x0000001c   Data   RO        22411    .constdata          lv_keyboard.o
+    0x0805a2e0   0x0805a2e0   0x000000b0   Data   RO        22412    .constdata          lv_keyboard.o
+    0x0805a390   0x0805a390   0x00000050   Data   RO        22413    .constdata          lv_keyboard.o
+    0x0805a3e0   0x0805a3e0   0x000000b0   Data   RO        22414    .constdata          lv_keyboard.o
+    0x0805a490   0x0805a490   0x00000050   Data   RO        22415    .constdata          lv_keyboard.o
+    0x0805a4e0   0x0805a4e0   0x000000b0   Data   RO        22416    .constdata          lv_keyboard.o
+    0x0805a590   0x0805a590   0x00000050   Data   RO        22417    .constdata          lv_keyboard.o
+    0x0805a5e0   0x0805a5e0   0x00000054   Data   RO        22418    .constdata          lv_keyboard.o
+    0x0805a634   0x0805a634   0x00000022   Data   RO        22419    .constdata          lv_keyboard.o
+    0x0805a656   0x0805a656   0x00000002   PAD
+    0x0805a658   0x0805a658   0x0000001c   Data   RO        22663    .constdata          lv_led.o
+    0x0805a674   0x0805a674   0x00000054   Data   RO        23110    .constdata          lv_list.o
+    0x0805a6c8   0x0805a6c8   0x000000fc   Data   RO        23338    .constdata          lv_menu.o
+    0x0805a7c4   0x0805a7c4   0x0000001c   Data   RO        23671    .constdata          lv_meter.o
+    0x0805a7e0   0x0805a7e0   0x00000054   Data   RO        24179    .constdata          lv_msgbox.o
+    0x0805a834   0x0805a834   0x0000001c   Data   RO        25230    .constdata          lv_spinbox.o
+    0x0805a850   0x0805a850   0x0000001c   Data   RO        25712    .constdata          lv_spinner.o
+    0x0805a86c   0x0805a86c   0x0000001c   Data   RO        26134    .constdata          lv_tabview.o
+    0x0805a888   0x0805a888   0x00000038   Data   RO        26590    .constdata          lv_tileview.o
+    0x0805a8c0   0x0805a8c0   0x0000001c   Data   RO        26789    .constdata          lv_win.o
+    0x0805a8dc   0x0805a8dc   0x00002280   Data   RO        28229    .constdata          lv_font_montserrat_14.o
+    0x0805cb5c   0x0805cb5c   0x000004f0   Data   RO        28230    .constdata          lv_font_montserrat_14.o
+    0x0805d04c   0x0805d04c   0x0000007c   Data   RO        28231    .constdata          lv_font_montserrat_14.o
+    0x0805d0c8   0x0805d0c8   0x00000028   Data   RO        28232    .constdata          lv_font_montserrat_14.o
+    0x0805d0f0   0x0805d0f0   0x0000009e   Data   RO        28233    .constdata          lv_font_montserrat_14.o
+    0x0805d18e   0x0805d18e   0x0000009e   Data   RO        28234    .constdata          lv_font_montserrat_14.o
+    0x0805d22c   0x0805d22c   0x00000bad   Data   RO        28235    .constdata          lv_font_montserrat_14.o
+    0x0805ddd9   0x0805ddd9   0x00000003   PAD
+    0x0805dddc   0x0805dddc   0x00000010   Data   RO        28236    .constdata          lv_font_montserrat_14.o
+    0x0805ddec   0x0805ddec   0x00000018   Data   RO        28237    .constdata          lv_font_montserrat_14.o
+    0x0805de04   0x0805de04   0x0000001c   Data   RO        28238    .constdata          lv_font_montserrat_14.o
+    0x0805de20   0x0805de20   0x00005d4c   Data   RO        28468    .constdata          lv_font_montserrat_24.o
+    0x08063b6c   0x08063b6c   0x000004f0   Data   RO        28469    .constdata          lv_font_montserrat_24.o
+    0x0806405c   0x0806405c   0x0000007c   Data   RO        28470    .constdata          lv_font_montserrat_24.o
+    0x080640d8   0x080640d8   0x00000028   Data   RO        28471    .constdata          lv_font_montserrat_24.o
+    0x08064100   0x08064100   0x0000009e   Data   RO        28472    .constdata          lv_font_montserrat_24.o
+    0x0806419e   0x0806419e   0x0000009e   Data   RO        28473    .constdata          lv_font_montserrat_24.o
+    0x0806423c   0x0806423c   0x00000bad   Data   RO        28474    .constdata          lv_font_montserrat_24.o
+    0x08064de9   0x08064de9   0x00000003   PAD
+    0x08064dec   0x08064dec   0x00000010   Data   RO        28475    .constdata          lv_font_montserrat_24.o
+    0x08064dfc   0x08064dfc   0x00000018   Data   RO        28476    .constdata          lv_font_montserrat_24.o
+    0x08064e14   0x08064e14   0x0000001c   Data   RO        28477    .constdata          lv_font_montserrat_24.o
+    0x08064e30   0x08064e30   0x00006db8   Data   RO        28683    .constdata          lv_font_montserrat_26.o
+    0x0806bbe8   0x0806bbe8   0x000004f0   Data   RO        28684    .constdata          lv_font_montserrat_26.o
+    0x0806c0d8   0x0806c0d8   0x0000007c   Data   RO        28685    .constdata          lv_font_montserrat_26.o
+    0x0806c154   0x0806c154   0x00000028   Data   RO        28686    .constdata          lv_font_montserrat_26.o
+    0x0806c17c   0x0806c17c   0x0000009e   Data   RO        28687    .constdata          lv_font_montserrat_26.o
+    0x0806c21a   0x0806c21a   0x0000009e   Data   RO        28688    .constdata          lv_font_montserrat_26.o
+    0x0806c2b8   0x0806c2b8   0x00000bad   Data   RO        28689    .constdata          lv_font_montserrat_26.o
+    0x0806ce65   0x0806ce65   0x00000003   PAD
+    0x0806ce68   0x0806ce68   0x00000010   Data   RO        28690    .constdata          lv_font_montserrat_26.o
+    0x0806ce78   0x0806ce78   0x00000018   Data   RO        28691    .constdata          lv_font_montserrat_26.o
+    0x0806ce90   0x0806ce90   0x0000001c   Data   RO        28692    .constdata          lv_font_montserrat_26.o
+    0x0806ceac   0x0806ceac   0x0000a088   Data   RO        29334    .constdata          lv_font_montserrat_32.o
+    0x08076f34   0x08076f34   0x000004f0   Data   RO        29335    .constdata          lv_font_montserrat_32.o
+    0x08077424   0x08077424   0x0000007c   Data   RO        29336    .constdata          lv_font_montserrat_32.o
+    0x080774a0   0x080774a0   0x00000028   Data   RO        29337    .constdata          lv_font_montserrat_32.o
+    0x080774c8   0x080774c8   0x0000009e   Data   RO        29338    .constdata          lv_font_montserrat_32.o
+    0x08077566   0x08077566   0x0000009e   Data   RO        29339    .constdata          lv_font_montserrat_32.o
+    0x08077604   0x08077604   0x00000bad   Data   RO        29340    .constdata          lv_font_montserrat_32.o
+    0x080781b1   0x080781b1   0x00000003   PAD
+    0x080781b4   0x080781b4   0x00000010   Data   RO        29341    .constdata          lv_font_montserrat_32.o
+    0x080781c4   0x080781c4   0x00000018   Data   RO        29342    .constdata          lv_font_montserrat_32.o
+    0x080781dc   0x080781dc   0x0000001c   Data   RO        29343    .constdata          lv_font_montserrat_32.o
+    0x080781f8   0x080781f8   0x0000017c   Data   RO        30712    .constdata          lv_color.o
+    0x08078374   0x08078374   0x000000b6   Data   RO        31125    .constdata          lv_math.o
+    0x0807842a   0x0807842a   0x00000006   PAD
+    0x08078430   0x08078430   0x00000050   Data   RO        31281    .constdata          lv_printf.o
+    0x08078480   0x08078480   0x0000001c   Data   RO        32570    .constdata          lv_arc.o
+    0x0807849c   0x0807849c   0x0000001c   Data   RO        32904    .constdata          lv_bar.o
+    0x080784b8   0x080784b8   0x0000001c   Data   RO        33115    .constdata          lv_btn.o
+    0x080784d4   0x080784d4   0x0000001c   Data   RO        33173    .constdata          lv_btnmatrix.o
+    0x080784f0   0x080784f0   0x0000001c   Data   RO        33649    .constdata          lv_checkbox.o
+    0x0807850c   0x0807850c   0x00000038   Data   RO        33846    .constdata          lv_dropdown.o
+    0x08078544   0x08078544   0x0000001c   Data   RO        34148    .constdata          lv_img.o
+    0x08078560   0x08078560   0x0000001c   Data   RO        34385    .constdata          lv_label.o
+    0x0807857c   0x0807857c   0x0000001c   Data   RO        34630    .constdata          lv_line.o
+    0x08078598   0x08078598   0x00000038   Data   RO        34705    .constdata          lv_roller.o
+    0x080785d0   0x080785d0   0x0000001c   Data   RO        34900    .constdata          lv_slider.o
+    0x080785ec   0x080785ec   0x0000001c   Data   RO        35041    .constdata          lv_switch.o
+    0x08078608   0x08078608   0x0000001c   Data   RO        35197    .constdata          lv_table.o
+    0x08078624   0x08078624   0x0000001c   Data   RO        35486    .constdata          lv_textarea.o
+    0x08078640   0x08078640   0x00000010   Data   RO        38887    .constdata          disaster.o
+    0x08078650   0x08078650   0x0000001b   Data   RO        19908    .conststring        lv_calendar.o
+    0x0807866b   0x0807866b   0x00000001   PAD
+    0x0807866c   0x0807866c   0x00000069   Data   RO        20380    .conststring        lv_calendar_header_arrow.o
+    0x080786d5   0x080786d5   0x00000003   PAD
+    0x080786d8   0x080786d8   0x0000028c   Data   RO        20579    .conststring        lv_calendar_header_dropdown.o
+    0x08078964   0x08078964   0x0000009d   Data   RO        22420    .conststring        lv_keyboard.o
+    0x08078a01   0x08078a01   0x00000003   PAD
+    0x08078a04   0x08078a04   0x0000006c   Data   RO        22421    .conststring        lv_keyboard.o
+    0x08078a70   0x08078a70   0x0000007e   Data   RO        22422    .conststring        lv_keyboard.o
+    0x08078aee   0x08078aee   0x00000002   PAD
+    0x08078af0   0x08078af0   0x00000004   Data   RO        22423    .conststring        lv_keyboard.o
+    0x08078af4   0x08078af4   0x00000025   Data   RO        33174    .conststring        lv_btnmatrix.o
+    0x08078b19   0x08078b19   0x00000003   PAD
+    0x08078b1c   0x08078b1c   0x00000020   Data   RO        39782    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x24000000, Load base: 0x0807896c, Size: 0x0002f1c0, Max: 0x000d0000, ABSOLUTE, COMPRESSED[0x0000011c])
+    Execution Region RW_IRAM1 (Exec base: 0x24000000, Load base: 0x08078b3c, Size: 0x0002f1c0, Max: 0x000d0000, ABSOLUTE, COMPRESSED[0x0000011c])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -15055,7 +15061,7 @@ Image component sizes
        324         68          0          0          0       1770   type_init.o
        598         34          0         28          0      49527   ui_feed .o
        432         56          0          4          0      18690   ui_fruit.o
-       852        102          0          4         12      41060   ui_game_screen.o
+      1316        200          0          4         12      41604   ui_game_screen.o
        420         56          0         12         52      32043   ui_hot.o
        160         38          0          0         64       1258   ui_hunder.o
       1032        102          0         12         24      31666   ui_info.o
@@ -15066,7 +15072,7 @@ Image component sizes
       1040        146          0          8        736      40008   ui_snow.o
 
     ----------------------------------------------------------------------
-    189446       5792     301668        936   32517328    4334492   Object Totals
+    189910       5890     301668        936   32517328    4335036   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        218          0         39         10          2          0   (incl. Padding)
 
@@ -15157,15 +15163,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-    192264       5914     301668        936   32517656    4193200   Grand Totals
-    192264       5914     301668        284   32517656    4193200   ELF Image Totals (compressed)
-    192264       5914     301668        284          0          0   ROM Totals
+    192728       6012     301668        936   32517656    4193744   Grand Totals
+    192728       6012     301668        284   32517656    4193744   ELF Image Totals (compressed)
+    192728       6012     301668        284          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               493932 ( 482.36kB)
+    Total RO  Size (Code + RO Data)               494396 ( 482.81kB)
     Total RW  Size (RW Data + ZI Data)          32518592 (31756.44kB)
-    Total ROM Size (Code + RO Data + RW Data)     494216 ( 482.63kB)
+    Total ROM Size (Code + RO Data + RW Data)     494680 ( 483.09kB)
 
 ==============================================================================
 

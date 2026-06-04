@@ -109,6 +109,51 @@ void ui_game_screen(lv_event_t *e)
 	//饥饿
 	create_hunger_img();
 
+	lv_obj_t *hot_btn = lv_btn_create(game_screen);
+	lv_obj_set_size(hot_btn, 100, 40);
+	lv_obj_align(hot_btn, LV_ALIGN_TOP_RIGHT, -20, 60);
+	lv_obj_add_event_cb(hot_btn, hot_start, LV_EVENT_CLICKED, NULL);
+	lv_obj_t *hot_label = lv_label_create(hot_btn);
+	lv_label_set_text(hot_label, "HOT START");
+	lv_obj_center(hot_label);
+	lv_obj_t *hot_stop_btn = lv_btn_create(game_screen);
+	lv_obj_set_size(hot_stop_btn, 100, 40);
+	lv_obj_align(hot_stop_btn, LV_ALIGN_TOP_RIGHT, -20, 110);
+	lv_obj_add_event_cb(hot_stop_btn, hot_stop, LV_EVENT_CLICKED, NULL);
+	lv_obj_t *hot_stop_label = lv_label_create(hot_stop_btn);
+	lv_label_set_text(hot_stop_label, "HOT STOP");
+	lv_obj_center(hot_stop_label);
+
+	lv_obj_t *snow_btn = lv_btn_create(game_screen);
+	lv_obj_set_size(snow_btn, 100, 40);
+	lv_obj_align(snow_btn, LV_ALIGN_TOP_RIGHT, -20, 160);
+	lv_obj_add_event_cb(snow_btn, snow_start, LV_EVENT_CLICKED, NULL);
+	lv_obj_t *snow_label = lv_label_create(snow_btn);
+	lv_label_set_text(snow_label, "SNOW START");
+	lv_obj_center(snow_label);
+	lv_obj_t *snow_stop_btn = lv_btn_create(game_screen);
+	lv_obj_set_size(snow_stop_btn, 100, 40);
+	lv_obj_align(snow_stop_btn, LV_ALIGN_TOP_RIGHT, -20, 210);
+	lv_obj_add_event_cb(snow_stop_btn, snow_stop, LV_EVENT_CLICKED, NULL);
+	lv_obj_t *snow_stop_label = lv_label_create(snow_stop_btn);
+	lv_label_set_text(snow_stop_label, "SNOW STOP");
+	lv_obj_center(snow_stop_label);
+
+	lv_obj_t *rain_btn = lv_btn_create(game_screen);
+	lv_obj_set_size(rain_btn, 100, 40);
+	lv_obj_align(rain_btn, LV_ALIGN_TOP_RIGHT, -20, 260);
+	lv_obj_add_event_cb(rain_btn, rain_start, LV_EVENT_CLICKED, NULL);
+	lv_obj_t *rain_label = lv_label_create(rain_btn);
+	lv_label_set_text(rain_label, "RAIN START");
+	lv_obj_center(rain_label);
+	lv_obj_t *rain_stop_btn = lv_btn_create(game_screen);
+	lv_obj_set_size(rain_stop_btn, 100, 40);
+	lv_obj_align(rain_stop_btn, LV_ALIGN_TOP_RIGHT, -20, 310);
+	lv_obj_add_event_cb(rain_stop_btn, rain_stop, LV_EVENT_CLICKED, NULL);
+	lv_obj_t *rain_stop_label = lv_label_create(rain_stop_btn);
+	lv_label_set_text(rain_stop_label, "RAIN STOP");
+	lv_obj_center(rain_stop_label);
+
 	//fruit
 	/*
 	lv_obj_t *btn_fruit[3];
