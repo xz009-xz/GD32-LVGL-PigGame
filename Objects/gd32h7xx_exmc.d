@@ -1,9 +1,9 @@
 .\objects\gd32h7xx_exmc.o: GD32H7xx_standard_peripheral\Source\gd32h7xx_exmc.c
-.\objects\gd32h7xx_exmc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\gd32h7xx_exmc.o: D:\cks\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\gd32h7xx_exmc.o: .\GD32H7xx_standard_peripheral\Include\gd32h7xx_exmc.h
 .\objects\gd32h7xx_exmc.o: .\GD32H7xx\gd32h7xx.h
 .\objects\gd32h7xx_exmc.o: .\GD32H7xx\core_cm7.h
-.\objects\gd32h7xx_exmc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\gd32h7xx_exmc.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\gd32h7xx_exmc.o: .\GD32H7xx\CMSIS\cmsis_version.h
 .\objects\gd32h7xx_exmc.o: .\GD32H7xx\CMSIS\cmsis_compiler.h
 .\objects\gd32h7xx_exmc.o: .\GD32H7xx\CMSIS\cmsis_armcc.h

@@ -1,9 +1,9 @@
 .\objects\lv_hal_disp.o: lvgl\src\hal\lv_hal_disp.c
-.\objects\lv_hal_disp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\lv_hal_disp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\lv_hal_disp.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lv_hal_disp.o: D:\cks\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\lv_hal.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\lv_hal_disp.h
-.\objects\lv_hal_disp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\lv_hal_disp.o: D:\cks\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\lv_hal.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/lv_draw.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../lv_conf_internal.h
@@ -18,11 +18,11 @@
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_log.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_types.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_mem.h
-.\objects\lv_hal_disp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\lv_hal_disp.o: D:\cks\ARM\ARMCC\Bin\..\include\string.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_math.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_anim.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_txt.h
-.\objects\lv_hal_disp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\lv_hal_disp.o: D:\cks\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_printf.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_bidi.h
 .\objects\lv_hal_disp.o: lvgl\src\hal\../draw/../misc/lv_style_gen.h

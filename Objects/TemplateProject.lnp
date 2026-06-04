@@ -206,6 +206,7 @@
 ".\objects\ui_snow.o"
 ".\objects\ui_login.o"
 ".\objects\ui_hunder.o"
+".\objects\bgm.o"
 ".\objects\state_machine.o"
 ".\objects\type_init.o"
 ".\objects\disaster.o"

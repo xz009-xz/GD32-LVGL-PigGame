@@ -1,9 +1,2 @@
-<<<<<<< HEAD
-Load "f:\\pig_game_c\\ui_test\\cks\\Objects\\TemplateProject.axf" 
-Erase Done.Programming Done.Verify OK.Flash Load finished at 23:34:46
-=======
-*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\cks\ARM\ARMCC\Bin'
-Build target 'Target 1'
-".\Objects\TemplateProject.axf" - 0 Error(s), 0 Warning(s).
-Build Time Elapsed:  00:00:04
->>>>>>> e059f4d54a5c7ec8dfd026815306492d10d8b132
+Load "d:\\cks\\Project_ui\\GD32-LVGL-PigGame\\Objects\\TemplateProject.axf" 
+Erase Done.Programming Done.Verify OK.Flash Load finished at 11:23:28

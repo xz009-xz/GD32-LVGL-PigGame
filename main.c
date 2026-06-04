@@ -31,6 +31,11 @@ int main()
 		lv_port_disp_init();
 		lv_port_indev_init();
 
+		//bgm
+		i2s_config();
+		nvic_irq_enable(SPI1_IRQn, 0, 0);
+		music_bgm_load();
+	
 		ui_game_start(); 
 		uint32_t last_tick = lv_tick_get();
 		disaster_init();

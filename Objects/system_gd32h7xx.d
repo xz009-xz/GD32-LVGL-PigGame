@@ -1,7 +1,7 @@
 .\objects\system_gd32h7xx.o: GD32H7xx\system_gd32h7xx.c
 .\objects\system_gd32h7xx.o: GD32H7xx\gd32h7xx.h
 .\objects\system_gd32h7xx.o: GD32H7xx\core_cm7.h
-.\objects\system_gd32h7xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\system_gd32h7xx.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\system_gd32h7xx.o: .\GD32H7xx\CMSIS\cmsis_version.h
 .\objects\system_gd32h7xx.o: .\GD32H7xx\CMSIS\cmsis_compiler.h
 .\objects\system_gd32h7xx.o: .\GD32H7xx\CMSIS\cmsis_armcc.h

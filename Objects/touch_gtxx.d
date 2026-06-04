@@ -2,7 +2,7 @@
 .\objects\touch_gtxx.o: Drivers\touch.h
 .\objects\touch_gtxx.o: .\GD32H7xx\gd32h7xx.h
 .\objects\touch_gtxx.o: .\GD32H7xx\core_cm7.h
-.\objects\touch_gtxx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\touch_gtxx.o: D:\cks\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\touch_gtxx.o: .\GD32H7xx\CMSIS\cmsis_version.h
 .\objects\touch_gtxx.o: .\GD32H7xx\CMSIS\cmsis_compiler.h
 .\objects\touch_gtxx.o: .\GD32H7xx\CMSIS\cmsis_armcc.h
@@ -62,4 +62,4 @@
 .\objects\touch_gtxx.o: .\GD32H7xx_standard_peripheral\Include\gd32h7xx_vref.h
 .\objects\touch_gtxx.o: .\GD32H7xx_standard_peripheral\Include\gd32h7xx_wwdgt.h
 .\objects\touch_gtxx.o: Drivers\touch_iic.h
-.\objects\touch_gtxx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\touch_gtxx.o: D:\cks\ARM\ARMCC\Bin\..\include\string.h
