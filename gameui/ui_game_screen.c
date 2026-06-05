@@ -91,6 +91,14 @@ void ui_game_screen(lv_event_t *e)
 
 		lv_obj_move_foreground(help_fruit[i]);
 	}
+
+	// 屠宰计数标签 — 屏幕居中，红色
+	slaughter_label = lv_label_create(game_screen);
+	lv_label_set_text_fmt(slaughter_label, "%.0f", slaughter_number);
+	lv_obj_align(slaughter_label, LV_ALIGN_TOP_MID, 0, 10);
+	lv_obj_set_style_text_color(slaughter_label, lv_color_hex(0xFF0000), 0);
+	lv_obj_set_style_text_font(slaughter_label, &lv_font_montserrat_26, 0);
+
 	coin_label = lv_label_create(game_screen);
 	lv_label_set_text_fmt(coin_label, "%.0f", money);
 	lv_obj_align(coin_label, LV_ALIGN_TOP_LEFT, 110, 46);

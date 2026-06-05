@@ -13,6 +13,8 @@ Food foods[MAX_FOOD];
 float money = 200.0f;
 lv_obj_t *coin_label;
 char current_user[MAX_USERNAME_LEN + 1] = {0};
+float slaughter_number = 0.0f;
+lv_obj_t *slaughter_label;
 
 float rand_float(void) {
     return (float)rand() / (float)RAND_MAX;
@@ -72,7 +74,6 @@ int main()
 						if (chance > 1.0f) chance = 1.0f;
 	
 						if (rand_float() < chance) {
-							// ���ѡ���ֺ����ͣ�?0/1/2��
 							DisasterType disaster_type;
 							switch (rand() % 3) {
 								case 0:  disaster_type = DISASTER_HOT;  break;
@@ -80,7 +81,7 @@ int main()
 								default: disaster_type = DISASTER_RAIN; break;
 							}
 							disaster_start(disaster_type, 20.0f);
-							chance = 0.0f;    // ����������
+							chance = 0.0f;    
 						}
 					}
 				}
@@ -100,12 +101,21 @@ int main()
 						else if(pig_fsms[i].pig_t.growth >= 100 && pig_fsms[i].growth_fsm.current_state == BIG){
 								fsm_eventhandle(&pig_fsms[i].growth_fsm, EVENT_GROW);
 						}
-						else if(pig_fsms[i].growth_fsm.current_state == SLAUGHTER){
-								fsm_eventhandle(&pig_fsms[i].growth_fsm, EVENT_GROW);
-						}
 				}
 				if(coin_label != NULL){
 						lv_label_set_text_fmt(coin_label, "%.0f", money);
 				}
+				if(slaughter_label != NULL){
+						lv_label_set_text_fmt(slaughter_label, "%.0f", slaughter_number);
+				}
+				for(int i = 0; i < MAX_PIGS; i++){
+						if(pig_fsms[i].pig_t.slaughter_icon != NULL && pig_fsms[i].pig_t.is_slaughtering == false){
+								slaughter_number += 1.0f;
+								pig_fsms[i].pig_t.is_slaughtering = true;
+								break;
+						}
+				}
 		}
 }
+
+	

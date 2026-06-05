@@ -78,8 +78,10 @@ typedef struct{
     int x,y;
     lv_img_dsc_t image_pig_small;
     lv_img_dsc_t image_pig_big;
-    lv_obj_t *img_pig;     
-    
+    lv_obj_t *img_pig;
+    lv_obj_t *slaughter_icon;
+    bool is_slaughtering;  // SLAUGHTER 状态下的红色感叹图标
+
 } PigData;
 
 typedef struct{
@@ -93,15 +95,19 @@ void growtoslaughter(void *data);
 void growtonormal(void *data);
 void on_enter_eat(void *data);
 void on_exit_eat(void *data);
+void on_enter_slaughter(void *data);
+void on_exit_slaughter(void *data);
 void on_update_eat(void *data,float dt);
 void on_update_idle(void *data,float dt);
 
-//pig??????init
+
 void pig_fsm_init(pig_fsm *pig_fsm_instance,int id);
 
 extern pig_fsm pig_fsms[MAX_PIGS];
 extern Food foods[MAX_FOOD];
 extern float money;
 extern lv_obj_t *coin_label;
+extern lv_obj_t *slaughter_label;
+extern float slaughter_number;
 
 #endif

@@ -75,8 +75,8 @@ void growtobig(void *data){
 
 void growtoslaughter(void *data){
     PigData *pig_data = (PigData *)data;
-    money += pig_data->weight; 
-    //pig_slaughter_anim(pig_data->id);
+    // 金币在用户点击感叹号时结�?
+    (void)pig_data;
     //printf("Pig %d has been slaughtered!\n", pig_data->id);
 }
 
@@ -123,6 +123,9 @@ void on_update_eat(void *data,float dt){
     }
     
     pig_data->growth += dt * foods[idx].growth_boost * mod.growth_rate_modifier;
+    if(pig_data->growth > 100){
+        pig_data->growth = 100;
+    }
     pig_data->weight += dt * foods[idx].weight_boost * mod.weight_loss_rate;
 }
 
@@ -144,7 +147,44 @@ void on_update_idle(void *data,float dt){
     }
 }
 
+void slaughter_icon_cb(lv_event_t *e)
+{
+    int pig_idx = (int)(uintptr_t)lv_event_get_user_data(e);
+    money += pig_fsms[pig_idx].pig_t.weight;                     // 金币结算
+    fsm_eventhandle(&pig_fsms[pig_idx].growth_fsm, EVENT_GROW);  // 触发 pig_small_anim + 新猪初始�? + 切换�? NORMAL
+}
 
+void on_enter_slaughter(void *data)
+{
+    PigData *pig_data = (PigData *)data;
+    int pig_idx = pig_data->id;
+
+    if(pig_data->slaughter_icon != NULL) return;
+
+    lv_obj_t *parent = lv_obj_get_parent(pig_data->img_pig);
+
+    pig_data->slaughter_icon = lv_btn_create(parent);
+    lv_obj_set_size(pig_data->slaughter_icon, 30, 30);
+    lv_obj_set_pos(pig_data->slaughter_icon,
+                   pig_data->x + 85,
+                   pig_data->y + 85);
+    lv_obj_set_style_bg_color(pig_data->slaughter_icon, lv_color_hex(0xFF0000), 0);
+    lv_obj_t *label = lv_label_create(pig_data->slaughter_icon);
+    lv_label_set_text(label, "!");
+    lv_obj_center(label);
+    lv_obj_add_event_cb(pig_data->slaughter_icon, slaughter_icon_cb, LV_EVENT_CLICKED, (void*)(uintptr_t)pig_idx);
+
+    lv_obj_move_foreground(pig_data->slaughter_icon);
+}
+
+void on_exit_slaughter(void *data){
+    PigData *pig_data = (PigData *)data;
+    if(pig_data->slaughter_icon != NULL){
+        lv_obj_del(pig_data->slaughter_icon);
+        slaughter_number -= 1.0f;
+        pig_data->slaughter_icon = NULL;
+    }
+}
 
 static Fsm_table state_table[] = {
     {EVENT_GROW, NORMAL, growtobig, BIG},
@@ -167,6 +207,7 @@ void pig_fsm_init(pig_fsm *pig_fsm_instance,int id){
     pig_fsm_instance->pig_t.hunger = (float)(rand() % 80);
     pig_fsm_instance->pig_t.eat_timer = 0;
     pig_fsm_instance->pig_t.eat_fruit_idx = -1;
+    pig_fsm_instance->pig_t.slaughter_icon = NULL;
     
     uint8_t* image_buffer = sdram_malloc( 100 * 100 * 3 + 4 );
 	read_file_to_array("0:/ui_pig_small.bin", image_buffer,  100 * 100 * 3 + 4 );
@@ -196,6 +237,8 @@ void pig_fsm_init(pig_fsm *pig_fsm_instance,int id){
 
     enter_init(&pig_fsm_instance->action_fsm, ACTION_EAT, on_enter_eat);
     exit_init(&pig_fsm_instance->action_fsm, ACTION_EAT, on_exit_eat);
+    exit_init(&pig_fsm_instance->growth_fsm, SLAUGHTER, on_exit_slaughter);
+    enter_init(&pig_fsm_instance->growth_fsm, SLAUGHTER, on_enter_slaughter);
     update_init(&pig_fsm_instance->action_fsm, ACTION_EAT, on_update_eat);
     update_init(&pig_fsm_instance->action_fsm, ACTION_IDLE, on_update_idle);
 }

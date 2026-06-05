@@ -16,13 +16,13 @@ typedef enum {
     AUTH_ERR_WRONG_PASSWORD,
 } AuthResult;
 
-/* ÓÃ»§×¢²á£ºÏò user.cfg ×·¼ÓĞÂÓÃ»§ */
+/* ç”¨æˆ·æ³¨å†Œï¼šå‘ user.cfg è¿½åŠ æ–°ç”¨æˆ· */
 AuthResult auth_register(const char *username, const char *password);
 
-/* ÓÃ»§µÇÂ¼£ºÑéÖ¤ user.cfg ÖĞµÄÓÃ»§ÃûÃÜÂë */
+/* ç”¨æˆ·ç™»å½•ï¼šéªŒè¯ user.cfg ä¸­çš„ç”¨æˆ·åå¯†ç  */
 AuthResult auth_login(const char *username, const char *password);
 
-/* ¼Ç×¡ÎÒ */
+/* è®°ä½æˆ‘ */
 AuthResult auth_save_remember(const char *username, const char *password);
 AuthResult auth_load_remember(char *username, char *password, int max_len);
 bool auth_has_remember(void);

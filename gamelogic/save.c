@@ -25,7 +25,7 @@ bool save_game(const char *username) {
     char path[64];
     save_build_path(username, path, sizeof(path));
 
-    // ´´½¨ saves Ä¿Â¼ (Èç²»´æÔÚ)
+    // ï¿½ï¿½ï¿½ï¿½ saves Ä¿Â¼ (ï¿½ç²»ï¿½ï¿½ï¿½ï¿½)
     f_mkdir(SAVE_DIR);
 
     FIL file;
@@ -34,7 +34,7 @@ bool save_game(const char *username) {
 
     UINT bw;
 
-    // Ð´ÈëÍ·²¿
+    // Ð´ï¿½ï¿½Í·ï¿½ï¿½
     uint32_t magic = SAVE_MAGIC;
     uint32_t version = SAVE_VERSION;
     uint32_t count = MAX_PIGS;
@@ -44,10 +44,12 @@ bool save_game(const char *username) {
     f_write(&file, &version, 4, &bw);
     f_write(&file, &money, 4, &bw);
     checksum += *(uint32_t*)&money;
-    f_write(&file, &checksum, 4, &bw);  // Õ¼Î»£¬×îºó»ØÌî
+    f_write(&file, &checksum, 4, &bw);  
     f_write(&file, &count, 4, &bw);
+    f_write(&file,&slaughter_number,4,&bw);
+    checksum += *(uint32_t*)&slaughter_number;
 
-    // Ð´ÈëÃ¿Ö»ÖíµÄÊý¾Ý
+    // Ð´ï¿½ï¿½Ã¿Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     for (int i = 0; i < MAX_PIGS; i++) {
         PigSaveData psd;
         psd.growth        = pig_fsms[i].pig_t.growth;
@@ -62,14 +64,14 @@ bool save_game(const char *username) {
 
         f_write(&file, &psd, sizeof(PigSaveData), &bw);
 
-        // ÀÛ¼ÓÐ£ÑéºÍ
+        // ï¿½Û¼ï¿½Ð£ï¿½ï¿½ï¿½
         uint8_t *p = (uint8_t*)&psd;
         for (int j = 0; j < sizeof(PigSaveData); j++) {
             checksum += p[j];
         }
     }
 
-    // »ØÌîÐ£ÑéºÍ (Î»ÓÚÆ«ÒÆ 12)
+    // ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ (Î»ï¿½ï¿½Æ«ï¿½ï¿½ 12)
     f_lseek(&file, 12);
     f_write(&file, &checksum, 4, &bw);
 
@@ -101,13 +103,16 @@ bool load_game(const char *username) {
     f_read(&file, &count, 4, &br);
     if (count != MAX_PIGS) { f_close(&file); return false; }
 
+    f_read(&file, &slaughter_number, 4, &br);
+
     uint32_t calc_checksum = *(uint32_t*)&money;
+    calc_checksum += *(uint32_t*)&slaughter_number;
 
     for (int i = 0; i < MAX_PIGS; i++) {
         PigSaveData psd;
         f_read(&file, &psd, sizeof(PigSaveData), &br);
 
-        // ¸²Ð´ÖíÊý¾Ý
+        // ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         pig_fsms[i].pig_t.growth        = psd.growth;
         pig_fsms[i].pig_t.weight        = psd.weight;
         pig_fsms[i].pig_t.hunger        = psd.hunger;
@@ -116,11 +121,11 @@ bool load_game(const char *username) {
         pig_fsms[i].pig_t.x             = psd.x;
         pig_fsms[i].pig_t.y             = psd.y;
 
-        // »Ö¸´ FSM ×´Ì¬
+        // ï¿½Ö¸ï¿½ FSM ×´Ì¬
         pig_fsms[i].growth_fsm.current_state = psd.growth_state;
         pig_fsms[i].action_fsm.current_state = psd.action_state;
 
-        // »Ö¸´ÖíÍ¼Ïñ
+        // ï¿½Ö¸ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
         if (pig_fsms[i].pig_t.img_pig != NULL) {
             if (psd.growth_state == BIG) {
                 lv_img_set_src(pig_fsms[i].pig_t.img_pig,
@@ -132,7 +137,7 @@ bool load_game(const char *username) {
             lv_obj_set_pos(pig_fsms[i].pig_t.img_pig, psd.x, psd.y);
         }
 
-        // ÀÛ¼ÓÐ£ÑéºÍ
+        // ï¿½Û¼ï¿½Ð£ï¿½ï¿½ï¿½
         uint8_t *p = (uint8_t*)&psd;
         for (int j = 0; j < sizeof(PigSaveData); j++) {
             calc_checksum += p[j];
@@ -141,14 +146,14 @@ bool load_game(const char *username) {
 
     f_close(&file);
 
-    // Ð£Ñé
+    // Ð£ï¿½ï¿½
     if (calc_checksum != saved_checksum) {
-        // Ð£ÑéÊ§°Ü£¬»Ö¸´Ä¬ÈÏÖµ
+        // Ð£ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½Ö¸ï¿½Ä¬ï¿½ï¿½Öµ
         money = 200.0f;
         return false;
     }
 
-    // ¸üÐÂ½ð±ÒÏÔÊ¾
+    // ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½Ê¾
     if (coin_label != NULL) {
         lv_label_set_text_fmt(coin_label, "%.0f", money);
     }
